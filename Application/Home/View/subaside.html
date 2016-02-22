@@ -1,0 +1,41 @@
+  <aside>
+    <div class="rnav">
+		<volist name='pros' id='p'>
+	      <li class="rnav{$i}"><a href="http://www.mynote2.com/index.php/index/{$t_url}/u/{$p.pro_url}">{$p.pro_name}</a></li>
+		</volist>
+    </div>
+    <div class="ph_news">
+      <h2>
+        <p>点击排行</p>
+      </h2>
+      <ul class="ph_n">
+      <volist name='a1' id='a1'>
+        <li><span class="num{$i}">{$i}</span><a href="[field:arcurl/]">{$a1.art_title}</a></li>
+	</volist>
+      </ul>
+      <h2>
+        <p>文章推荐</p>
+      </h2>
+      <ul>
+      <volist name='a2' id='a2'>
+        <li><span class="num{$i}">{$i}</span><a href="[field:arcurl/]">{$a2.art_title}</a></li>
+	</volist>
+      </ul>
+	      <div class="links">
+      <h2>
+        <p>友情链接</p>
+      </h2>
+      <ul>
+	    <li><a href="http://www.imooc.com/">慕课网</a></li>
+        <li><a href="http://www.yangqq.com/">杨青个人博客</a></li>
+      </ul>
+    </div>
+    </div>
+    <div class="copyright">
+      <ul>
+        <p> Design by 天启</a></p>
+        <p>备案号</p>
+        </p>
+      </ul>
+    </div>
+  </aside>

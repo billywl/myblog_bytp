@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>会健身的程序员</title>
+<meta name="description" content="天启的个人博客" />
+<meta name="keywords" content="健身,程序员,php,博客" />
+<link href="__STYLE__/base.css" rel="stylesheet">
+<link href="__STYLE__/index.css" rel="stylesheet">
+<link href="__STYLE__/media.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+<!--[if lt IE 9]>
+<script src="__JS__/modernizr.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<div class="ibody">
+<include file="../Application/Home/View/head.html" />
+  <article>
+    <div class="banner">
+      <ul class="texts">
+        <p> 健身是一种态度,需要坚持!!! </p>
+        <p> 编程更是一种信仰,我相信,我的指尖会具有改变世界的力量!!!</p>
+      </ul>
+    </div>
+    <div class="bloglist">
+      <h2>
+        <p><span>最新</span>文章</p>
+      </h2>
+	    <volist name='arts' id='a'> 
+      <div class="blogs">
+        <h3><a href="[field:arcurl/]">{$a.art_title}</a></h3>
+        <figure></figure>
+        <ul>
+          <p>{$a.art_description}</p>
+          <a href="" class="readmore">阅读全文&gt;&gt;</a>
+        </ul>
+        <p class="autor"><span>作者：{$a.art_writer}</span><span>分类：【<a href="/" >{$a.pro_name}</a>】</span><span>浏览（<a href="/">{$a.art_click}</a>）</span><span>来源（<a href="/">{$a.art_source}</a>）</span></p>
+        <div class="dateview">{$a.art_time|date='m.d号',###}</div>
+      </div>
+	    </volist>
+    </div>
+
+  </article>
+  <include file="aside" /> 
+  <script src="__JS__/silder.js"></script>
+  <div class="clear"></div>
+  <!-- 清除浮动 --> 
+</div>
+</body>
+</html>

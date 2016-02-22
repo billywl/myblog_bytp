@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$title}</title>
+<meta name="keywords" content="健身,编程,php,天启,个人博客'/" />
+<meta name="description" content="会健身的程序员天启的个人博客" />
+<link href="__STYLE__/base.css" rel="stylesheet">
+<link href="__STYLE__/style.css" rel="stylesheet">
+<link href="__STYLE__/media.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+<!--[if lt IE 9]>
+<script src="__JS__/modernizr.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+
+
+<body class="articlelist">
+<div class="ibody">
+<include file="../Application/Home/View/head.html" />
+  <article>
+        <div class='extend' text-align='center'>
+		<volist name='pros' id='p'>
+<a href="[field:typelink/]">{$p.pro_name} |</a>
+		</volist>
+		</div>
+		
+
+
+
+
+    <h2 class="about_h">当前位置：dede:field.position /</h2>
+	<div class="bloglist">
+
+	    <volist name='arts' id='a'> 
+	    <div class="newblog">
+        <ul>
+          <h3><a href="[field:arcurl/]">{$a.art_title}</a></h3>
+          <div class="autor"><span>{$a.art_writer}</span>
+		  <span>分类：{a.pro_name}</span>
+		  <span>浏览(<a href="/">{$a.art_click}</a>)</span>
+		  <span>来源(<a href="/">{$a.art_source}</a>)</span></div>
+          <p>{$a.art_description}<a href="[field:arcurl/]" target="_blank" class="readmore">全文</a></p>
+		  
+        </ul>
+        <figure><img src="[field:litpic/]" ></figure>
+        <div class="dateview">{$a.art_time|date='m.d号',###}</div>
+      </div>
+    </volist>
+	  <!-- /listbox -->
+    </div>
+<div class="pagination">{$show}</div>
+  </article>
+
+	<include file="../Application/Home/View/subaside.html" />
+
+
+
+  <script src="__JS__/silder.js"></script>
+  <div class="clear"></div>
+ </div>
+
+
+</body>
+</html>
