@@ -18,7 +18,7 @@ function prevent(event) {
 window.onload = function(){
 	$('btn').onclick = function(event){
 		//当name为空时,取消submit的按钮的提交
-		if ($('name').value == ''||$('f_name').value == '请选择...') {
+		if ($('name').value == ''||$('url').value =='') {
 			//调用取消函数
 			prevent(event);
 			alert('栏目名不能为空!');
@@ -90,6 +90,13 @@ window.onload = function(){
                                                         <input type="hidden" name="f_id" value="<?php echo ($top["pro_id"]); ?>" /></td>
                                                         <td>本栏目的上级栏</td>
                                                         <td>&nbsp;</td>	
+                                                    </tr>
+                                                    <tr>
+                                                        <td>&nbsp;</td>
+                                                        <td>访问url：</td>
+                                                        <td width="20%"><input class="text" type="text" name="url" id='url' value="" />
+                                                        <td>前台访问时的方法名</td>
+                                                        <td>&nbsp;</td>
                                                     </tr>
                                                	    <tr>
                                                         <td>&nbsp;</td>

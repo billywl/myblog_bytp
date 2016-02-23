@@ -21,11 +21,11 @@
 
 <body class="articlelist">
 <div class="ibody">
-<include file="../Application/Home/View/head.html" />
+<include file="head" />
   <article>
         <div class='extend' text-align='center'>
 		<volist name='pros' id='p'>
-<a href="[field:typelink/]">{$p.pro_name} |</a>
+<a href="http://www.mynote2.com/index.php/index/{$t_url}/u/{$p.pro_url}">{$p.pro_name} |</a>
 		</volist>
 		</div>
 		
@@ -39,24 +39,23 @@
 	    <volist name='arts' id='a'> 
 	    <div class="newblog">
         <ul>
-          <h3><a href="[field:arcurl/]">{$a.art_title}</a></h3>
+          <h3><a href="http://www.mynote2.com/index.php/index/art/id/{$a.art_id}">{$a.art_title}</a></h3>
           <div class="autor"><span>{$a.art_writer}</span>
 		  <span>分类：{a.pro_name}</span>
 		  <span>浏览(<a href="/">{$a.art_click}</a>)</span>
 		  <span>来源(<a href="/">{$a.art_source}</a>)</span></div>
-          <p>{$a.art_description}<a href="[field:arcurl/]" target="_blank" class="readmore">全文</a></p>
+          <p>{$a.art_description}<a href="http://www.mynote2.com/index.php/index/art/id/{$a.art_id}" class="readmore">全文</a></p>
 		  
         </ul>
-        <figure><img src="[field:litpic/]" ></figure>
         <div class="dateview">{$a.art_time|date='m.d号',###}</div>
       </div>
-    </volist>
 	  <!-- /listbox -->
+    </volist>
     </div>
 <div class="pagination">{$show}</div>
   </article>
 
-	<include file="../Application/Home/View/subaside.html" />
+	<include file="subaside" />
 
 
 

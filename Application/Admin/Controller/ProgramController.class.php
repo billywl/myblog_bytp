@@ -15,7 +15,7 @@ class ProgramController extends CheckController {
 		->join('right join tp_program b on a.pro_id=b.pro_topid')->select();		
 		
 		//如果没有获取到数据,弹出提示返回主页
-		if(!$list){
+		if($list===false){
 			$this->error('数据库连接错误,重试','../index/index');
 		}
 		

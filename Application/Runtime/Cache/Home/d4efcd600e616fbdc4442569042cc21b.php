@@ -2,17 +2,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>会健身的程序员</title>
-<meta name="description" content="天启的个人博客" />
-<meta name="keywords" content="健身,程序员,php,博客" />
+<title><?php echo ($arts["art_title"]); ?></title>
+<meta name="keywords" content="<?php echo ($arts["art_keyword"]); ?>" />
+<meta name="description" content="<?php echo ($arts["art_description"]); ?>" />
 <link href="/Style/base.css" rel="stylesheet">
+<link href="/Style/style.css" rel="stylesheet">
 <link href="/Style/index.css" rel="stylesheet">
 <link href="/Style/media.css" rel="stylesheet">
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
 <!--[if lt IE 9]>
-<script src="/Js/modernizr.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/modernizr.js"></script>
 <![endif]-->
-
+<meta http-equiv="mobile-agent" content="format=xhtml;url={dede:global.cfg_mobileurl/}/view.php?aid={dede:field.id/}">
 </head>
 <body>
 <div class="ibody">
@@ -29,30 +30,29 @@
   </header>
 
   <article>
-    <div class="banner">
-      <ul class="texts">
-        <p> 健身是一种态度,需要坚持!!! </p>
-        <p> 编程更是一种信仰,我相信,我的指尖会具有改变世界的力量!!!</p>
-      </ul>
-    </div>
-    <div class="bloglist">
-      <h2>
-        <p><span>最新</span>文章</p>
-      </h2>
-	    <?php if(is_array($arts)): $i = 0; $__LIST__ = $arts;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a): $mod = ($i % 2 );++$i;?><div class="blogs">
-        <h3><a href="[field:arcurl/]"><?php echo ($a["art_title"]); ?></a></h3>
-        <figure></figure>
-        <ul>
-          <p><?php echo ($a["art_description"]); ?></p>
-          <a href="" class="readmore">阅读全文&gt;&gt;</a>
-        </ul>
-        <p class="autor"><span>作者：<?php echo ($a["art_writer"]); ?></span><span>分类：【<a href="/" ><?php echo ($a["pro_name"]); ?></a>】</span><span>浏览（<a href="/"><?php echo ($a["art_click"]); ?></a>）</span><span>来源（<a href="/"><?php echo ($a["art_source"]); ?></a>）</span></p>
-        <div class="dateview"><?php echo (date('m.d号',$a["art_time"])); ?></div>
-      </div><?php endforeach; endif; else: echo "" ;endif; ?>
-    </div>
+    <h2 class="about_h">当前位置：{dede:field.position /}</h2>
+    <div class="index_about">
+      <h2 class="c_titile"><?php echo ($arts["art_title"]); ?></h2>
+      <p class="box_c"><span class="d_time">发布时间：<?php echo (date('m.d',$arts["art_time"])); ?></span>
+      <span>作者：<?php echo ($arts["art_writer"]); ?></span><span>浏览:<?php echo ($arts["art_click"]); ?>次</span>
+      <span>来源:<?php echo ($arts["art_source"]); ?></span></p>
 
+      <ul class="infos">
+       <?php echo ($arts["art_body"]); ?>
+      </ul>
+      <div class="keybq">
+        <p><span>关键字词</span>：<?php echo ($arts["art_keyword"]); ?></p>
+      </div>
+
+     
+      <div class="nextinfo">
+        <p>{dede:prenext get='pre'/}</p>
+        <p>{dede:prenext get='next'/}</p>
+      </div>
+    </div>
   </article>
-  <aside>
+
+<aside>
     <div class="avatar"><a href="http://23.252.105.140/a/about/"><span>关于站长</span></a></div>
     <div class="topspaceinfo">
       <h1>健身改变自己,指尖改变世界</h1>
@@ -95,7 +95,7 @@
         </p>
       </ul>
     </div>
-  </aside> 
+  </aside>
   <script src="/Js/silder.js"></script>
   <div class="clear"></div>
   <!-- 清除浮动 --> 

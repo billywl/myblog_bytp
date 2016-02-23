@@ -18,7 +18,7 @@ function prevent(event) {
 window.onload = function(){
 	$('btn').onclick = function(event){
 		//当username为空时,取消submit的按钮的提交
-		if ($('name').value == '') {
+		if ($('name').value == ''||$('url').value =='') {
 			//调用取消函数
 			prevent(event);
 			alert('栏目名不能为空!');
@@ -94,7 +94,7 @@ window.onload = function(){
                                                     <tr>
                                                         <td>&nbsp;</td>
                                                         <td>访问url：</td>
-                                                        <td width="20%"><input class="text" type="text" name="url" value="" />
+                                                        <td width="20%"><input class="text" type="text" name="url" id='url' value="" />
                                                         <td>前台访问时的方法名</td>
                                                         <td>&nbsp;</td>
                                                     </tr>

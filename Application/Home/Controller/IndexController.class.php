@@ -8,10 +8,10 @@ class IndexController extends Controller {
 		$pro=M('program');
 		//联合查询取出文章数据和所属栏目
 		$arts=$art->alias('a')->field('a.art_title,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
-		->where('a.art_topid>0')->limit('5')->join('left join tp_program p on a.art_topid=p.pro_id')->select();
+		->where('a.art_topid>0')->limit('5')->join('left join tp_program p on a.art_topid=p.pro_id')->order('art_id desc')->select();
 		
-		$a1=$art->field('art_title')->where('art_topid>18 and art_topid<23')->limit('5')->select();
-		$a2=$art->field('art_title')->where('art_topid>23 and art_topid<28')->limit('5')->select();
+		$a1=$art->field('art_id,art_title')->where('art_topid>2 and art_topid<7')->limit('5')->order('art_id desc')->select();
+		$a2=$art->field('art_id,art_title')->where('art_topid>6 and art_topid<11')->limit('5')->order('art_id desc')->select();
 		
 		$this->assign('arts',$arts);
 		$this->assign('a1',$a1);
@@ -53,14 +53,14 @@ class IndexController extends Controller {
 			
 
 			//联合查询取出文章数据和所属栏目
-			$arts=$art->alias('a')->field('a.art_title,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
-			->where($where1)->limit($page->firstRow.','.$page->listRows)->join('left join tp_program p on a.art_topid=p.pro_id')->select();
+			$arts=$art->alias('a')->field('a.art_id,a.art_title,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
+			->where($where1)->limit($page->firstRow.','.$page->listRows)->order('art_id desc')->join('left join tp_program p on a.art_topid=p.pro_id')->select();
 			
 
 			//查询取出本栏目点击最高的5篇文章标题
-			$a1=$art->field('art_title')->where($where2)->limit('5')->order('art_click')->select();
+			$a1=$art->field('art_id,art_title')->where($where2)->limit('5')->order('art_click')->select();
 			//查询取出本栏目推荐的文章标题
-			$a2=$art->field('art_title')->where($where2)->where('art_recommend=1')->limit('5')->order('art_click')->select();
+			$a2=$art->field('art_id,art_title')->where($where2)->where('art_recommend=1')->limit('5')->order('art_click')->select();
 			
 			
 			
@@ -80,7 +80,7 @@ class IndexController extends Controller {
 			$this->assign('t_url',$t_url);
 			
 			//加载模版文件,然后返回
-	    		$this->display('../Application/Home/View/list.html');
+	    		$this->display('list');
 	    		return ;
     		}
     		//如果有u参数循环判断
@@ -119,13 +119,13 @@ class IndexController extends Controller {
 		
 		//联合查询取出文章数据和所属栏目
 		$arts=$art->alias('a')->field('a.art_title,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
-		->where("art_topid=$id")->limit($page->firstRow.','.$page->listRows)->join('left join tp_program p on a.art_topid=p.pro_id')->select();
+		->where("art_topid=$id")->limit($page->firstRow.','.$page->listRows)->order('art_id desc')->join('left join tp_program p on a.art_topid=p.pro_id')->select();
 			
 		
 		//查询取出本栏目点击最高的5篇文章标题
-		$a1=$art->field('art_title')->where("art_topid=$id")->limit('5')->order('art_click')->select();
+		$a1=$art->field('art_id,art_title')->where("art_topid=$id")->limit('5')->order('art_click')->select();
 		//查询取出本栏目推荐的文章标题
-		$a2=$art->field('art_title')->where("art_topid=$id")->where('art_recommend=1')->limit('5')->order('art_click')->select();
+		$a2=$art->field('art_id,art_title')->where("art_topid=$id")->where('art_recommend=1')->limit('5')->order('art_click')->select();
 			
 			
 			
@@ -145,7 +145,7 @@ class IndexController extends Controller {
 		$this->assign('t_url',$t_url);
 		
 		//加载模版文件
-		$this->display('../Application/Home/View/list.html');
+		$this->display('list');
     		
     }
     
@@ -182,14 +182,14 @@ class IndexController extends Controller {
 			
 
 			//联合查询取出文章数据和所属栏目
-			$arts=$art->alias('a')->field('a.art_title,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
-			->where($where1)->limit($page->firstRow.','.$page->listRows)->join('left join tp_program p on a.art_topid=p.pro_id')->select();
+			$arts=$art->alias('a')->field('a.art_id,a.art_title,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
+			->where($where1)->limit($page->firstRow.','.$page->listRows)->order('art_id desc')->join('left join tp_program p on a.art_topid=p.pro_id')->select();
 			
 
 			//查询取出本栏目点击最高的5篇文章标题
-			$a1=$art->field('art_title')->where($where2)->limit('5')->order('art_click')->select();
+			$a1=$art->field('art_id,art_title')->where($where2)->limit('5')->order('art_click')->select();
 			//查询取出本栏目推荐的文章标题
-			$a2=$art->field('art_title')->where($where2)->where('art_recommend=1')->limit('5')->order('art_click')->select();
+			$a2=$art->field('art_id,art_title')->where($where2)->where('art_recommend=1')->limit('5')->order('art_click')->select();
 			
 			
 			
@@ -209,7 +209,7 @@ class IndexController extends Controller {
 			$this->assign('t_url',$t_url);
 			
 			//加载模版文件,然后返回
-	    		$this->display('../Application/Home/View/list.html');
+	    		$this->display('list');
 	    		return ;
     		}
     		//如果有u参数循环判断
@@ -247,14 +247,14 @@ class IndexController extends Controller {
 			
 		
 		//联合查询取出文章数据和所属栏目
-		$arts=$art->alias('a')->field('a.art_title,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
-		->where("art_topid=$id")->limit($page->firstRow.','.$page->listRows)->join('left join tp_program p on a.art_topid=p.pro_id')->select();
+		$arts=$art->alias('a')->field('a.art_id,a.art_title,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
+		->where("art_topid=$id")->limit($page->firstRow.','.$page->listRows)->order('art_id desc')->join('left join tp_program p on a.art_topid=p.pro_id')->select();
 			
 		
 		//查询取出本栏目点击最高的5篇文章标题
-		$a1=$art->field('art_title')->where("art_topid=$id")->limit('5')->order('art_click')->select();
+		$a1=$art->field('art_id,art_title')->where("art_topid=$id")->limit('5')->order('art_click')->select();
 		//查询取出本栏目推荐的文章标题
-		$a2=$art->field('art_title')->where("art_topid=$id")->where('art_recommend=1')->limit('5')->order('art_click')->select();
+		$a2=$art->field('art_id,art_title')->where("art_topid=$id")->where('art_recommend=1')->limit('5')->order('art_click')->select();
 			
 			
 			
@@ -274,6 +274,88 @@ class IndexController extends Controller {
 		$this->assign('t_url',$t_url);
 		
 		//加载模版文件
-		$this->display('../Application/Home/View/list.html');
+		$this->display('list');
 	    }
+	    
+	    
+	//个人简介页面
+	public function about(){
+		//获取简介的数据
+		$about=M('article');
+		
+		$arts=$about->where('art_topid=-1')->find();	
+		$a1=$about->field('art_id,art_title')->where('art_topid>2 and art_topid<7')->limit('5')->order('art_id desc')->select();
+		$a2=$about->field('art_id,art_title')->where('art_topid>6 and art_topid<11')->limit('5')->order('art_id desc')->select();
+		
+		$this->assign('arts',$arts);
+		$this->assign('a1',$a1);
+		$this->assign('a2',$a2);
+		$this->display();
+	}
+	
+	//文章页面
+	public function art(){
+		//判断是否有get传递的id数据
+		if(!isset($_GET['id'])){
+			$this->error('您访问的文章不存在!','../../');
+		}
+		$id=$_GET['id'];
+		$art=M('article');
+		//文章的点击数+1
+		$art->art_click=$art->where("art_id=$id")->getField('art_click')+1;
+		//更新数据库
+		$art->where("art_id=$id")->save(); 
+		
+		//取出文章数据
+		$arts=$art->where("art_id=$id")->find();
+		$topid=$arts['art_topid'];
+		
+		//查询取出本栏目点击最高的5篇文章标题
+		$a1=$art->field('art_id,art_title')->where("art_topid=$topid")->limit('5')->order('art_click')->select();
+		//查询取出本栏目推荐的文章标题
+		$a2=$art->field('art_id,art_title')->where("art_topid=$topid")->where('art_recommend=1')->limit('5')->order('art_click')->select();
+
+		//取出下一篇和上一篇文章的id
+		$set_id=$art->where("art_topid=$topid")->getField('art_id',true);
+		//获取当前文章id的下标
+		$current=array_search($id, $set_id);
+		//获取上一篇本栏目文章id的下标
+		$prev=$current==0?-1:$current-1;
+		//获取下一篇本栏目文章id的下标
+		$next=$current==(count($set_id)-1)?-1:$current+1;
+		//根据id的下标取出id值
+		$prev_id=$set_id[$prev];
+		$next_id=$set_id[$next];
+		
+		//根据id取出文章标题
+		if($prev<0){
+		$prev_title='没有文章了!';
+			
+		}else{
+		$prev_title=$art->where("art_id=$prev_id")->getField('art_title');
+			
+		}
+		
+		if($next<0){
+			$next_title='没有文章了!';
+				
+		}else{
+			$next_title=$art->where("art_id=$next_id")->getField('art_title');
+				
+		}
+		
+		
+		//赋值到模版
+		
+		$this->assign('prev_id',$prev_id);
+		$this->assign('prev_title',$prev_title);
+		$this->assign('next_id',$next_id);
+		$this->assign('next_title',$next_title);
+		$this->assign('a1',$a1);
+		$this->assign('a2',$a2);
+		
+		$this->assign('arts',$arts);
+		$this->display();
+		
+	}
 }
