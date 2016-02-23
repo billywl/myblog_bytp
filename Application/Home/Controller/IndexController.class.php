@@ -10,8 +10,25 @@ class IndexController extends Controller {
 		$arts=$art->alias('a')->field('a.art_title,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
 		->where('a.art_topid>0')->limit('5')->join('left join tp_program p on a.art_topid=p.pro_id')->order('art_id desc')->select();
 		
-		$a1=$art->field('art_id,art_title')->where('art_topid>2 and art_topid<7')->limit('5')->order('art_id desc')->select();
-		$a2=$art->field('art_id,art_title')->where('art_topid>6 and art_topid<11')->limit('5')->order('art_id desc')->select();
+		//取出健身世界和程序世界下的子栏目
+		$pros1=$pro->field('pro_id,pro_name,pro_url')->where('pro_topid=1')->select();
+		$pros2=$pro->field('pro_id,pro_name,pro_url')->where('pro_topid=2')->select();
+		
+		//设定查询条件
+		for($i=0;$i<count($pros1);$i++){
+			$proid1[]=$pros1[$i]['pro_id'];
+		}
+		$where1['art_topid']=array('in',$proid1);
+		
+		for($i=0;$i<count($pros2);$i++){
+			$proid2[]=$pros2[$i]['pro_id'];
+		}
+		$where2['art_topid']=array('in',$proid2);
+		
+		
+		//取出侧边栏数据
+		$a1=$art->field('art_id,art_title')->where($where1)->limit('5')->order('art_id desc')->select();
+		$a2=$art->field('art_id,art_title')->where($where2)->limit('5')->order('art_id desc')->select();
 		
 		$this->assign('arts',$arts);
 		$this->assign('a1',$a1);
@@ -62,7 +79,9 @@ class IndexController extends Controller {
 			//查询取出本栏目推荐的文章标题
 			$a2=$art->field('art_id,art_title')->where($where2)->where('art_recommend=1')->limit('5')->order('art_click')->select();
 			
-			
+			//获取当前位置并赋值到模版
+			$location=$this->showLocationOfList($pro);
+			$this->assign('location',$location);
 			
 			//赋值到模版
 			$this->assign('title',$title);
@@ -128,7 +147,10 @@ class IndexController extends Controller {
 		$a2=$art->field('art_id,art_title')->where("art_topid=$id")->where('art_recommend=1')->limit('5')->order('art_click')->select();
 			
 			
-			
+		//获取当前位置并赋值到模版
+		$location=$this->showLocationOfList($pro);
+		$this->assign('location',$location);
+		
 		//赋值到模版
 		$this->assign('title',$title);
 		$this->assign('a1',$a1);
@@ -160,7 +182,7 @@ class IndexController extends Controller {
 	    		$art=M('article');
 			$pro=M('program');
 			
-			//取出健身世界下的子栏目
+			//取出IT世界下的子栏目
 			$pros=$pro->field('pro_id,pro_name,pro_url')->where('pro_topid=1')->select();
 		
 			//设定查询条件
@@ -191,7 +213,9 @@ class IndexController extends Controller {
 			//查询取出本栏目推荐的文章标题
 			$a2=$art->field('art_id,art_title')->where($where2)->where('art_recommend=1')->limit('5')->order('art_click')->select();
 			
-			
+			//获取当前位置并赋值到模版
+			$location=$this->showLocationOfList($pro);
+			$this->assign('location',$location);
 			
 			//赋值到模版
 			$this->assign('title',$title);
@@ -256,8 +280,10 @@ class IndexController extends Controller {
 		//查询取出本栏目推荐的文章标题
 		$a2=$art->field('art_id,art_title')->where("art_topid=$id")->where('art_recommend=1')->limit('5')->order('art_click')->select();
 			
-			
-			
+		//获取当前位置并赋值到模版
+		$location=$this->showLocationOfList($pro);
+		$this->assign('location',$location);
+		
 		//赋值到模版
 		$this->assign('title',$title);
 		$this->assign('a1',$a1);
@@ -265,6 +291,7 @@ class IndexController extends Controller {
 		$this->assign('pros',$pros);
 		$this->assign('arts',$arts);
 		$this->assign('show',$show);
+
 		
 		//方法名赋值给模版
 		$t_url=__METHOD__;
@@ -281,15 +308,37 @@ class IndexController extends Controller {
 	//个人简介页面
 	public function about(){
 		//获取简介的数据
-		$about=M('article');
+		$art=M('article');
+		$pro=M('program');
 		
-		$arts=$about->where('art_topid=-1')->find();	
-		$a1=$about->field('art_id,art_title')->where('art_topid>2 and art_topid<7')->limit('5')->order('art_id desc')->select();
-		$a2=$about->field('art_id,art_title')->where('art_topid>6 and art_topid<11')->limit('5')->order('art_id desc')->select();
+		$arts=$art->where('art_topid=-1')->find();
+			
+		//取出健身世界和程序世界下的子栏目
+		$pros1=$pro->field('pro_id,pro_name,pro_url')->where('pro_topid=1')->select();
+		$pros2=$pro->field('pro_id,pro_name,pro_url')->where('pro_topid=2')->select();
+		
+		//设定查询条件
+		for($i=0;$i<count($pros1);$i++){
+			$proid1[]=$pros1[$i]['pro_id'];
+		}
+		$where1['art_topid']=array('in',$proid1);
+		
+		for($i=0;$i<count($pros2);$i++){
+			$proid2[]=$pros2[$i]['pro_id'];
+		}
+		$where2['art_topid']=array('in',$proid2);
+		
+
+		
+		//取出侧边栏数据
+		$a1=$art->field('art_id,art_title')->where($where1)->limit('5')->order('art_id desc')->select();
+		$a2=$art->field('art_id,art_title')->where($where2)->limit('5')->order('art_id desc')->select();
 		
 		$this->assign('arts',$arts);
 		$this->assign('a1',$a1);
 		$this->assign('a2',$a2);
+
+		
 		$this->display();
 	}
 	
@@ -306,6 +355,7 @@ class IndexController extends Controller {
 		//更新数据库
 		$art->where("art_id=$id")->save(); 
 		
+		$location=$this->showLocationOfArt($art,$id);
 		//取出文章数据
 		$arts=$art->where("art_id=$id")->find();
 		$topid=$arts['art_topid'];
@@ -329,10 +379,10 @@ class IndexController extends Controller {
 		
 		//根据id取出文章标题
 		if($prev<0){
-		$prev_title='没有文章了!';
+			$prev_title='没有文章了!';
 			
 		}else{
-		$prev_title=$art->where("art_id=$prev_id")->getField('art_title');
+			$prev_title=$art->where("art_id=$prev_id")->getField('art_title');
 			
 		}
 		
@@ -344,6 +394,9 @@ class IndexController extends Controller {
 				
 		}
 		
+		//根据文章id平凑当前位置字符串
+		$location=$this->showLocationOfArt($art,$id);
+		$this->assign('location',$location);
 		
 		//赋值到模版
 		
@@ -357,5 +410,61 @@ class IndexController extends Controller {
 		$this->assign('arts',$arts);
 		$this->display();
 		
+	}
+	
+	public function showLocationOfList($pro){
+		//定义字符串
+		$location="当前位置:<a href='http://www.mynote2.com'>主页</a> > ";
+		//获取uri
+		$loc=$_SERVER['PHP_SELF'];
+		
+		//截取方法名,并拼凑到字符串
+		$loc=substr($loc,strpos($loc, 'ndex/')+5);
+		//判断是否有/u参数
+		$stop=strpos($loc, '/u');
+		
+		//截取字符串获取当前方法名
+		if(!strstr($loc,'/',true)){
+			$func=$loc;
+		}else{
+			$func=strstr($loc,'/',true);
+		}
+		
+		$name1=$pro->where("pro_url='$func'")->getField('pro_name');
+		$location.="<a href='http://www.mynote2.com/index.php/index/$func'>$name1</a>";
+		
+		//如果没有/u参数,返回当前拼凑好的字符串
+		if(!$stop){
+			return $location;
+		}
+		
+		//如果有/u参数,截取u参数,并拼凑到字符串中
+		$loc=substr($loc,strpos($loc,'/u/')+3);
+			//截取字符串获取当前方法名
+		if(!strstr($loc,'/',true)){
+			$u=$loc;
+		}else{
+			$u=strstr($loc,'/',true);
+		}
+		$name2=$pro->where("pro_url='$u'")->getField('pro_name');
+		$location.="> <a href='http://www.mynote2.com/index.php/index/$func/u/$u'>$name2</a>";
+		return $location;
+	}
+	
+	private function showLocationOfArt($art,$id){
+		//初始化字符串
+		$location="当前位置:<a href='http://www.mynote2.com'>主页</a> > ";
+		//根据$id获取所属栏目和顶级栏目名和url
+		$programOfArt=$art->alias('a')->where("art_id=$id")->field('a.art_topid,p.pro_name,p.pro_url,p.pro_topid')
+		->join('left join tp_program p on a.art_topid=p.pro_id') ->find();
+
+		//根据$programOfArt['pro_topid'],获取顶级栏目名和url
+		$id=$programOfArt['pro_topid'];
+		$pro=M('program');
+		$programOfTop=$pro->field('pro_name,pro_url')->where("pro_id=$id")->find();
+		
+		$location.="<a href='http://www.mynote2.com/index.php/index/{$programOfTop["pro_url"]}'>{$programOfTop['pro_name']}</a>";
+		$location.=" > <a href='http://www.mynote2.com/index.php/index/{$programOfTop["pro_url"]}/u/{$programOfArt["pro_url"]}'>{$programOfArt['pro_name']}</a>";
+		return $location;
 	}
 }

@@ -12,10 +12,21 @@
 <!--[if lt IE 9]>
 <script src="__JS__/modernizr.js"></script>
 <![endif]-->
+<script src='__JS__/jquery-1.12.0.min.js'></script>
+<script>
+$().ready(function(){
+	var loc=$('.about_h>a:eq(1)').attr('href');
+	var list=$('#topnav>a');
 
+ 	for(var i=0;i<list.length;i++){
+		if(list[i]==loc){
+			var id=i;
+		}
+ 	}
+ 	$('#topnav>a:eq('+id+')').attr('id','topnav_current');
 
-
-
+});
+</script>
 </head>
 
 
@@ -33,7 +44,7 @@
 
 
 
-    <h2 class="about_h">当前位置：dede:field.position /</h2>
+    <h2 class="about_h">{$location}</h2>
 	<div class="bloglist">
 
 	    <volist name='arts' id='a'> 
@@ -59,7 +70,7 @@
 
 
 
-  <script src="__JS__/silder.js"></script>
+
   <div class="clear"></div>
  </div>
 

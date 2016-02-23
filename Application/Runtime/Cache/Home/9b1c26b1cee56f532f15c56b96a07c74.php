@@ -12,6 +12,13 @@
 <!--[if lt IE 9]>
 <script src="/Js/modernizr.js"></script>
 <![endif]-->
+<script src='/Js/jquery-1.12.0.min.js'></script>
+<script>
+$().ready(function(){
+	$('#topnav>a:first').attr('id','topnav_current');
+	alert(window.location.href);
+});
+</script>
 
 </head>
 <body>
@@ -20,9 +27,10 @@
     <h1>天启的个人博客</h1>
     <h2>fighting!!!.....目标,很牛的phper!!!</h2>
     <div class="logo"><a href="http://www.mynote2.com"></a></div>
-    <nav id="topnav"><a href="http://www.mynote2.com">首页</a>
+    <nav id="topnav">
+      <a href="http://www.mynote2.com">首页</a>
 	<a href="http://www.mynote2.com/index.php/index/fitness">健身世界</a>
-	<a href="http://www.mynote2.com/index.php/index/program">编程世界</a>
+	<a href="http://www.mynote2.com/index.php/index/program">IT世界</a>
 	<a href="http://www.mynote2.com/index.php/index/about">关于天启</a>
 	<a href="https://github.com/billywl">Github</a>
 	</nav>
@@ -31,7 +39,7 @@
   <article>
     <div class="banner">
       <ul class="texts">
-        <p> 健身是一种态度,需要坚持!!! </p>
+        <p id='p'> 健身是一种态度,需要坚持!!! </p>
         <p> 编程更是一种信仰,我相信,我的指尖会具有改变世界的力量!!!</p>
       </ul>
     </div>
@@ -96,7 +104,6 @@
       </ul>
     </div>
   </aside> 
-  <script src="/Js/silder.js"></script>
   <div class="clear"></div>
   <!-- 清除浮动 --> 
 </div>

@@ -38,10 +38,7 @@ $().ready(function() {
 </script>
 </head>
 <body>
-        <div class='extend' text-align='center'>
-		<?php if(is_array($pros)): $i = 0; $__LIST__ = $pros;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$p): $mod = ($i % 2 );++$i;?><a href="http://www.mynote2.com/index.php/index/<?php echo ($t_url); ?>/u/<?php echo ($p["pro_url"]); ?>"><?php echo ($p["pro_name"]); ?> |</a><?php endforeach; endif; else: echo "" ;endif; ?>
-		</div>
-		
+
 <div class="ibody">
   <header>
     <h1>天启的个人博客</h1>
@@ -49,14 +46,14 @@ $().ready(function() {
     <div class="logo"><a href="http://www.mynote2.com"></a></div>
     <nav id="topnav"><a href="http://www.mynote2.com">首页</a>
 	<a href="http://www.mynote2.com/index.php/index/fitness">健身世界</a>
-	<a href="http://www.mynote2.com/index.php/index/program">编程世界</a>
+	<a href="http://www.mynote2.com/index.php/index/program">IT世界</a>
 	<a href="http://www.mynote2.com/index.php/index/about">关于天启</a>
 	<a href="https://github.com/billywl">Github</a>
 	</nav>
   </header>
 
   <article>
-    <h2 class="about_h">当前位置：{dede:field.position /}</h2>
+    <h2 class="about_h"><?php echo ($location); ?></h2>
     <div class="index_about">
       <h2 class="c_titile"><?php echo ($arts["art_title"]); ?></h2>
       <p class="box_c"><span class="d_time">发布时间：<?php echo (date('m.d',$arts["art_time"])); ?></span>

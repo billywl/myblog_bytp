@@ -12,6 +12,12 @@
 <!--[if lt IE 9]>
 <script src="__JS__/modernizr.js"></script>
 <![endif]-->
+<script src='__JS__/jquery-1.12.0.min.js'></script>
+<script>
+$().ready(function(){
+	$('#topnav>a:first').attr('id','topnav_current');
+});
+</script>
 
 </head>
 <body>
@@ -20,7 +26,7 @@
   <article>
     <div class="banner">
       <ul class="texts">
-        <p> 健身是一种态度,需要坚持!!! </p>
+        <p id='p'> 健身是一种态度,需要坚持!!! </p>
         <p> 编程更是一种信仰,我相信,我的指尖会具有改变世界的力量!!!</p>
       </ul>
     </div>
@@ -44,7 +50,6 @@
 
   </article>
   <include file="aside" /> 
-  <script src="__JS__/silder.js"></script>
   <div class="clear"></div>
   <!-- 清除浮动 --> 
 </div>

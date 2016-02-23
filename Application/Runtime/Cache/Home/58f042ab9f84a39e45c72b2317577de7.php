@@ -12,10 +12,21 @@
 <!--[if lt IE 9]>
 <script src="/Js/modernizr.js"></script>
 <![endif]-->
+<script src='/Js/jquery-1.12.0.min.js'></script>
+<script>
+$().ready(function(){
+	var loc=$('.about_h>a:eq(1)').attr('href');
+	var list=$('#topnav>a');
 
+ 	for(var i=0;i<list.length;i++){
+		if(list[i]==loc){
+			var id=i;
+		}
+ 	}
+ 	$('#topnav>a:eq('+id+')').attr('id','topnav_current');
 
-
-
+});
+</script>
 </head>
 
 
@@ -25,9 +36,10 @@
     <h1>天启的个人博客</h1>
     <h2>fighting!!!.....目标,很牛的phper!!!</h2>
     <div class="logo"><a href="http://www.mynote2.com"></a></div>
-    <nav id="topnav"><a href="http://www.mynote2.com">首页</a>
+    <nav id="topnav">
+      <a href="http://www.mynote2.com">首页</a>
 	<a href="http://www.mynote2.com/index.php/index/fitness">健身世界</a>
-	<a href="http://www.mynote2.com/index.php/index/program">编程世界</a>
+	<a href="http://www.mynote2.com/index.php/index/program">IT世界</a>
 	<a href="http://www.mynote2.com/index.php/index/about">关于天启</a>
 	<a href="https://github.com/billywl">Github</a>
 	</nav>
@@ -42,7 +54,7 @@
 
 
 
-    <h2 class="about_h">当前位置：dede:field.position /</h2>
+    <h2 class="about_h"><?php echo ($location); ?></h2>
 	<div class="bloglist">
 
 	    <?php if(is_array($arts)): $i = 0; $__LIST__ = $arts;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a): $mod = ($i % 2 );++$i;?><div class="newblog">
@@ -100,7 +112,7 @@
 
 
 
-  <script src="/Js/silder.js"></script>
+
   <div class="clear"></div>
  </div>
 

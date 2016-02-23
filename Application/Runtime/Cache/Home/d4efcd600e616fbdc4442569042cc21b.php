@@ -11,9 +11,8 @@
 <link href="/Style/media.css" rel="stylesheet">
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
 <!--[if lt IE 9]>
-<script src="{dede:global.cfg_templets_skin/}/js/modernizr.js"></script>
+<script src="/Js/modernizr.js"></script>
 <![endif]-->
-<meta http-equiv="mobile-agent" content="format=xhtml;url={dede:global.cfg_mobileurl/}/view.php?aid={dede:field.id/}">
 </head>
 <body>
 <div class="ibody">
@@ -21,16 +20,17 @@
     <h1>天启的个人博客</h1>
     <h2>fighting!!!.....目标,很牛的phper!!!</h2>
     <div class="logo"><a href="http://www.mynote2.com"></a></div>
-    <nav id="topnav"><a href="http://www.mynote2.com">首页</a>
+    <nav id="topnav">
+      <a href="http://www.mynote2.com">首页</a>
 	<a href="http://www.mynote2.com/index.php/index/fitness">健身世界</a>
-	<a href="http://www.mynote2.com/index.php/index/program">编程世界</a>
+	<a href="http://www.mynote2.com/index.php/index/program">IT世界</a>
 	<a href="http://www.mynote2.com/index.php/index/about">关于天启</a>
 	<a href="https://github.com/billywl">Github</a>
 	</nav>
   </header>
 
   <article>
-    <h2 class="about_h">当前位置：{dede:field.position /}</h2>
+    <h2 class="about_h">当前位置:<a href='http://www.mynote2.com'>主页</a> > <a href='http://www.mynote2.com/index.php/index/about'>关于天启</a></h2></h2>
     <div class="index_about">
       <h2 class="c_titile"><?php echo ($arts["art_title"]); ?></h2>
       <p class="box_c"><span class="d_time">发布时间：<?php echo (date('m.d',$arts["art_time"])); ?></span>
