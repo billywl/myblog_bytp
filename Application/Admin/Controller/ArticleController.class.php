@@ -41,48 +41,73 @@ class ArticleController extends CheckController{
 			$this->assign('list',Tree::tree($list));
 			$this->display();			
 		}else{
-			//如果 有post数据
+			//如果 有post数据		
+
+			//接收文件信息
+			$info=$this->getUpLoadFile();
+			if(!$info) {
+				// 上传错误提示错误信息
+				$this->error('图片上传失败');
+				return;
+			}
+			
+			//生成图片文件的缩略图并打上为文字水印
+			$this->getThumbAndWater ($info);
+		
 			//实例化模型
-			$art=D('article');
+			 $art=D('article');
 			
-			//添加时间戳
-			$_POST['art_time']=time();
+			 //添加时间戳
+			 $_POST['art_time']=time();
 			
-			//自动填写以下空白数据
-			$_POST['keyword']=$_POST['keyword']!=''?$_POST['keyword']:$_POST['title'];
-			$_POST['description']=$_POST['description']!=''?$_POST['description']:substr($_POST['body'], 0,30);
-			$_POST['writer']=$_POST['writer']!=''?$_POST['writer']:'天启';
-			$_POST['source']=$_POST['source']!=''?$_POST['source']:'原创';
+			 //添加图片的缩略图url
+			$_POST['purl']="{$info['purl']['savepath']}thumb.{$info['purl']['savename']}";
+			 //自动填写以下空白数据
+			 $_POST['keyword']=$_POST['keyword']!=''?$_POST['keyword']:$_POST['title'];
+			 $_POST['writer']=$_POST['writer']!=''?$_POST['writer']:'天启';
+			 $_POST['source']=$_POST['source']!=''?$_POST['source']:'原创';			 
+			 $_POST['description']=$_POST['description']!=''?$_POST['description']:substr($_POST['body'], 0,40);
+			 
+			 //实体化并过滤掉html标签
+			 $_POST['description'] =   preg_replace("/<(.*?)>/",'',htmlspecialchars_decode($_POST['description']));
 
-			if(!$_POST['title']){
-				die();
-			}
+			 if(!$_POST['title']){
+			 die();
+			 }
 			
-			if(!$_POST['topid']){
-				die();
-			}
+			 if(!$_POST['topid']){
+			 die();
+			 }
 			
- 			//如果传来的topid为不存在的栏目,终止
- 			$pro=D('program');
-			$id=$_POST['topid'];
+			 //如果传来的topid为不存在的栏目,终止
+			 $pro=D('program');
+			 $id=$_POST['topid'];
+			
+			 $flag=$pro->where("pro_id=$id")->find();
+			 if (!$flag){
+			 die();
+			 }
+			
+			 //用create()方法创建数据
+			 $art->create();
 
-			$flag=$pro->where("pro_id=$id")->find();			
-			if (!$flag){
-				die();
-			} 
-			
-			//用create()方法创建数据
-			$art->create();
-			
-			//将数据写入数据库
-			if($art->add()){
-				$this->success('添加成功','add');
-			}else{
-				//添加失败
-				$this->error('添加失败','add');
-			}			
+		//	$art->art_body=$_POST['body'];
+
+
+			 //将数据写入数据库
+			 if($art->add()){
+			 $this->success('添加成功','add');
+			 }else{
+			 //添加失败
+			 $this->error('添加失败','add');
+			 }	
 		} 
 	}
+
+		
+
+	
+
 	
 	/**
 	 * 编辑文章页面
@@ -226,4 +251,42 @@ class ArticleController extends CheckController{
 			}
 		}
 	}
-}
+	
+	/**
+	 * 接收表单的提交的图片并保存
+	 * @return $info mixed 上传成功为图片的信息,失败为false
+	 */
+	private function getUpLoadFile(){
+		$upload = new \Think\Upload();// 实例化上传类
+		$upload->maxSize   =     3145728 ;// 设置附件上传大小
+		$upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
+		$upload->rootPath  =     './Uploads/'; // 设置附件上传根目录
+		$upload->savePath  =     ''; // 设置附件上传（子）目录
+		// 上传文件
+		$info   =   $upload->upload();
+		return  $info;
+	}
+	
+	/**
+	 * 生成图片文件的缩略图并打上为文字水印
+	 * @param $info tp方式获取的上传图片信息
+	 */
+	 private function getThumbAndWater($info) {
+		 //实例化图片类
+		$image = new \Think\Image();
+		//打开上传的图片
+		$image->open("./Uploads/{$info['purl']['savepath']}{$info['purl']['savename']}");
+		
+		//生成缩略图
+		$image->thumb(200, 150,\Think\Image::IMAGE_THUMB_FIXED)->save("./Uploads/{$info['purl']['savepath']}thumb.{$info['purl']['savename']}");
+		
+		// 缩略图添加文字水印
+		$image->text('会健身的程序员','./Uploads/cai.ttf',10,'#ff5151',9)
+		->save("./Uploads/{$info['purl']['savepath']}thumb.{$info['purl']['savename']}");
+		
+		// 给原图添加文字水印
+		$image->open("./Uploads/{$info['purl']['savepath']}{$info['purl']['savename']}")
+		->text('会健身的程序员','./Uploads/cai.ttf',30,'#ff5151',9)
+		->save("./Uploads/{$info['purl']['savepath']}{$info['purl']['savename']}");
+	}
+}	

@@ -24,7 +24,6 @@ $().ready(function(){
 		}
  	}
  	$('#topnav>a:eq('+id+')').attr('id','topnav_current');
-
 });
 </script>
 </head>
@@ -34,7 +33,7 @@ $().ready(function(){
 <div class="ibody">
   <header>
     <h1>天启的个人博客</h1>
-    <h2>fighting!!!.....目标,很牛的phper!!!</h2>
+    <h2>fighting!!为梦想去努力的路不会觉得累!!!</h2>
     <div class="logo"><a href="http://www.mynote2.com"></a></div>
     <nav id="topnav">
       <a href="http://www.mynote2.com">首页</a>
@@ -60,13 +59,14 @@ $().ready(function(){
 	    <?php if(is_array($arts)): $i = 0; $__LIST__ = $arts;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a): $mod = ($i % 2 );++$i;?><div class="newblog">
         <ul>
           <h3><a href="http://www.mynote2.com/index.php/index/art/id/<?php echo ($a["art_id"]); ?>"><?php echo ($a["art_title"]); ?></a></h3>
-          <div class="autor"><span><?php echo ($a["art_writer"]); ?></span>
-		  <span>分类：{a.pro_name}</span>
-		  <span>浏览(<a href="/"><?php echo ($a["art_click"]); ?></a>)</span>
-		  <span>来源(<a href="/"><?php echo ($a["art_source"]); ?></a>)</span></div>
-          <p><?php echo ($a["art_description"]); ?><a href="http://www.mynote2.com/index.php/index/art/id/<?php echo ($a["art_id"]); ?>" class="readmore">全文</a></p>
+          <div class="autor">作者: <span class='sp'><?php echo ($a["art_writer"]); ?></span>
+		  <span>所属栏目【 <span class='sp'><?php echo ($a["pro_name"]); ?></span>】</span>
+		  <span>浏览 ( <span class='sp'><?php echo ($a["art_click"]); ?></span>)</span>
+		  <span>来源 ( <span class='sp'><?php echo ($a["art_source"]); ?></span>)</span></div>
+          <p><?php echo ($a["art_description"]); ?><a href="http://www.mynote2.com/index.php/index/art/id/<?php echo ($a["art_id"]); ?>" class="readmore">阅读全文</a></p>
 		  
         </ul>
+        <figure><img src="http://www.mynote2.com/uploads/<?php echo ($a["art_purl"]); ?>" ></figure>
         <div class="dateview"><?php echo (date('m.d号',$a["art_time"])); ?></div>
       </div>
 	  <!-- /listbox --><?php endforeach; endif; else: echo "" ;endif; ?>
@@ -89,7 +89,7 @@ $().ready(function(){
         <p>文章推荐</p>
       </h2>
       <ul>
-      <?php if(is_array($a2)): $i = 0; $__LIST__ = $a2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a2): $mod = ($i % 2 );++$i;?><li><span class="num<?php echo ($i); ?>"><?php echo ($i); ?></span><a href="http://www.mynote2.com/index.php/index/art/id/<?php echo ($a2["art_id"]); ?>"><?php echo ($a2["art_title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+      <?php if(is_array($a2)): $i = 0; $__LIST__ = $a2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a2): $mod = ($i % 2 );++$i;?><li><a href="http://www.mynote2.com/index.php/index/art/id/<?php echo ($a2["art_id"]); ?>"><?php echo ($a2["art_title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
       </ul>
 	      <div class="links">
       <h2>

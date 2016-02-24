@@ -31,7 +31,21 @@ $().ready(function() {
 			event.preventDefault();
 			window.event.returnValue=false;
 		}
-	})
+	})	
+	
+	//获取当前页面中当前位置中的栏目url
+	var loc=$('.about_h>a:eq(1)').attr('href');
+	
+	//获取head.html中的所有a标签中的url
+	var list=$('#topnav>a');
+	
+	//循环比较,如果哪个url和栏目url相等,设置属性id=topnav_current,高亮
+ 	for(var i=0;i<list.length;i++){
+		if(list[i]==loc){
+			var id=i;
+		}
+ 	}
+ 	$('#topnav>a:eq('+id+')').attr('id','topnav_current');
 	
 });
 
@@ -65,7 +79,6 @@ $().ready(function() {
   </article>
 
 <include file='subaside' />
-  <script src="__JS__/silder.js"></script>
   <div class="clear"></div>
   <!-- 清除浮动 --> 
 </div>

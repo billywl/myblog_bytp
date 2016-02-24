@@ -31,7 +31,21 @@ $().ready(function() {
 			event.preventDefault();
 			window.event.returnValue=false;
 		}
-	})
+	})	
+	
+	//获取当前页面中当前位置中的栏目url
+	var loc=$('.about_h>a:eq(1)').attr('href');
+	
+	//获取head.html中的所有a标签中的url
+	var list=$('#topnav>a');
+	
+	//循环比较,如果哪个url和栏目url相等,设置属性id=topnav_current,高亮
+ 	for(var i=0;i<list.length;i++){
+		if(list[i]==loc){
+			var id=i;
+		}
+ 	}
+ 	$('#topnav>a:eq('+id+')').attr('id','topnav_current');
 	
 });
 
@@ -44,7 +58,8 @@ $().ready(function() {
     <h1>天启的个人博客</h1>
     <h2>fighting!!!.....目标,很牛的phper!!!</h2>
     <div class="logo"><a href="http://www.mynote2.com"></a></div>
-    <nav id="topnav"><a href="http://www.mynote2.com">首页</a>
+    <nav id="topnav">
+      <a href="http://www.mynote2.com">首页</a>
 	<a href="http://www.mynote2.com/index.php/index/fitness">健身世界</a>
 	<a href="http://www.mynote2.com/index.php/index/program">IT世界</a>
 	<a href="http://www.mynote2.com/index.php/index/about">关于天启</a>
@@ -110,7 +125,6 @@ $().ready(function() {
       </ul>
     </div>
   </aside>
-  <script src="/Js/silder.js"></script>
   <div class="clear"></div>
   <!-- 清除浮动 --> 
 </div>

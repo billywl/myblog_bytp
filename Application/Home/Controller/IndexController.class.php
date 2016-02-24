@@ -7,7 +7,7 @@ class IndexController extends Controller {
 		$art=M('article');
 		$pro=M('program');
 		//联合查询取出文章数据和所属栏目
-		$arts=$art->alias('a')->field('a.art_title,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
+		$arts=$art->alias('a')->field('a.art_id,a.art_title,a.art_purl,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
 		->where('a.art_topid>0')->limit('5')->join('left join tp_program p on a.art_topid=p.pro_id')->order('art_id desc')->select();
 		
 		//取出健身世界和程序世界下的子栏目
@@ -70,7 +70,7 @@ class IndexController extends Controller {
 			
 
 			//联合查询取出文章数据和所属栏目
-			$arts=$art->alias('a')->field('a.art_id,a.art_title,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
+			$arts=$art->alias('a')->field('a.art_id,a.art_purl,a.art_title,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
 			->where($where1)->limit($page->firstRow.','.$page->listRows)->order('art_id desc')->join('left join tp_program p on a.art_topid=p.pro_id')->select();
 			
 
@@ -137,7 +137,7 @@ class IndexController extends Controller {
 			
 		
 		//联合查询取出文章数据和所属栏目
-		$arts=$art->alias('a')->field('a.art_title,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
+		$arts=$art->alias('a')->field('a.art_title,a.art_purl,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
 		->where("art_topid=$id")->limit($page->firstRow.','.$page->listRows)->order('art_id desc')->join('left join tp_program p on a.art_topid=p.pro_id')->select();
 			
 		
@@ -204,7 +204,7 @@ class IndexController extends Controller {
 			
 
 			//联合查询取出文章数据和所属栏目
-			$arts=$art->alias('a')->field('a.art_id,a.art_title,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
+			$arts=$art->alias('a')->field('a.art_id,a.art_purl,a.art_title,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
 			->where($where1)->limit($page->firstRow.','.$page->listRows)->order('art_id desc')->join('left join tp_program p on a.art_topid=p.pro_id')->select();
 			
 
@@ -271,7 +271,7 @@ class IndexController extends Controller {
 			
 		
 		//联合查询取出文章数据和所属栏目
-		$arts=$art->alias('a')->field('a.art_id,a.art_title,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
+		$arts=$art->alias('a')->field('a.art_id,a.art_purl,a.art_title,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
 		->where("art_topid=$id")->limit($page->firstRow.','.$page->listRows)->order('art_id desc')->join('left join tp_program p on a.art_topid=p.pro_id')->select();
 			
 		
@@ -311,7 +311,11 @@ class IndexController extends Controller {
 		$art=M('article');
 		$pro=M('program');
 		
+		//取出个人简介数据
 		$arts=$art->where('art_topid=-1')->find();
+		
+		//将取出的文章内容进行实体标签转换
+		$arts['art_body']=html_entity_decode($arts['art_body']);
 			
 		//取出健身世界和程序世界下的子栏目
 		$pros1=$pro->field('pro_id,pro_name,pro_url')->where('pro_topid=1')->select();
@@ -359,6 +363,9 @@ class IndexController extends Controller {
 		//取出文章数据
 		$arts=$art->where("art_id=$id")->find();
 		$topid=$arts['art_topid'];
+		
+		//将取出的文章内容进行实体标签转换
+		$arts['art_body']=htmlspecialchars_decode($arts['art_body']);
 		
 		//查询取出本栏目点击最高的5篇文章标题
 		$a1=$art->field('art_id,art_title')->where("art_topid=$topid")->limit('5')->order('art_click')->select();

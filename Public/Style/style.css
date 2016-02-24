@@ -4,7 +4,7 @@
 .about_h a { color: #666; margin: 0 5px; }
 .about_h a:hover { color: #e41635 }
 .newblog { margin: 0 20px 20px 20px; border-bottom: #dcdcdc 1px dashed; position: relative; clear: both; display: inline-block; padding-bottom: 20px; }
-.newblog h3 { font-size: 14px; font-weight: bold; margin-bottom: 10px }
+.newblog h3 { font-weight: bold; margin-bottom: 10px }
 .newblog h3 a { color: #181818; }
 .newblog h3 a:hover { text-decoration: underline }
 .newblog ul { float: left; line-height: 20px; width: 72%; color: #474645; }
@@ -76,3 +76,7 @@ ul.infos p img { display: block; margin: auto }
 .template li span { color: #fff; display: block; text-align: center; margin-top: 5px; width: 142px; overflow: hidden; text-overflow: ellipsis; height: 14px }
 .template li:hover { background: #666; padding: 5px 5px 6px 5px; }
 a.more { position: absolute; right: 0; top: 4px; color: #666; font-size: 12px }
+.sp {
+    color: #0f9c7c;
+    font-weight: bold;
+}

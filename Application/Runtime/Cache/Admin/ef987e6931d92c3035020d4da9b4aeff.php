@@ -132,7 +132,7 @@ function hid(){
                                                     <tr>
                                                         <td width="2%">&nbsp;</td>
                                                         <td>文章简介：</td>
-                                                        <td width="20%"><textarea name='<?php echo ($dataes["art_description"]); ?>' ></textarea></td>
+                                                        <td width="20%"><textarea name='description' ><?php echo ($dataes["art_description"]); ?></textarea></td>
                                                         <td width="2%">&nbsp;</td>
                                                     </tr>         
                                                     <tr>

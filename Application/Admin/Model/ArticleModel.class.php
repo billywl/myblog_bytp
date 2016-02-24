@@ -14,6 +14,7 @@ class ArticleModel extends Model {
 			'description'=>'art_description',
 			'keyword'=>'art_keyword',
 			'body'=>'art_body',
+			'purl'=>'art_purl',
 	);
 	
 
