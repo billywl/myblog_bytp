@@ -56,13 +56,13 @@ $().ready(function() {
 <div class="ibody">
   <header>
     <h1>天启的个人博客</h1>
-    <h2>fighting!!!.....目标,很牛的phper!!!</h2>
+    <h2>fighting!为梦想去努力的路不会觉得累!!!</h2>
     <div class="logo"><a href="http://www.mynote2.com"></a></div>
     <nav id="topnav">
       <a href="http://www.mynote2.com">首页</a>
-	<a href="http://www.mynote2.com/index.php/index/fitness">健身世界</a>
-	<a href="http://www.mynote2.com/index.php/index/program">IT世界</a>
-	<a href="http://www.mynote2.com/index.php/index/about">关于天启</a>
+	<a href="http://www.mynote2.com/index.php/index/fitness.html">健身世界</a>
+	<a href="http://www.mynote2.com/index.php/index/program.html">IT世界</a>
+	<a href="http://www.mynote2.com/index.php/index/about.html">关于天启</a>
 	<a href="https://github.com/billywl">Github</a>
 	</nav>
   </header>
@@ -84,28 +84,28 @@ $().ready(function() {
 
      
       <div class="nextinfo">
-        <p>上一篇:<a  id='pre' href='http://www.mynote2.com/index.php/index/art/id/<?php echo ($prev_id); ?>'><?php echo ($prev_title); ?></a></p>
-        <p>下一篇:<a id='nex' href='http://www.mynote2.com/index.php/index/art/id/<?php echo ($next_id); ?>'><?php echo ($next_title); ?></a></p>
+        <p>上一篇:<a  id='pre' href='http://www.mynote2.com/index.php/index/art/id/<?php echo ($prev_id); ?>.html'><?php echo ($prev_title); ?></a></p>
+        <p>下一篇:<a id='nex' href='http://www.mynote2.com/index.php/index/art/id/<?php echo ($next_id); ?>.html'><?php echo ($next_title); ?></a></p>
       </div>
     </div>
   </article>
 
   <aside>
     <div class="rnav">
-		<?php if(is_array($pros)): $i = 0; $__LIST__ = $pros;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$p): $mod = ($i % 2 );++$i;?><li class="rnav<?php echo ($i); ?>"><a href="http://www.mynote2.com/index.php/index/<?php echo ($t_url); ?>/u/<?php echo ($p["pro_url"]); ?>"><?php echo ($p["pro_name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+		<?php if(is_array($pros)): $i = 0; $__LIST__ = $pros;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$p): $mod = ($i % 2 );++$i;?><li class="rnav<?php echo ($i); ?>"><a href="http://www.mynote2.com/index.php/index/<?php echo ($t_url); ?>/u/<?php echo ($p["pro_url"]); ?>.html"><?php echo ($p["pro_name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
     </div>
     <div class="ph_news">
       <h2>
         <p>点击排行</p>
       </h2>
       <ul class="ph_n">
-      <?php if(is_array($a1)): $i = 0; $__LIST__ = $a1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a1): $mod = ($i % 2 );++$i;?><li><span class="num<?php echo ($i); ?>"><?php echo ($i); ?></span><a href="http://www.mynote2.com/index.php/index/art/id/<?php echo ($a1["art_id"]); ?>"><?php echo ($a1["art_title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+      <?php if(is_array($a1)): $i = 0; $__LIST__ = $a1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a1): $mod = ($i % 2 );++$i;?><li><span class="num<?php echo ($i); ?>"><?php echo ($i); ?></span><a href="http://www.mynote2.com/index.php/index/art/id/<?php echo ($a1["art_id"]); ?>.html"><?php echo ($a1["art_title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
       </ul>
       <h2>
         <p>文章推荐</p>
       </h2>
       <ul>
-      <?php if(is_array($a2)): $i = 0; $__LIST__ = $a2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a2): $mod = ($i % 2 );++$i;?><li><span class="num<?php echo ($i); ?>"><?php echo ($i); ?></span><a href="http://www.mynote2.com/index.php/index/art/id/<?php echo ($a2["art_id"]); ?>"><?php echo ($a2["art_title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+      <?php if(is_array($a2)): $i = 0; $__LIST__ = $a2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a2): $mod = ($i % 2 );++$i;?><li><a href="http://www.mynote2.com/index.php/index/art/id/<?php echo ($a2["art_id"]); ?>.html"><?php echo ($a2["art_title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
       </ul>
 	      <div class="links">
       <h2>

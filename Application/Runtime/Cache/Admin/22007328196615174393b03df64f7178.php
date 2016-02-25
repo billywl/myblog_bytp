@@ -36,7 +36,7 @@ window.onload = function(){
                 </td>
                 <td valign="top" background="/Images/content_bg.gif">
                     <table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" background=".//Images/content_bg.gif">
-                        <tr><td height="31"><div class="title">添加栏目</div></td></tr>
+                        <tr><td height="31"><div class="title">编辑栏目</div></td></tr>
                     </table>
                 </td>
                 <td width="16" valign="top" background="/Images/mail_right_bg.gif"><img src="/Images/nav_right_bg.gif" width="16" height="29" /></td>

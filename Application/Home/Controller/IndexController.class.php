@@ -2,6 +2,7 @@
 namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
+	//首页
 	public function index(){
 		//表取出数据
 		$art=M('article');
@@ -36,128 +37,12 @@ class IndexController extends Controller {
 		
 		$this->display();
     }
-    
-    //健身世界列表页
+     
+     //健身世界列表页
 	public function fitness(){
-			$title       = '健身世界';
-		
-		
-		//如果没有通过get传递u参数,name说明访问的顶级栏目
-    		if(!$_GET['u']){	    			
-	    		//实例化数据表
-	    		$art=M('article');
-			$pro=M('program');
-			
-			//取出健身世界下的子栏目
-			$pros=$pro->field('pro_id,pro_name,pro_url')->where('pro_topid=2')->select();
-		
-			//设定查询条件
-			for($i=0;$i<count($pros);$i++){
-				$proid[]=$pros[$i]['pro_id'];
-			}
-			$where1['pro_id']=array('in',$proid);
-			$where2['art_topid']=array('in',$proid);
-			
-			//获取查询到的中记录数
-			$count=$art->field('art_title')->where($where2)->count();
-
-			//实例化系统的分页类
-			$page       = new \Think\Page($count,3);
-			
-			//获取页脚输出的字符串
-			$show       = $page->show();
-			
-			
-
-			//联合查询取出文章数据和所属栏目
-			$arts=$art->alias('a')->field('a.art_id,a.art_purl,a.art_title,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
-			->where($where1)->limit($page->firstRow.','.$page->listRows)->order('art_id desc')->join('left join tp_program p on a.art_topid=p.pro_id')->select();
-			
-
-			//查询取出本栏目点击最高的5篇文章标题
-			$a1=$art->field('art_id,art_title')->where($where2)->limit('5')->order('art_click')->select();
-			//查询取出本栏目推荐的文章标题
-			$a2=$art->field('art_id,art_title')->where($where2)->where('art_recommend=1')->limit('5')->order('art_click')->select();
-			
-			//获取当前位置并赋值到模版
-			$location=$this->showLocationOfList($pro);
-			$this->assign('location',$location);
-			
-			//赋值到模版
-			$this->assign('title',$title);
-			$this->assign('a1',$a1);
-			$this->assign('a2',$a2);
-			$this->assign('pros',$pros);
-			$this->assign('arts',$arts);
-			$this->assign('show',$show);
-			
-			//方法名赋值给模版
-			$t_url=__METHOD__;
-			//获取方法名字符串
-			$ind=strpos($t_url,'::');
-			$t_url=substr($t_url,$ind+2);		
-			$this->assign('t_url',$t_url);
-			
-			//加载模版文件,然后返回
-	    		$this->display('list');
-	    		return ;
-    		}
-    		//如果有u参数循环判断
-    		$u=$_GET['u'];
-		$pro=M('program');
-		$pros=$pro->field('pro_id,pro_name,pro_url')->where('pro_topid=2')->select();
-    		//var_dump($pros);
-    		foreach($pros as $value){
-    			if($value['pro_url']==$u){
-    				$id=$value['pro_id'];
-    				break;
-    			}
-    		}
-    		//如果$id不为空说明访问的是子栏目
-		if(!$id){
-			$this->error('您访问的栏目不存在','../');
-		}   
-		
-		
-		//当$id不为空说明访问的是it的健身世界的子类栏目
-		//实例化数据表
-		$art=M('article');
-		$pro=M('program');
-		
-		
-		//获取查询到的中记录数
-		$count=$art->field('art_title')->where("art_topid=$id")->count();
-		
-		//实例化系统的分页类
-		$page       = new \Think\Page($count,3);
-			
-		//获取页脚输出的字符串
-		$show       = $page->show();
-			
-			
-		
-		//联合查询取出文章数据和所属栏目
-		$arts=$art->alias('a')->field('a.art_title,a.art_purl,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
-		->where("art_topid=$id")->limit($page->firstRow.','.$page->listRows)->order('art_id desc')->join('left join tp_program p on a.art_topid=p.pro_id')->select();
-			
-		
-		//查询取出本栏目点击最高的5篇文章标题
-		$a1=$art->field('art_id,art_title')->where("art_topid=$id")->limit('5')->order('art_click')->select();
-		//查询取出本栏目推荐的文章标题
-		$a2=$art->field('art_id,art_title')->where("art_topid=$id")->where('art_recommend=1')->limit('5')->order('art_click')->select();
-			
-			
-		//获取当前位置并赋值到模版
-		$location=$this->showLocationOfList($pro);
-		$this->assign('location',$location);
-		
-		//赋值到模版
-		$this->assign('title',$title);
-		$this->assign('a1',$a1);
-		$this->assign('a2',$a2);
-		$this->assign('pros',$pros);
-		$this->assign('arts',$arts);
-		$this->assign('show',$show);
+/* 		//网页标题栏标题
+		$title       = '健身世界';
+		$this->assign('title',$title);		
 		
 		//方法名赋值给模版
 		$t_url=__METHOD__;
@@ -165,185 +50,13 @@ class IndexController extends Controller {
 		$ind=strpos($t_url,'::');
 		$t_url=substr($t_url,$ind+2);
 		$this->assign('t_url',$t_url);
-		
-		//加载模版文件
-		$this->display('list');
-    		
-    }
-    
+		 */
+		$this->listArt(2);
+	}
+
       //程序世界列表页
-	public function program(){
-			$title       = 'IT世界';
-		
-		
-		//如果没有通过get传递u参数,name说明访问的顶级栏目
-    		if(!$_GET['u']){	    			
-	    		//实例化数据表
-	    		$art=M('article');
-			$pro=M('program');
-			
-			//取出IT世界下的子栏目
-			$pros=$pro->field('pro_id,pro_name,pro_url')->where('pro_topid=1')->select();
-		
-			//设定查询条件
-			for($i=0;$i<count($pros);$i++){
-				$proid[]=$pros[$i]['pro_id'];
-			}
-			$where1['pro_id']=array('in',$proid);
-			$where2['art_topid']=array('in',$proid);
-			
-			//获取查询到的中记录数
-			$count=$art->field('art_title')->where($where2)->count();
-
-			//实例化系统的分页类
-			$page       = new \Think\Page($count,3);
-			
-			//获取页脚输出的字符串
-			$show       = $page->show();
-			
-			
-
-			//联合查询取出文章数据和所属栏目
-			$arts=$art->alias('a')->field('a.art_id,a.art_purl,a.art_title,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
-			->where($where1)->limit($page->firstRow.','.$page->listRows)->order('art_id desc')->join('left join tp_program p on a.art_topid=p.pro_id')->select();
-			
-
-			//查询取出本栏目点击最高的5篇文章标题
-			$a1=$art->field('art_id,art_title')->where($where2)->limit('5')->order('art_click')->select();
-			//查询取出本栏目推荐的文章标题
-			$a2=$art->field('art_id,art_title')->where($where2)->where('art_recommend=1')->limit('5')->order('art_click')->select();
-			
-			//获取当前位置并赋值到模版
-			$location=$this->showLocationOfList($pro);
-			$this->assign('location',$location);
-			
-			//赋值到模版
-			$this->assign('title',$title);
-			$this->assign('a1',$a1);
-			$this->assign('a2',$a2);
-			$this->assign('pros',$pros);
-			$this->assign('arts',$arts);
-			$this->assign('show',$show);
-			
-			//方法名赋值给模版
-			$t_url=__METHOD__;
-			//获取方法名字符串
-			$ind=strpos($t_url,'::');
-			$t_url=substr($t_url,$ind+2);		
-			$this->assign('t_url',$t_url);
-			
-			//加载模版文件,然后返回
-	    		$this->display('list');
-	    		return ;
-    		}
-    		//如果有u参数循环判断
-    		$u=$_GET['u'];
-		$pro=M('program');
-		$pros=$pro->field('pro_id,pro_name,pro_url')->where('pro_topid=1')->select();
-    		//var_dump($pros);
-    		foreach($pros as $value){
-    			if($value['pro_url']==$u){
-    				$id=$value['pro_id'];
-    				break;
-    			}
-    		}
-    		//如果$id不为空说明访问的是子栏目
-		if(!$id){
-			$this->error('您访问的栏目不存在','../');
-		}   
-		
-		
-		//当$id不为空说明访问的是it的健身世界的子类栏目
-		//实例化数据表
-		$art=M('article');
-		$pro=M('program');
-		
-		
-		//获取查询到的中记录数
-		$count=$art->field('art_title')->where("art_topid=$id")->count();
-		
-		//实例化系统的分页类
-		$page       = new \Think\Page($count,3);
-			
-		//获取页脚输出的字符串
-		$show       = $page->show();
-			
-			
-		
-		//联合查询取出文章数据和所属栏目
-		$arts=$art->alias('a')->field('a.art_id,a.art_purl,a.art_title,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
-		->where("art_topid=$id")->limit($page->firstRow.','.$page->listRows)->order('art_id desc')->join('left join tp_program p on a.art_topid=p.pro_id')->select();
-			
-		
-		//查询取出本栏目点击最高的5篇文章标题
-		$a1=$art->field('art_id,art_title')->where("art_topid=$id")->limit('5')->order('art_click')->select();
-		//查询取出本栏目推荐的文章标题
-		$a2=$art->field('art_id,art_title')->where("art_topid=$id")->where('art_recommend=1')->limit('5')->order('art_click')->select();
-			
-		//获取当前位置并赋值到模版
-		$location=$this->showLocationOfList($pro);
-		$this->assign('location',$location);
-		
-		//赋值到模版
-		$this->assign('title',$title);
-		$this->assign('a1',$a1);
-		$this->assign('a2',$a2);
-		$this->assign('pros',$pros);
-		$this->assign('arts',$arts);
-		$this->assign('show',$show);
-
-		
-		//方法名赋值给模版
-		$t_url=__METHOD__;
-		//获取方法名字符串
-		$ind=strpos($t_url,'::');
-		$t_url=substr($t_url,$ind+2);
-		$this->assign('t_url',$t_url);
-		
-		//加载模版文件
-		$this->display('list');
-	    }
-	    
-	    
-	//个人简介页面
-	public function about(){
-		//获取简介的数据
-		$art=M('article');
-		$pro=M('program');
-		
-		//取出个人简介数据
-		$arts=$art->where('art_topid=-1')->find();
-		
-		//将取出的文章内容进行实体标签转换
-		$arts['art_body']=html_entity_decode($arts['art_body']);
-			
-		//取出健身世界和程序世界下的子栏目
-		$pros1=$pro->field('pro_id,pro_name,pro_url')->where('pro_topid=1')->select();
-		$pros2=$pro->field('pro_id,pro_name,pro_url')->where('pro_topid=2')->select();
-		
-		//设定查询条件
-		for($i=0;$i<count($pros1);$i++){
-			$proid1[]=$pros1[$i]['pro_id'];
-		}
-		$where1['art_topid']=array('in',$proid1);
-		
-		for($i=0;$i<count($pros2);$i++){
-			$proid2[]=$pros2[$i]['pro_id'];
-		}
-		$where2['art_topid']=array('in',$proid2);
-		
-
-		
-		//取出侧边栏数据
-		$a1=$art->field('art_id,art_title')->where($where1)->limit('5')->order('art_id desc')->select();
-		$a2=$art->field('art_id,art_title')->where($where2)->limit('5')->order('art_id desc')->select();
-		
-		$this->assign('arts',$arts);
-		$this->assign('a1',$a1);
-		$this->assign('a2',$a2);
-
-		
-		$this->display();
+	public function program(){		
+		$this->listArt(1);	
 	}
 	
 	//文章页面
@@ -419,7 +132,12 @@ class IndexController extends Controller {
 		
 	}
 	
-	public function showLocationOfList($pro){
+	/**
+	 * 列表页查询当前位置的方法
+	 * @param $pro program模型对象
+	 * @return string 拼凑好的当前位置字符串
+	 */
+	private function showLocationOfList($pro){
 		//定义字符串
 		$location="当前位置:<a href='http://www.mynote2.com'>主页</a> > ";
 		//获取uri
@@ -458,6 +176,12 @@ class IndexController extends Controller {
 		return $location;
 	}
 	
+	/**
+	 * 文章页查询当前位置的方法
+	 * @param $art article模型对象
+	 * @param $id 当前文章id
+	 * @return string 拼凑好的当前位置字符串
+	 */
 	private function showLocationOfArt($art,$id){
 		//初始化字符串
 		$location="当前位置:<a href='http://www.mynote2.com'>主页</a> > ";
@@ -474,4 +198,125 @@ class IndexController extends Controller {
 		$location.=" > <a href='http://www.mynote2.com/index.php/index/{$programOfTop["pro_url"]}/u/{$programOfArt["pro_url"]}'>{$programOfArt['pro_name']}</a>";
 		return $location;
 	}
+		
+	/**
+	 * 根据id来列出栏目内容
+	 * @param  $searchId 要列出的栏目id
+	 */
+	private function listArt($searchId){
+		//实例化数据表
+		$art=M('article');
+		$pro=M('program');
+		//取出本栏目的url
+		$t_url=$pro->where("pro_id=$searchId")->getField('pro_url');
+		$title=$pro->where("pro_id=$searchId")->getField('pro_name');
+		$this->assign('t_url',$t_url);
+		$this->assign('title',$title);
+		
+		
+		//如果没有通过get传递u参数,name说明访问的顶级栏目
+		if(!$_GET['u']){
+
+
+			//取出顶级栏目下的子栏目
+			$pros=$pro->field('pro_id,pro_name,pro_url')->where("pro_topid=$searchId")->select();
+		
+			//设定查询条件
+			for($i=0;$i<count($pros);$i++){
+				$proid[]=$pros[$i]['pro_id'];
+			}
+			$where1['pro_id']=array('in',$proid);
+			$where2['art_topid']=array('in',$proid);
+				
+			//获取查询到的中记录数
+			$count=$art->field('art_title')->where($where2)->count();
+		
+			//实例化系统的分页类
+			$page       = new \Think\Page($count,3);
+				
+			//获取页脚输出的字符串
+			$show       = $page->show();
+				
+				
+		
+			//联合查询取出文章数据和所属栏目
+			$arts=$art->alias('a')->field('a.art_id,a.art_purl,a.art_title,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
+			->where($where1)->limit($page->firstRow.','.$page->listRows)->order('art_id desc')->join('left join tp_program p on a.art_topid=p.pro_id')->select();
+				
+		
+			//查询取出本栏目点击最高的5篇文章标题
+			$a1=$art->field('art_id,art_title')->where($where2)->limit('5')->order('art_click')->select();
+			//查询取出本栏目推荐的文章标题
+			$a2=$art->field('art_id,art_title')->where($where2)->where('art_recommend=1')->limit('5')->order('art_click')->select();
+				
+			//获取当前位置并赋值到模版
+			$location=$this->showLocationOfList($pro);
+			$this->assign('location',$location);
+				
+			//赋值到模版
+			$this->assign('a1',$a1);
+			$this->assign('a2',$a2);
+			$this->assign('pros',$pros);
+			$this->assign('arts',$arts);
+			$this->assign('show',$show);
+		
+			//加载模版文件,然后返回
+			$this->display('list');
+			return ;
+		}
+		//如果有u参数循环判断要访问的子栏目
+		$u=$_GET['u'];
+		$pro=M('program');
+		$pros=$pro->field('pro_id,pro_name,pro_url')->where("pro_topid=$searchId")->select();
+
+		foreach($pros as $value){
+			if($value['pro_url']==$u){
+				$id=$value['pro_id'];
+				break;
+			}
+		}
+		//如果$id不为空说明访问的是子栏目
+		if(!$id){
+			$this->error('您访问的栏目不存在','../');
+		}
+		
+		
+		//当$id不为空说明访问的是it的健身世界的子类栏目
+				
+		//获取查询到的中记录数
+		$count=$art->field('art_title')->where("art_topid=$id")->count();
+		
+		//实例化系统的分页类
+		$page       = new \Think\Page($count,3);
+			
+		//获取页脚输出的字符串
+		$show       = $page->show();
+			
+			
+		
+		//联合查询取出文章数据和所属栏目
+		$arts=$art->alias('a')->field('a.art_id,a.art_title,a.art_purl,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
+		->where("art_topid=$id")->limit($page->firstRow.','.$page->listRows)->order('art_id desc')->join('left join tp_program p on a.art_topid=p.pro_id')->select();
+			
+		
+		//查询取出本栏目点击最高的5篇文章标题
+		$a1=$art->field('art_id,art_title')->where("art_topid=$id")->limit('5')->order('art_click')->select();
+		//查询取出本栏目推荐的文章标题
+		$a2=$art->field('art_id,art_title')->where("art_topid=$id")->where('art_recommend=1')->limit('5')->order('art_click')->select();
+			
+			
+		//获取当前位置并赋值到模版
+		$location=$this->showLocationOfList($pro);
+		$this->assign('location',$location);
+		
+		//赋值到模版
+		$this->assign('a1',$a1);
+		$this->assign('a2',$a2);
+		$this->assign('pros',$pros);
+		$this->assign('arts',$arts);
+		$this->assign('show',$show);
+		//加载模版文件
+		$this->display('list');
+	}
+
 }

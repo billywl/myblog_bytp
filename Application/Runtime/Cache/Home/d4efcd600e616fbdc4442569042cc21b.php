@@ -18,7 +18,7 @@
 <div class="ibody">
   <header>
     <h1>天启的个人博客</h1>
-    <h2>fighting!!!.....目标,很牛的phper!!!</h2>
+    <h2>fighting!为梦想去努力的路不会觉得累!!!</h2>
     <div class="logo"><a href="http://www.mynote2.com"></a></div>
     <nav id="topnav">
       <a href="http://www.mynote2.com">首页</a>
@@ -30,7 +30,7 @@
   </header>
 
   <article>
-    <h2 class="about_h">当前位置:<a href='http://www.mynote2.com'>主页</a> > <a href='http://www.mynote2.com/index.php/index/about'>关于天启</a></h2></h2>
+    <h2 class="about_h">当前位置:<a href='http://www.mynote2.com'>主页</a> > <a href='http://www.mynote2.com/index.php/index/about.html'>关于天启</a></h2></h2>
     <div class="index_about">
       <h2 class="c_titile"><?php echo ($arts["art_title"]); ?></h2>
       <p class="box_c"><span class="d_time">发布时间：<?php echo (date('m.d',$arts["art_time"])); ?></span>
@@ -44,16 +44,11 @@
         <p><span>关键字词</span>：<?php echo ($arts["art_keyword"]); ?></p>
       </div>
 
-     
-      <div class="nextinfo">
-        <p>{dede:prenext get='pre'/}</p>
-        <p>{dede:prenext get='next'/}</p>
-      </div>
     </div>
   </article>
 
 <aside>
-    <div class="avatar"><a href="http://23.252.105.140/a/about/"><span>关于站长</span></a></div>
+    <div class="avatar"><a href="http://www.mynote2.com/index.php/index/about.html"><span>关于天启</span></a></div>
     <div class="topspaceinfo">
       <h1>健身改变自己,指尖改变世界</h1>
       <p>我变得更好,才能让身边的人更幸福......</p>
@@ -70,13 +65,13 @@
         <p class="tj_t1">程序世界</p>
       </h2>
       <ul>
-			<?php if(is_array($a1)): $i = 0; $__LIST__ = $a1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a1): $mod = ($i % 2 );++$i;?><li><a href="http://www.mynote2.com/index.php/index/art/id/<?php echo ($a1["art_id"]); ?>"><?php echo ($a1["art_title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+			<?php if(is_array($a1)): $i = 0; $__LIST__ = $a1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a1): $mod = ($i % 2 );++$i;?><li><a href="http://www.mynote2.com/index.php/index/art/id/<?php echo ($a1["art_id"]); ?>.html"><?php echo ($a1["art_title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
       </ul>
       <h2>
         <p class="tj_t2">健身世界</p>
       </h2>
       <ul>
-			<?php if(is_array($a2)): $i = 0; $__LIST__ = $a2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a2): $mod = ($i % 2 );++$i;?><li><a href="http://www.mynote2.com/index.php/index/art/id/<?php echo ($a2["art_id"]); ?>"><?php echo ($a2["art_title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+			<?php if(is_array($a2)): $i = 0; $__LIST__ = $a2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a2): $mod = ($i % 2 );++$i;?><li><a href="http://www.mynote2.com/index.php/index/art/id/<?php echo ($a2["art_id"]); ?>.html"><?php echo ($a2["art_title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
       </ul>
     </div>
     <div class="links">

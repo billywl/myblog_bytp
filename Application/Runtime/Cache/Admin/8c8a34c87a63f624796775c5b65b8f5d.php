@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="/Style/skin.css" />
 </head>
     <body>
-        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <table width="100%" height="550"border="0" cellpadding="0" cellspacing="0">
             <!-- 头部开始 -->
             <tr>
                 <td width="17" valign="top" background="/Images/mail_left_bg.gif">
@@ -27,10 +27,7 @@
                     <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
                         <!-- 空白行-->
                         <tr><td colspan="2" valign="top">&nbsp;</td><td>&nbsp;</td><td valign="top">&nbsp;</td></tr>
-                        <!--**********这里是内容**********-->
-                        <!--**********这里是内容**********-->
-                        <!--**********这里是内容**********-->
-                        <!--**********这里是内容**********-->
+
                         <tr>
                             <!--左边内容-->
                             <td colspan="2" valign="top">
@@ -44,29 +41,7 @@
                             <td width="7%">&nbsp;</td>
                             <!--右边内容-->
                             <td width="40%" valign="top">
-                                <table width="100%" height="150" border="0" cellpadding="0" cellspacing="0" style="border: 1px solid #CCCCCC;">
-                                    <tr>
-                                        <td width="7%" height="27" background="/Images/news_title_bg.gif">
-                                            <img src="/Images/news_title_bg.gif" width="2" height="27">
-                                        </td>
-                                        <td width="93%" background="/Images/news_title_bg.gif" class="left_bt">最新动态</td>
-                                    </tr>
-                                    <tr><td height="5" colspan="2">&nbsp;</td></tr>
-                                    <tr>
-                                        <td height="100" valign="top" colspan="2" id="news">
-                                            <marquee direction="up" scrollamount="2" vspace="30px" width="400px" height="100px" onmouseout="this.start()" onmouseover="this.stop()">
-                                                <ul>
-                                                    <li>1</li>
-                                                    <li>2</li>
-                                                    <li>3</li>
-                                                    <li>4</li>
-                                                    <li>5</li>
-                                                </ul>
-                                            </marquee>
-                                        </td>
-                                    </tr>
-                                    <tr><td height="5" colspan="2">&nbsp;</td></tr>
-                                </table>
+
                             </td>
                         </tr>
                         <tr height="20"><td colspan="2" valign="top">&nbsp;</td><td>&nbsp;</td><td valign="top">&nbsp;</td></tr>
@@ -88,23 +63,11 @@
                             </td>
                             <td>&nbsp;</td>
                             <td valign="top">
-                                <table width="100%" height="230" border="0" cellpadding="0" cellspacing="0" style="border: 1px solid #CCCCCC;">
-                                    <tr>
-                                        <td width="7%" background="/Images/news_title_bg.gif">
-                                            <img src="/Images/news_title_bg.gif" width="2" height="27">
-                                        </td>
-                                        <td width="93%" height="27" background="/Images/news_title_bg.gif" class="left_bt">最新动态</td>
-                                    </tr>
-                                    <tr><td height="186" valign="top">&nbsp;</td><td height="102" valign="top"></td></tr>
-                                    <tr><td height="5" colspan="2">&nbsp;</td></tr>
-                                </table>
+
                             </td>
                         </tr>
                         <tr>
                             <td height="40" colspan="4">
-                                <table width="100%" height="1" border="0" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC">
-                                    <tr><td></td></tr>
-                                </table>
                             </td>
                         </tr>
                     </table>
