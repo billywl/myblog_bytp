@@ -47,11 +47,11 @@ $().ready(function(){
         <p><span>最新</span>文章</p>
       </h2>
 	    <?php if(is_array($arts)): $i = 0; $__LIST__ = $arts;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a): $mod = ($i % 2 );++$i;?><div class="blogs">
-        <h3><a href="http://www.mynote2.com/index.php/index/art/id/<?php echo ($a["art_id"]); ?>"><?php echo ($a["art_title"]); ?></a></h3>
+        <h3><a href="http://www.mynote2.com/index.php/index/art/id/<?php echo ($a["art_id"]); ?>.html"><?php echo ($a["art_title"]); ?></a></h3>
         <figure><img src="http://www.mynote2.com/uploads/<?php echo ($a["art_purl"]); ?>" ></figure>
         <ul>
           <p><?php echo ($a["art_description"]); ?></p>
-          <a href="http://www.mynote2.com/index.php/index/art/id/<?php echo ($a["art_id"]); ?>" class="readmore">阅读全文&gt;&gt;</a>
+          <a href="http://www.mynote2.com/index.php/index/art/id/<?php echo ($a["art_id"]); ?>.html" class="readmore">阅读全文&gt;&gt;</a>
         </ul>
         <p class="autor"><span>作者：<?php echo ($a["art_writer"]); ?></span><span>分类：【<a href="/" ><?php echo ($a["pro_name"]); ?></a>】</span><span>浏览（<a href="/"><?php echo ($a["art_click"]); ?></a>）</span><span>来源（<a href="/"><?php echo ($a["art_source"]); ?></a>）</span></p>
         <div class="dateview"><?php echo (date('m.d号',$a["art_time"])); ?></div>

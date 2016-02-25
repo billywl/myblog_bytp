@@ -37,8 +37,8 @@ $().ready(function(){
     <div class="logo"><a href="http://www.mynote2.com"></a></div>
     <nav id="topnav">
       <a href="http://www.mynote2.com">首页</a>
-	<a href="http://www.mynote2.com/index.php/index/fitness.html">健身世界</a>
-	<a href="http://www.mynote2.com/index.php/index/program.html">IT世界</a>
+	<a href="http://www.mynote2.com/index.php/index/fitness/p/1.html">健身世界</a>
+	<a href="http://www.mynote2.com/index.php/index/program/p/1.html">IT世界</a>
 	<a href="http://www.mynote2.com/index.php/index/about.html">关于天启</a>
 	<a href="https://github.com/billywl">Github</a>
 	</nav>
@@ -46,7 +46,7 @@ $().ready(function(){
 
   <article>
         <div class='extend' text-align='center'>
-		<?php if(is_array($pros)): $i = 0; $__LIST__ = $pros;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$p): $mod = ($i % 2 );++$i;?><a href="http://www.mynote2.com/index.php/index/<?php echo ($t_url); ?>/u/<?php echo ($p["pro_url"]); ?>.html"><?php echo ($p["pro_name"]); ?> |</a><?php endforeach; endif; else: echo "" ;endif; ?>
+		<?php if(is_array($pros)): $i = 0; $__LIST__ = $pros;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$p): $mod = ($i % 2 );++$i;?><a href="http://www.mynote2.com/index.php/index/<?php echo ($t_url); ?>/u/<?php echo ($p["pro_url"]); ?>/p/1.html"><?php echo ($p["pro_name"]); ?> |</a><?php endforeach; endif; else: echo "" ;endif; ?>
 		</div>
 		
 
@@ -76,14 +76,14 @@ $().ready(function(){
 
 	  <aside>
     <div class="rnav">
-		<?php if(is_array($pros)): $i = 0; $__LIST__ = $pros;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$p): $mod = ($i % 2 );++$i;?><li class="rnav<?php echo ($i); ?>"><a href="http://www.mynote2.com/index.php/index/<?php echo ($t_url); ?>/u/<?php echo ($p["pro_url"]); ?>.html"><?php echo ($p["pro_name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+		<?php if(is_array($pros)): $i = 0; $__LIST__ = $pros;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$p): $mod = ($i % 2 );++$i;?><li class="rnav<?php echo ($i); ?>"><a href="http://www.mynote2.com/index.php/index/<?php echo ($t_url); ?>/u/<?php echo ($p["pro_url"]); ?>/p/1.html"><?php echo ($p["pro_name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
     </div>
     <div class="ph_news">
       <h2>
         <p>点击排行</p>
       </h2>
       <ul class="ph_n">
-      <?php if(is_array($a1)): $i = 0; $__LIST__ = $a1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a1): $mod = ($i % 2 );++$i;?><li><span class="num<?php echo ($i); ?>"><?php echo ($i); ?></span><a href="http://www.mynote2.com/index.php/index/art/id/<?php echo ($a1["art_id"]); ?>.html"><?php echo ($a1["art_title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+      <?php if(is_array($a1)): $i = 0; $__LIST__ = $a1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a1): $mod = ($i % 2 );++$i;?><li><span class="num<?php echo ($i); ?>"><?php echo ($i); ?></span><a href="http://www.mynote2.com/index.php/index/art/id/<?php echo ($a1["art_id"]); ?>/p/1.html"><?php echo ($a1["art_title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
       </ul>
       <h2>
         <p>文章推荐</p>

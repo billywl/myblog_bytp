@@ -149,14 +149,15 @@ class IndexController extends Controller {
 		$stop=strpos($loc, '/u');
 		
 		//截取字符串获取当前方法名
-		if(!strstr($loc,'/',true)){
+		$func=strstr($loc,'/',true);
+		/*if(!strstr($loc,'/p',true)){
 			$func=$loc;
 		}else{
-			$func=strstr($loc,'/',true);
-		}
+			$func=strstr($loc,'/p',true);
+		}*/
 		
 		$name1=$pro->where("pro_url='$func'")->getField('pro_name');
-		$location.="<a href='http://www.mynote2.com/index.php/index/$func'>$name1</a>";
+		$location.="<a href='http://www.mynote2.com/index.php/index/$func/p/1.html'>$name1</a>";
 		
 		//如果没有/u参数,返回当前拼凑好的字符串
 		if(!$stop){
@@ -165,14 +166,15 @@ class IndexController extends Controller {
 		
 		//如果有/u参数,截取u参数,并拼凑到字符串中
 		$loc=substr($loc,strpos($loc,'/u/')+3);
-			//截取字符串获取当前方法名
-		if(!strstr($loc,'/',true)){
+		//截取字符串获取当前方法名
+		/*if(!strstr($loc,'/',true)){
 			$u=$loc;
 		}else{
 			$u=strstr($loc,'/',true);
-		}
+		}*/
+		$u=strstr($loc,'/p',true);
 		$name2=$pro->where("pro_url='$u'")->getField('pro_name');
-		$location.="> <a href='http://www.mynote2.com/index.php/index/$func/u/$u'>$name2</a>";
+		$location.="> <a href='http://www.mynote2.com/index.php/index/$func/u/$u/p/1.html'>$name2</a>";
 		return $location;
 	}
 	
@@ -194,8 +196,8 @@ class IndexController extends Controller {
 		$pro=M('program');
 		$programOfTop=$pro->field('pro_name,pro_url')->where("pro_id=$id")->find();
 		
-		$location.="<a href='http://www.mynote2.com/index.php/index/{$programOfTop["pro_url"]}'>{$programOfTop['pro_name']}</a>";
-		$location.=" > <a href='http://www.mynote2.com/index.php/index/{$programOfTop["pro_url"]}/u/{$programOfArt["pro_url"]}'>{$programOfArt['pro_name']}</a>";
+		$location.="<a href='http://www.mynote2.com/index.php/index/{$programOfTop["pro_url"]}.html'>{$programOfTop['pro_name']}</a>";
+		$location.=" > <a href='http://www.mynote2.com/index.php/index/{$programOfTop["pro_url"]}/u/{$programOfArt["pro_url"]}.html'>{$programOfArt['pro_name']}</a>";
 		return $location;
 	}
 		
