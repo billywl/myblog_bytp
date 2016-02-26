@@ -28,8 +28,8 @@ $().ready(function(){
     <div class="logo"><a href="http://www.mynote2.com"></a></div>
     <nav id="topnav">
       <a href="http://www.mynote2.com">首页</a>
-	<a href="http://www.mynote2.com/index.php/index/fitness.html">健身世界</a>
-	<a href="http://www.mynote2.com/index.php/index/program.html">IT世界</a>
+	<a href="http://www.mynote2.com/index.php/index/fitness/p/1.html">健身世界</a>
+	<a href="http://www.mynote2.com/index.php/index/program/p/1.html">IT世界</a>
 	<a href="http://www.mynote2.com/index.php/index/about.html">关于天启</a>
 	<a href="https://github.com/billywl">Github</a>
 	</nav>

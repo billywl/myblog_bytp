@@ -59,6 +59,49 @@ class IndexController extends Controller {
 		$this->listArt(1);	
 	}
 	
+	//个人简介页面
+	public function about(){
+		//获取简介的数据
+		$art=M('article');
+		$pro=M('program');
+	
+		
+		$art->art_click=$art->where('art_topid=-1')->getField('art_click')+1;
+		$art->where("art_topid=-1")->save();
+		
+		//取出个人简介数据
+		$arts=$art->where('art_topid=-1')->find();
+		
+		//将取出的文章内容进行实体标签转换
+		$arts['art_body']=html_entity_decode($arts['art_body']);
+			
+		//取出健身世界和程序世界下的子栏目
+		$pros1=$pro->field('pro_id,pro_name,pro_url')->where('pro_topid=1')->select();
+		$pros2=$pro->field('pro_id,pro_name,pro_url')->where('pro_topid=2')->select();
+	
+		//设定查询条件
+		for($i=0;$i<count($pros1);$i++){
+			$proid1[]=$pros1[$i]['pro_id'];
+		}
+		$where1['art_topid']=array('in',$proid1);
+	
+		for($i=0;$i<count($pros2);$i++){
+			$proid2[]=$pros2[$i]['pro_id'];
+		}
+		$where2['art_topid']=array('in',$proid2);
+	
+	
+		//取出侧边栏数据
+		$a1=$art->field('art_id,art_title')->where($where1)->limit('5')->order('art_id desc')->select();
+		$a2=$art->field('art_id,art_title')->where($where2)->limit('5')->order('art_id desc')->select();
+	
+		$this->assign('arts',$arts);
+		$this->assign('a1',$a1);
+		$this->assign('a2',$a2);
+	
+		$this->display();
+	}
+	
 	//文章页面
 	public function art(){
 		//判断是否有get传递的id数据
