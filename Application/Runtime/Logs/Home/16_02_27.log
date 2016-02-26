@@ -1,0 +1,184 @@
+[ 2016-02-27T00:04:20+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000774s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001279s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.0618s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0071s ]
+SQL: SELECT a.art_id,a.art_title,a.art_purl,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE ( a.art_topid>0 ) ORDER BY art_id desc LIMIT 5   [ RunTime:0.0756s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=1 )  [ RunTime:0.0011s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=2 )  [ RunTime:0.0004s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('19','20','21','22') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0276s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('24','25','26','27') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000181s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000370s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049842s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050086s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000785s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000943s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001085s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001245s ]
+
+[ 2016-02-27T00:04:28+08:00 ] 127.0.0.1 /index.php/index/art/id/15.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000992s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001112s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001306s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.0066s ]
+SQL: SELECT `art_click` FROM `tp_article` WHERE ( art_id=15 ) LIMIT 1   [ RunTime:0.0097s ]
+SQL: UPDATE `tp_article` SET `art_click`='89' WHERE ( art_id=15 ) [ RunTime:0.0488s ]
+SQL: SELECT a.art_topid,p.pro_name,p.pro_url,p.pro_topid FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE ( art_id=15 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0113s ]
+SQL: SELECT `pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_id=1 ) LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `tp_article` WHERE ( art_id=15 ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE ( art_topid=19 ) ORDER BY art_click LIMIT 5   [ RunTime:0.0006s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE ( art_recommend=1 ) ORDER BY art_click LIMIT 5   [ RunTime:0.0006s ]
+SQL: SELECT `art_id` FROM `tp_article` WHERE ( art_topid=19 )  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined offset: -1 E:\www\mynote2\Application\Home\Controller\IndexController.class.php 第 145 行.
+SQL: SELECT `art_title` FROM `tp_article` WHERE ( art_id=5 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT a.art_topid,p.pro_name,p.pro_url,p.pro_topid FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE ( art_id=15 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000220s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000402s ]
+NOTIC: [8] Undefined variable: pros E:\www\mynote2\Application\Runtime\Cache\Home\90f46c694e5072416172d26c4d242c62.php 第 95 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047097s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047290s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001352s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001559s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002456s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002800s ]
+
+[ 2016-02-27T00:06:06+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000956s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001881s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.0069s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0064s ]
+SQL: SELECT a.art_id,a.art_title,a.art_purl,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE ( a.art_topid>0 ) ORDER BY art_id desc LIMIT 5   [ RunTime:0.0007s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=1 )  [ RunTime:0.0004s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=2 )  [ RunTime:0.0003s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('19','20','21','22') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0004s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('24','25','26','27') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000184s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000379s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021655s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021889s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000838s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000996s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001123s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001324s ]
+
+[ 2016-02-27T00:06:08+08:00 ] 127.0.0.1 /index.php/index/about.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001113s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001272s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001524s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.0123s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0089s ]
+SQL: SELECT `art_click` FROM `tp_article` WHERE ( art_topid=-1 ) LIMIT 1   [ RunTime:0.0299s ]
+SQL: UPDATE `tp_article` SET `art_click`='85' WHERE ( art_topid=-1 ) [ RunTime:0.0011s ]
+SQL: SELECT * FROM `tp_article` WHERE ( art_topid=-1 ) LIMIT 1   [ RunTime:0.0045s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=1 )  [ RunTime:0.0007s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=2 )  [ RunTime:0.0005s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('19','20','21','22') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0005s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('24','25','26','27') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000227s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000493s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021377s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021682s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001014s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001172s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001112s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001273s ]
+
+[ 2016-02-27T00:09:57+08:00 ] 127.0.0.1 /index.php/index/program/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001088s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001702s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.0079s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0106s ]
+SQL: SELECT `pro_url` FROM `tp_program` WHERE ( pro_id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `pro_name` FROM `tp_program` WHERE ( pro_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: u E:\www\mynote2\Application\Home\Controller\IndexController.class.php 第 267 行.
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=1 )  [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_article` WHERE `art_topid` IN ('19','20','21','22') LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT a.art_id,a.art_purl,a.art_title,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE `pro_id` IN ('19','20','21','22') ORDER BY art_id desc LIMIT 0,3   [ RunTime:0.0310s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('19','20','21','22') ORDER BY art_click LIMIT 5   [ RunTime:0.0079s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('19','20','21','22') AND ( art_recommend=1 ) ORDER BY art_click LIMIT 5   [ RunTime:0.0007s ]
+SQL: SELECT `pro_name` FROM `tp_program` WHERE ( pro_url='program' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000185s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000368s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034818s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035025s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001885s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001133s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001296s ]
+
+[ 2016-02-27T00:09:59+08:00 ] 127.0.0.1 /index.php/index/art/id/15.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000730s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001075s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001248s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.0120s ]
+SQL: SELECT `art_click` FROM `tp_article` WHERE ( art_id=15 ) LIMIT 1   [ RunTime:0.0016s ]
+SQL: UPDATE `tp_article` SET `art_click`='90' WHERE ( art_id=15 ) [ RunTime:0.0008s ]
+SQL: SELECT a.art_topid,p.pro_name,p.pro_url,p.pro_topid FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE ( art_id=15 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0055s ]
+SQL: SELECT `pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tp_article` WHERE ( art_id=15 ) LIMIT 1   [ RunTime:0.0076s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE ( art_topid=19 ) ORDER BY art_click LIMIT 5   [ RunTime:0.0006s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE ( art_recommend=1 ) ORDER BY art_click LIMIT 5   [ RunTime:0.0006s ]
+SQL: SELECT `art_id` FROM `tp_article` WHERE ( art_topid=19 )  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined offset: -1 E:\www\mynote2\Application\Home\Controller\IndexController.class.php 第 145 行.
+SQL: SELECT `art_title` FROM `tp_article` WHERE ( art_id=5 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT a.art_topid,p.pro_name,p.pro_url,p.pro_topid FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE ( art_id=15 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000181s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000359s ]
+NOTIC: [8] Undefined variable: pros E:\www\mynote2\Application\Runtime\Cache\Home\90f46c694e5072416172d26c4d242c62.php 第 95 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026673s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026855s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001266s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001482s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001879s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002159s ]
+

@@ -48,7 +48,7 @@ $().ready(function(){
       </h2>
 	    <?php if(is_array($arts)): $i = 0; $__LIST__ = $arts;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a): $mod = ($i % 2 );++$i;?><div class="blogs">
         <h3><a href="http://www.mynote2.com/index.php/index/art/id/<?php echo ($a["art_id"]); ?>.html"><?php echo ($a["art_title"]); ?></a></h3>
-        <figure><img src="http://www.mynote2.com/uploads/<?php echo ($a["art_purl"]); ?>" ></figure>
+        <figure><img src="http://www.mynote2.com/uploads/Images/<?php echo ($a["art_purl"]); ?>" ></figure>
         <ul>
           <p><?php echo ($a["art_description"]); ?></p>
           <a href="http://www.mynote2.com/index.php/index/art/id/<?php echo ($a["art_id"]); ?>.html" class="readmore">阅读全文&gt;&gt;</a>

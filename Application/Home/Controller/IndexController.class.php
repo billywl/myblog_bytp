@@ -243,8 +243,8 @@ class IndexController extends Controller {
 		$pro=M('program');
 		$programOfTop=$pro->field('pro_name,pro_url')->where("pro_id=$id")->find();
 		
-		$location.="<a href='http://www.mynote2.com/index.php/index/{$programOfTop["pro_url"]}.html'>{$programOfTop['pro_name']}</a>";
-		$location.=" > <a href='http://www.mynote2.com/index.php/index/{$programOfTop["pro_url"]}/u/{$programOfArt["pro_url"]}.html'>{$programOfArt['pro_name']}</a>";
+		$location.="<a href='http://www.mynote2.com/index.php/index/{$programOfTop["pro_url"]}/p/1.html'>{$programOfTop['pro_name']}</a>";
+		$location.=" > <a href='http://www.mynote2.com/index.php/index/{$programOfTop["pro_url"]}/u/{$programOfArt["pro_url"]}/p/1.html'>{$programOfArt['pro_name']}</a>";
 		return $location;
 	}
 		

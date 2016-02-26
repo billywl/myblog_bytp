@@ -66,7 +66,7 @@ $().ready(function(){
           <p><?php echo ($a["art_description"]); ?><a href="http://www.mynote2.com/index.php/index/art/id/<?php echo ($a["art_id"]); ?>.html" class="readmore">阅读全文</a></p>
 		  
         </ul>
-        <figure><img src="http://www.mynote2.com/uploads/<?php echo ($a["art_purl"]); ?>" ></figure>
+        <figure><img src="http://www.mynote2.com/uploads/Images/<?php echo ($a["art_purl"]); ?>" ></figure>
         <div class="dateview"><?php echo (date('m.d号',$a["art_time"])); ?></div>
       </div>
 	  <!-- /listbox --><?php endforeach; endif; else: echo "" ;endif; ?>

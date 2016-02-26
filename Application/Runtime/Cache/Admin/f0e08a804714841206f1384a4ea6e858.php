@@ -20,7 +20,9 @@
                     <br />
                     <h1 class="type"><a href="/admin.php/article/index" target="main">文章管理</a></h1>
                     <br />
-                    <h1 class="type"><a href="/admin.php/article/about" target="main">个人简介</a></h1>                       
+                    <h1 class="type"><a href="/admin.php/article/about" target="main">个人简介</a></h1>      
+                    <br />
+                    <h1 class="type"><a href="/admin.php/picture/upLoadPic" target="main">上传图片</a></h1>                      
                     <!-- *********** -->
                 </div>
             </td>
