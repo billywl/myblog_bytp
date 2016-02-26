@@ -110,8 +110,12 @@ class IndexController extends Controller {
 		}
 		$id=$_GET['id'];
 		$art=M('article');
-		//文章的点击数+1
-		$art->art_click=$art->where("art_id=$id")->getField('art_click')+1;
+		//文章的点击数+1 
+		$click=$art->where("art_id=$id")->getField('art_click');
+		if(!$click){
+			$this->error('您访问的文章不存在!','../../');
+		}
+		$art->art_click=$click+1;
 		//更新数据库
 		$art->where("art_id=$id")->save(); 
 		
