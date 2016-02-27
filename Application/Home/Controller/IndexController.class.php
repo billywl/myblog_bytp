@@ -110,6 +110,7 @@ class IndexController extends Controller {
 		}
 		$id=$_GET['id'];
 		$art=M('article');
+		$pro=M('program');
 		//文章的点击数+1 
 		$click=$art->where("art_id=$id")->getField('art_click');
 		if(!$click){
@@ -122,8 +123,21 @@ class IndexController extends Controller {
 		$location=$this->showLocationOfArt($art,$id);
 		//取出文章数据
 		$arts=$art->where("art_id=$id")->find();
-		$topid=$arts['art_topid'];
 		
+		//取出文章的的栏目id
+		$topid=$arts['art_topid'];
+
+
+		//根据栏目id取出栏目topid
+		$t_topid=$pro->where("pro_id=$topid")->getField('pro_topid');
+		
+		//根据栏目$t_topid取出顶级栏目的url
+		$t_url=$pro->where("pro_id=$t_topid")->getField('pro_url');
+
+		//根据顶级栏目$t_topid取出子栏目url和name
+		$pros=$pro->where("pro_topid=$t_topid")->field('pro_url,pro_name')->select();
+
+	
 		//将取出的文章内容进行实体标签转换
 		$arts['art_body']=htmlspecialchars_decode($arts['art_body']);
 		
@@ -173,6 +187,8 @@ class IndexController extends Controller {
 		$this->assign('next_title',$next_title);
 		$this->assign('a1',$a1);
 		$this->assign('a2',$a2);
+		$this->assign('t_url',$t_url);
+		$this->assign('pros',$pros);
 		
 		$this->assign('arts',$arts);
 		$this->display();
