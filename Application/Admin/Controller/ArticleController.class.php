@@ -42,26 +42,24 @@ class ArticleController extends CheckController{
 			$this->display();			
 		}else{
 			//如果 有post数据		
+			//实例化模型
+			 $art=D('article');
 
 			//接收文件信息
 			$info=$this->getUpLoadFile();
-			if(!$info) {
-				// 上传错误提示错误信息
-				$this->error('图片上传失败');
-				return;
+			//如果有上传图片则处理
+			if($info) {
+				//生成图片文件的缩略图并打上为文字水印
+				$this->getThumbAndWater ($info);
+				$_POST['purl']="{$info['purl']['savepath']}thumb.{$info['purl']['savename']}";
 			}
-			
-			//生成图片文件的缩略图并打上为文字水印
-			$this->getThumbAndWater ($info);
 		
-			//实例化模型
-			 $art=D('article');
+	
 			
 			 //添加时间戳
 			 $_POST['art_time']=time();
 			
 			 //添加图片的缩略图url
-			$_POST['purl']="{$info['purl']['savepath']}thumb.{$info['purl']['savename']}";
 			 //自动填写以下空白数据
 			 $_POST['keyword']=$_POST['keyword']!=''?$_POST['keyword']:$_POST['title'];
 			 $_POST['writer']=$_POST['writer']!=''?$_POST['writer']:'天启';

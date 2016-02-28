@@ -141,7 +141,7 @@ class IndexController extends Controller {
 		//查询取出本栏目点击最高的5篇文章标题
 		$a1=$art->field('art_id,art_title')->where("art_topid=$topid")->limit('5')->order('art_click')->select();
 		//查询取出本栏目推荐的文章标题
-		$a2=$art->field('art_id,art_title')->where("art_topid=$topid")->where('art_recommend=1')->limit('5')->order('art_click')->select();
+		$a2=$art->field('art_id,art_title')->where("art_topid=$topid and art_recommend=1")->limit('5')->order('art_click')->select();
 
 		//取出下一篇和上一篇文章的id
 		$set_id=$art->where("art_topid=$topid")->getField('art_id',true);
@@ -327,7 +327,7 @@ class IndexController extends Controller {
 		//如果有u参数循环判断要访问的子栏目
 		$u=$_GET['u'];
 		$pro=M('program');
-		$pros=$pro->field('pro_id,pro_name,pro_url')->where("pro_topid=$searchId")->select();
+		$pros=$pro->field('pro_id,pro_name,pro_url')->order('pro_id')->where("pro_topid=$searchId")->select();
 
 		foreach($pros as $value){
 			if($value['pro_url']==$u){
@@ -362,7 +362,7 @@ class IndexController extends Controller {
 		//查询取出本栏目点击最高的5篇文章标题
 		$a1=$art->field('art_id,art_title')->where("art_topid=$id")->limit('5')->order('art_click')->select();
 		//查询取出本栏目推荐的文章标题
-		$a2=$art->field('art_id,art_title')->where("art_topid=$id")->where('art_recommend=1')->limit('5')->order('art_click')->select();
+		$a2=$art->field('art_id,art_title')->where("art_topid=$id and art_recommend=1")->limit('5')->order('art_click')->select();
 			
 			
 		//获取当前位置并赋值到模版
