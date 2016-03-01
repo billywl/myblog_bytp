@@ -123,7 +123,7 @@ class IndexController extends Controller {
 		$location=$this->showLocationOfArt($art,$id);
 		//取出文章数据
 		$arts=$art->where("art_id=$id")->find();
-		
+
 		//取出文章的的栏目id
 		$topid=$arts['art_topid'];
 
@@ -137,14 +137,14 @@ class IndexController extends Controller {
 		//根据顶级栏目$t_topid取出子栏目url和name
 		$pros=$pro->where("pro_topid=$t_topid")->field('pro_url,pro_name')->select();
 
-	
+
 		//将取出的文章内容进行实体标签转换
 		$arts['art_body']=htmlspecialchars_decode($arts['art_body']);
 		
 		//查询取出本栏目点击最高的5篇文章标题
 		$a1=$art->field('art_id,art_title')->where("art_topid=$topid")->limit('5')->order('art_click')->select();
 		//查询取出本栏目推荐的文章标题
-		$a2=$art->field('art_id,art_title')->where("art_topid=$topid")->where('art_recommend=1')->limit('5')->order('art_click')->select();
+		$a2=$art->field('art_id,art_title')->where("art_topid=$topid and art_recommend=1")->limit('5')->order('art_click')->select();
 
 		//取出下一篇和上一篇文章的id
 		$set_id=$art->where("art_topid=$topid")->getField('art_id',true);
@@ -259,8 +259,8 @@ class IndexController extends Controller {
 		$pro=M('program');
 		$programOfTop=$pro->field('pro_name,pro_url')->where("pro_id=$id")->find();
 		
-		$location.="<a href='http://www.mynote2.com/index.php/index/{$programOfTop["pro_url"]}.html'>{$programOfTop['pro_name']}</a>";
-		$location.=" > <a href='http://www.mynote2.com/index.php/index/{$programOfTop["pro_url"]}/u/{$programOfArt["pro_url"]}.html'>{$programOfArt['pro_name']}</a>";
+		$location.="<a href='http://www.mynote2.com/index.php/index/{$programOfTop["pro_url"]}/p/1.html'>{$programOfTop['pro_name']}</a>";
+		$location.=" > <a href='http://www.mynote2.com/index.php/index/{$programOfTop["pro_url"]}/u/{$programOfArt["pro_url"]}/p/1.html'>{$programOfArt['pro_name']}</a>";
 		return $location;
 	}
 		
@@ -332,7 +332,7 @@ class IndexController extends Controller {
 		//如果有u参数循环判断要访问的子栏目
 		$u=$_GET['u'];
 		$pro=M('program');
-		$pros=$pro->field('pro_id,pro_name,pro_url')->where("pro_topid=$searchId")->select();
+		$pros=$pro->field('pro_id,pro_name,pro_url')->order('pro_id')->where("pro_topid=$searchId")->select();
 
 		foreach($pros as $value){
 			if($value['pro_url']==$u){
@@ -367,7 +367,7 @@ class IndexController extends Controller {
 		//查询取出本栏目点击最高的5篇文章标题
 		$a1=$art->field('art_id,art_title')->where("art_topid=$id")->limit('5')->order('art_click')->select();
 		//查询取出本栏目推荐的文章标题
-		$a2=$art->field('art_id,art_title')->where("art_topid=$id")->where('art_recommend=1')->limit('5')->order('art_click')->select();
+		$a2=$art->field('art_id,art_title')->where("art_topid=$id and art_recommend=1")->limit('5')->order('art_click')->select();
 			
 			
 		//获取当前位置并赋值到模版

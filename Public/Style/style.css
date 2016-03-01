@@ -59,7 +59,7 @@ a.readmore { color: #f55f77; margin-left: 10px; font-weight: bold }
 ul.infos { overflow: hidden; margin: 20px 60px; line-height: 28px; font-size: 14px; text-indent: 2em; color: #525554 }
 ul.infos p { margin-bottom: 10px }
 ul.infos p img { display: block; margin: auto }
-.keybq { background: url(../Images/6264.png) no-repeat 10px center #F8F8F8; line-height: 30px; height: 30px; padding-left: 40px; border: 1px solid #F0F0F0; margin: 20px 0; }
+.keybq { background: url(../Images/6264.png) no-repeat 10px center #7bc701; line-height: 30px; height: 30px; padding-left: 40px; border: 1px solid #F0F0F0; margin: 20px 0; }
 .keybq span { color: #099 }
 .nextinfo { line-height: 24px; }
 .nextinfo a, .otherlink li a { color: #756f71 }
