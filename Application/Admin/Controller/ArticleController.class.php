@@ -60,6 +60,10 @@ class ArticleController extends CheckController{
 			if(!$_POST['topid']){
 				die();
 			}
+			//数据合法化验证
+			if(!$_POST['body']){
+				die();
+			}
 				
 			//如果传来的topid为不存在的栏目,终止
 			$pro=D('program');
@@ -70,8 +74,7 @@ class ArticleController extends CheckController{
 				die();
 			}
 			
-			//实例化模型
-			 $art=D('article');
+
 
 			//接收上传文件信息
 			$info=$this->getUpLoadFile();
@@ -94,12 +97,18 @@ class ArticleController extends CheckController{
 			 //处理body数据后再赋值给description
 			 $_POST['description']=$_POST['description']!=''?$_POST['description']:substr($_POST['body'], 0,40);
 			 $_POST['description'] =   preg_replace("/<(.*?)>/",'',htmlspecialchars_decode($_POST['description']));
-						
+
+			 //实例化模型
+			 $art=D('article');
+			 $aart=D('addonarticle');
 			 //用create()方法创建数据
 			 $art->create();
 
+			 $data['art_body'] = $_POST['body'];
+			 $data['art_body'] = htmlspecialchars($data['art_body'] );
+			 $aart->create($data);
 			 //将数据写入数据库
-			 if($art->add()){
+			 if($art->add()&&$aart->add()){
 			 	$this->success('添加成功','add');
 			 }else{
 				 //添加失败
@@ -129,10 +138,11 @@ class ArticleController extends CheckController{
 	
 			//实例化模型
 			$art=M('article');
+			$aart=M('addonarticle');
 						
 			//取出要编辑的文章的信息
 			$dataes=$art->where("art_id=$id")->find();
-			
+			$body=$aart->where("art_id=$id")->getField('art_body');
 			//判断是否有get传过来的id数据,是否合理,如果不合理,为非法访问,终止
 			if(!$dataes){
 				die();
@@ -158,6 +168,7 @@ class ArticleController extends CheckController{
 			//变量赋值给模版
 			$this->assign('dataes',$dataes);
 			$this->assign('list',$list);
+			$this->assign('body',$body);
 			$this->assign('name',$name);
 			$this->display ();
 		} else {
@@ -170,18 +181,22 @@ class ArticleController extends CheckController{
 			
 			//实例化Program的模型,
 			$art=D('article');
+			$aart=D('addonarticle');
 			//获取表单传送过来的数据,并创建数据
 			$art->create();
-	
+			$data['art_body']=$_POST['body'];
+			$aart->create($data);
+			
 			
 			//保存更新条件
 			$id=$_POST['id'];
 	
 			//更新数据
-			$result=$art->where("art_id={$id}")->save();
+			$result1=$art->where("art_id={$id}")->save();
+			$result2=$aart->where("art_id={$id}")->save();
 
 			//因为返回的是更新的数量,所以必须使用!==来判断
-			if($result!==false){
+			if($result1!==false&&$result2!==false){
 				//更新成功,返回管理页
 				$this->success('更新成功','index');
 			}else{
@@ -204,11 +219,13 @@ class ArticleController extends CheckController{
 		$id=$_GET['id'];
 			
 		//实例化模型
-		$pro=M('article');
+		$art=M('article');
+		$aart=M('addonarticle');
 		//删除主键为$id的数据
-		$result=$pro->delete($id);
+		$result1=$art->delete($id);
+		$result2=$aart->delete($id);
 		//因为返回的是更新的数量,所以必须使用!==来判断
-		if($result!==false){
+		if($result1!==false&&$result2!==false){
 			$this->success('删除成功','index');
 		}else{
 			//添加失败

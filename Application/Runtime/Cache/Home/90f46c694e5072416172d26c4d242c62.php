@@ -76,7 +76,7 @@ $().ready(function() {
       <span>来源:<?php echo ($arts["art_source"]); ?></span></p>
 
       <ul class="infos">
-       <?php echo ($arts["art_body"]); ?>
+       <?php echo ($body); ?>
       </ul>
       <div class="keybq">
         <p><span>关键字词</span>：<?php echo ($arts["art_keyword"]); ?></p>

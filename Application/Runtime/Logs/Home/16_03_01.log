@@ -2090,3 +2090,489 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001797s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002095s ]
 
+[ 2016-03-01T23:12:53+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000866s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001009s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001200s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.4503s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0551s ]
+SQL: SELECT a.art_id,a.art_title,a.art_purl,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE ( a.art_topid>0 ) ORDER BY art_id desc LIMIT 5   [ RunTime:0.0014s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=1 )  [ RunTime:0.0006s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=2 )  [ RunTime:0.0006s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('19','20','21','22') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('24','25','26','27') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000193s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000431s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061828s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062092s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000568s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000761s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000884s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001055s ]
+
+[ 2016-03-01T23:16:51+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001364s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001460s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.0086s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0141s ]
+SQL: SELECT a.art_id,a.art_title,a.art_purl,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE ( a.art_topid>0 ) ORDER BY art_id desc LIMIT 5   [ RunTime:0.0013s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=1 )  [ RunTime:0.0006s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=2 )  [ RunTime:0.0036s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('19','20','21','22') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0007s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('24','25','26','27') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000170s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000345s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023353s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023562s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000799s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000968s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001236s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001415s ]
+
+[ 2016-03-01T23:17:00+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000885s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001668s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001938s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.0096s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0065s ]
+SQL: SELECT a.art_id,a.art_title,a.art_purl,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE ( a.art_topid>0 ) ORDER BY art_id desc LIMIT 5   [ RunTime:0.0014s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=1 )  [ RunTime:0.0007s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=2 )  [ RunTime:0.0004s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('19','20','21','22') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0018s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('24','25','26','27') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000180s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000417s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022372s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022577s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000705s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000874s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001456s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001636s ]
+
+[ 2016-03-01T23:20:18+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000945s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001605s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.0106s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0096s ]
+SQL: SELECT a.art_id,a.art_title,a.art_purl,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE ( a.art_topid>0 ) ORDER BY art_id desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=1 )  [ RunTime:0.0003s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=2 )  [ RunTime:0.0003s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('19','20','21','22') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0004s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('24','25','26','27') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000339s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023382s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023587s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000954s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001216s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001372s ]
+
+[ 2016-03-01T23:26:55+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000950s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001569s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001895s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.0088s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0060s ]
+SQL: SELECT a.art_id,a.art_title,a.art_purl,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE ( a.art_topid>0 ) ORDER BY art_id desc LIMIT 5   [ RunTime:0.0008s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=1 )  [ RunTime:0.0005s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=2 )  [ RunTime:0.0007s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('19','20','21','22') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0006s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('24','25','26','27') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000341s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024663s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024884s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000759s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000926s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001115s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001286s ]
+
+[ 2016-03-01T23:27:00+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000752s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000816s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000974s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.0098s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0093s ]
+SQL: SELECT a.art_id,a.art_title,a.art_purl,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE ( a.art_topid>0 ) ORDER BY art_id desc LIMIT 5   [ RunTime:0.0019s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=1 )  [ RunTime:0.0010s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=2 )  [ RunTime:0.0011s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('19','20','21','22') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0019s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('24','25','26','27') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000175s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000357s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032393s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032638s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001311s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001832s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002022s ]
+
+[ 2016-03-01T23:27:47+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000885s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001247s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.0082s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0055s ]
+SQL: SELECT a.art_id,a.art_title,a.art_purl,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE ( a.art_topid>0 ) ORDER BY art_id desc LIMIT 5   [ RunTime:0.0007s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=1 )  [ RunTime:0.0060s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=2 )  [ RunTime:0.0004s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('19','20','21','22') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0004s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('24','25','26','27') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000173s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000350s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021475s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021724s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001400s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001619s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001510s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001735s ]
+
+[ 2016-03-01T23:29:48+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001156s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001742s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001952s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.0083s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0127s ]
+SQL: SELECT a.art_id,a.art_title,a.art_purl,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE ( a.art_topid>0 ) ORDER BY art_id desc LIMIT 5   [ RunTime:0.0008s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=1 )  [ RunTime:0.0005s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=2 )  [ RunTime:0.0005s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('19','20','21','22') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0007s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('24','25','26','27') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000351s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022661s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022940s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002676s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002896s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001569s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001764s ]
+
+[ 2016-03-01T23:30:35+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001020s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001239s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.0078s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0053s ]
+SQL: SELECT a.art_id,a.art_title,a.art_purl,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE ( a.art_topid>0 ) ORDER BY art_id desc LIMIT 5   [ RunTime:0.0007s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=1 )  [ RunTime:0.0005s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=2 )  [ RunTime:0.0003s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('19','20','21','22') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0003s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('24','25','26','27') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000164s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000334s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020144s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020430s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000734s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000909s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001233s ]
+
+[ 2016-03-01T23:36:02+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001611s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.0078s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0066s ]
+SQL: SELECT a.art_id,a.art_title,a.art_purl,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE ( a.art_topid>0 ) ORDER BY art_id desc LIMIT 5   [ RunTime:0.0007s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=1 )  [ RunTime:0.0003s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=2 )  [ RunTime:0.0009s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('19','20','21','22') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0005s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('24','25','26','27') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000230s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000423s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024816s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025060s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000853s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001242s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001444s ]
+
+[ 2016-03-01T23:36:26+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000782s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000997s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001161s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.0091s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0057s ]
+SQL: SELECT a.art_id,a.art_title,a.art_purl,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE ( a.art_topid>0 ) ORDER BY art_id desc LIMIT 5   [ RunTime:0.0007s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=1 )  [ RunTime:0.0004s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=2 )  [ RunTime:0.0003s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('19','20','21','22') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0004s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('24','25','26','27') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000166s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000332s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020909s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021094s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002419s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002610s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001224s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001383s ]
+
+[ 2016-03-01T23:36:32+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000704s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000858s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001016s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.0145s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0073s ]
+SQL: SELECT a.art_id,a.art_title,a.art_purl,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE ( a.art_topid>0 ) ORDER BY art_id desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=1 )  [ RunTime:0.0007s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=2 )  [ RunTime:0.0059s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('19','20','21','22') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0007s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('24','25','26','27') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000180s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000359s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032409s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032606s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000952s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001129s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001224s ]
+
+[ 2016-03-01T23:37:27+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000077s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001173s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001558s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.0073s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0070s ]
+SQL: SELECT a.art_id,a.art_title,a.art_purl,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE ( a.art_topid>0 ) ORDER BY art_id desc LIMIT 5   [ RunTime:0.0008s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=1 )  [ RunTime:0.0006s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=2 )  [ RunTime:0.0013s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('19','20','21','22') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0007s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('24','25','26','27') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000244s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000563s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024971s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025188s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000648s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000808s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001073s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001450s ]
+
+[ 2016-03-01T23:37:54+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000718s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000961s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001153s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.0099s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0073s ]
+SQL: SELECT a.art_id,a.art_title,a.art_purl,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE ( a.art_topid>0 ) ORDER BY art_id desc LIMIT 5   [ RunTime:0.0009s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=1 )  [ RunTime:0.0004s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=2 )  [ RunTime:0.0003s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('19','20','21','22') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0004s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('24','25','26','27') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000185s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000358s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020830s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021027s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001103s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001292s ]
+
+[ 2016-03-01T23:38:09+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000801s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001210s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001501s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.0073s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0059s ]
+SQL: SELECT a.art_id,a.art_title,a.art_purl,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE ( a.art_topid>0 ) ORDER BY art_id desc LIMIT 5   [ RunTime:0.0007s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=1 )  [ RunTime:0.0004s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=2 )  [ RunTime:0.0004s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('19','20','21','22') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0004s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('24','25','26','27') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000167s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000353s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021902s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022148s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000958s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001523s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001769s ]
+
+[ 2016-03-01T23:38:39+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000997s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001227s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001436s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.0074s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0062s ]
+SQL: SELECT a.art_id,a.art_title,a.art_purl,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE ( a.art_topid>0 ) ORDER BY art_id desc LIMIT 5   [ RunTime:0.0009s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=1 )  [ RunTime:0.0006s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=2 )  [ RunTime:0.0005s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('19','20','21','22') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0009s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('24','25','26','27') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000171s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000338s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020896s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021084s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000653s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000800s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000942s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001092s ]
+
+[ 2016-03-01T23:40:02+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000878s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001205s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.0073s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0082s ]
+SQL: SELECT a.art_id,a.art_title,a.art_purl,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE ( a.art_topid>0 ) ORDER BY art_id desc LIMIT 5   [ RunTime:0.0007s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=1 )  [ RunTime:0.0004s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=2 )  [ RunTime:0.0003s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('19','20','21','22') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0004s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('24','25','26','27') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000168s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000327s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019732s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019906s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000544s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000692s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001551s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001731s ]
+
+[ 2016-03-01T23:41:01+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000768s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000970s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001133s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.0068s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0137s ]
+SQL: SELECT a.art_id,a.art_title,a.art_purl,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE ( a.art_topid>0 ) ORDER BY art_id desc LIMIT 5   [ RunTime:0.0015s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=1 )  [ RunTime:0.0006s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=2 )  [ RunTime:0.0004s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('19','20','21','22') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0005s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('24','25','26','27') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000196s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000420s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023432s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023668s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000880s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001205s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001361s ]
+
