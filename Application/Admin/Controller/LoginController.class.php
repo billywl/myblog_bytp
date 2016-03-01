@@ -29,8 +29,7 @@ class LoginController extends Controller {
 				$this->error('账号密码错误','login',2);
 			}
 			$this->redirect('index/index');
-			
-			
+						
 		}
 
 		$this->display();

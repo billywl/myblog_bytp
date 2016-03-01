@@ -3,34 +3,43 @@ namespace Admin\Controller;
 use Common\Tool\Tree;
 //文章控制器
 class ArticleController extends CheckController{
-	//文章管理首页,显示所有文章列表
+	/**
+	 * 文章管理,列出所有文章供管理员管理
+	 */
 	public function index(){
+		//实例化对象
 		$art=M('article');
-		//需要分页
 
-		//获取查询到的中记录数
+		//获取查询到的中记录数,用于判断和分页
 		$count=$art->field('art_id')->where('art_topid>0')->count();
 		
-		//实例化系统的分页类
-		$page       = new \Think\Page($count,10);
+		//如果有记录则显示文章,没有则直接加载模版文件
+		if($count){
+			//实例化系统的分页类
+			$page       = new \Think\Page($count,10);
+			
+			//获取页脚输出的字符串
+			$show       = $page->show();
+			
+			//赋值到模版,模版中调用{$show}即可
+			$this->assign('show',$show);
+			
+			//获取文章数据
+			$list=$art->alias('a')->field('a.art_id,a.art_title,a.art_time,a.art_topid,a.art_writer,b.pro_name')
+			->join('left join tp_program b on a.art_topid=b.pro_id')->order('art_id desc')->where('art_topid>0')
+			->limit($page->firstRow.','.$page->listRows)->select();
+			
+			//赋值给模版
+			$this->assign('list',$list);
+		}
 		
-		//获取页脚输出的字符串
-		$show       = $page->show();
-		
-		//赋值到模版,模版中调用{$show}即可
-		$this->assign('show',$show);
-		
-		//获取文章数据
-		$list=$art->alias('a')->field('a.art_id,a.art_title,a.art_time,a.art_topid,a.art_writer,b.pro_name')
-		->join('left join tp_program b on a.art_topid=b.pro_id')->order('art_id desc')->where('art_topid>0')
-		->limit($page->firstRow.','.$page->listRows)->select();
-		
-		//赋值给模版
-		$this->assign('list',$list);
 		$this->display();
+		
 	}
 	
-	//添加文章的方法
+	/**
+	 *  发布文章页面
+	 */
 	public function add(){
 		//没有post就直接加载添加页面
 		if(!$_POST){
@@ -41,63 +50,60 @@ class ArticleController extends CheckController{
 			$this->assign('list',Tree::tree($list));
 			$this->display();			
 		}else{
-			//如果 有post数据		
+			//如果 有post数据	
+			//数据合法化验证
+			if(!$_POST['title']){
+				die();
+			}
+			
+			//数据合法化验证
+			if(!$_POST['topid']){
+				die();
+			}
+				
+			//如果传来的topid为不存在的栏目,终止
+			$pro=D('program');
+			$id=$_POST['topid'];
+				
+			$flag=$pro->where("pro_id=$id")->find();
+			if (!$flag){
+				die();
+			}
+			
 			//实例化模型
 			 $art=D('article');
 
-			//接收文件信息
+			//接收上传文件信息
 			$info=$this->getUpLoadFile();
 			//如果有上传图片则处理
 			if($info) {
 				//生成图片文件的缩略图并打上为文字水印
 				$this->getThumbAndWater ($info);
+				 //添加图片的缩略图url
 				$_POST['purl']="{$info['purl']['savepath']}thumb.{$info['purl']['savename']}";
 			}
 		
-	
-			
 			 //添加时间戳
 			 $_POST['art_time']=time();
 			
-			 //添加图片的缩略图url
-			 //自动填写以下空白数据
+			 //默认参数
 			 $_POST['keyword']=$_POST['keyword']!=''?$_POST['keyword']:$_POST['title'];
 			 $_POST['writer']=$_POST['writer']!=''?$_POST['writer']:'天启';
 			 $_POST['source']=$_POST['source']!=''?$_POST['source']:'原创';			 
-			 $_POST['description']=$_POST['description']!=''?$_POST['description']:substr($_POST['body'], 0,40);
 			 
-			 //实体化并过滤掉html标签
+			 //处理body数据后再赋值给description
+			 $_POST['description']=$_POST['description']!=''?$_POST['description']:substr($_POST['body'], 0,40);
 			 $_POST['description'] =   preg_replace("/<(.*?)>/",'',htmlspecialchars_decode($_POST['description']));
-
-			 if(!$_POST['title']){
-			 die();
-			 }
-			
-			 if(!$_POST['topid']){
-			 die();
-			 }
-			
-			 //如果传来的topid为不存在的栏目,终止
-			 $pro=D('program');
-			 $id=$_POST['topid'];
-			
-			 $flag=$pro->where("pro_id=$id")->find();
-			 if (!$flag){
-			 die();
-			 }
-			
+						
 			 //用create()方法创建数据
 			 $art->create();
 
-		//	$art->art_body=$_POST['body'];
-
-
 			 //将数据写入数据库
 			 if($art->add()){
-			 $this->success('添加成功','add');
+			 	$this->success('添加成功','add');
 			 }else{
-			 //添加失败
-			 $this->error('添加失败','add');
+				 //添加失败
+			 	$this->error('添加失败','add');
 			 }	
 		} 
 	}
@@ -114,7 +120,7 @@ class ArticleController extends CheckController{
 		//没有post信息,填写加载表单模版,填写栏目数据
 		if (! $_POST) {
 			//判断是否有get传过来的id数据,如果没有属于非法访问,终止
-			if(!$_GET){
+			if(!$_GET['id']){
 				die();
 			}
 	
@@ -190,7 +196,7 @@ class ArticleController extends CheckController{
 	 */
 	public function delete(){
 		//判断是否有get传过来的id数据,如果没有属于非法访问,终止
-		if(!$_GET){
+		if(!$_GET['id']){
 			die();
 		}
 			

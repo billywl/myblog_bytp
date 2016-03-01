@@ -9,8 +9,7 @@ class ProgramController extends CheckController {
 	public function index() {
 		//实例化模型
 		$pro=M('Program');
-		//通过select()方法,连贯操作,取出模型中的数据集,并保存到$list中
-		//$list=$pro->field('pro_id,pro_name,pro_topid')->select();		
+		//联合查询,取出模型中的数据集,并保存到$list中	
 		$list=$pro->alias('a')->field('a.pro_name as pro_tname,b.pro_name,b.pro_id,b.pro_topid')
 		->join('right join tp_program b on a.pro_id=b.pro_topid')->select();		
 		
@@ -21,7 +20,6 @@ class ProgramController extends CheckController {
 		
 		//无限极分类.使用工具类Tree的静态方法					
 		//变量赋值给模版
-
 		$this->assign('list',Tree::tree($list));
 		$this->display ();
 	}
@@ -56,7 +54,7 @@ class ProgramController extends CheckController {
 		//没有post信息,填写加载表单模版,填写栏目数据
 		if (! $_POST) {
 			//判断是否有get传过来的id数据,如果没有属于非法访问,终止
-			if(!$_GET){
+			if(!$_GET['id']){
 				die();
 			}
 			
@@ -99,7 +97,7 @@ class ProgramController extends CheckController {
 		//没有post信息,填写加载表单模版,填写栏目数据
 		if (! $_POST) {
 			//判断是否有get传过来的id数据,如果没有属于非法访问,终止
-			if(!$_GET){
+			if(!$_GET['id']){
 				die();
 			}
 				
@@ -161,7 +159,7 @@ class ProgramController extends CheckController {
 	 */
 	public function delete(){
 		//判断是否有get传过来的id数据,如果没有属于非法访问,终止
-		if(!$_GET){
+		if(!$_GET['id']){
 			die();
 		}
 			
