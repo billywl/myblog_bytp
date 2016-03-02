@@ -112,12 +112,14 @@ class IndexController extends Controller {
 		//获取当前文章id值
 		$id=$_GET['id'];
 		$art=M('article');
+		$aart=M('addonarticle');
 	
 		//文章的点击数+1 
 		$this->addClick($id, $art);
 				
 		//取出文章数据
 		$arts=$art->where("art_id=$id")->find();
+		$body=$aart->where("art_id=$id")->getField('art_body');
 
 		//取出文章的的栏目id
 		$topid=$arts['art_topid'];
@@ -133,7 +135,7 @@ class IndexController extends Controller {
 		$pros=$pro->where("pro_topid=$t_topid")->field('pro_url,pro_name')->select();
 
 		//将取出的文章内容进行实体标签转换
-		$arts['art_body']=htmlspecialchars_decode($arts['art_body']);
+		$body=htmlspecialchars_decode($body);
 		
 		//查询取出本栏目点击最高的5篇文章标题
 		$a1=$art->field('art_id,art_title')->where("art_topid=$topid")->limit('5')->order('art_click')->select();
@@ -152,6 +154,7 @@ class IndexController extends Controller {
 		$this->assign('t_url',$t_url);
 		$this->assign('pros',$pros);	
 		$this->assign('arts',$arts);
+		$this->assign('body',$body);
 		$this->display();
 		
 	}
