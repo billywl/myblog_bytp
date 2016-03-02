@@ -17,5 +17,9 @@ return array(
 	'DB_PWD' 		=>'root', //密码
 	'DB_PORT' 		=>'3306', //端口
 	'DB_PREFIX' 	=>'tp_', //数据表前缀
-
+	
+/* 		'URL_ROUTER_ON'   => true,
+		'URL_ROUTE_RULES'=>array(
+				'news/:p' => 'News/index',
+		), */
 );

@@ -399,4 +399,8 @@ class IndexController extends Controller {
 		$this->assign('next_id',$next_id);
 		$this->assign('next_title',$next_title);
 	}
+	
+	public function test(){
+		echo 'haha';
+	}
 }

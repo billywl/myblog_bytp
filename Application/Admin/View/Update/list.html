@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$title}</title>
+<meta name="keywords" content="健身,编程,php,天启,个人博客'/" />
+<meta name="description" content="会健身的程序员天启的个人博客" />
+<link href="__STYLE__/base.css" rel="stylesheet">
+<link href="__STYLE__/style.css" rel="stylesheet">
+<link href="__STYLE__/media.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+<!--[if lt IE 9]>
+<script src="__JS__/modernizr.js"></script>
+<![endif]-->
+<script src='__JS__/jquery-1.12.0.min.js'></script>
+<script>
+$().ready(function(){
+	var loc=$('.about_h>a:eq(1)').attr('href');
+	var list=$('#topnav>a');
+
+ 	for(var i=0;i<list.length;i++){
+		if(list[i]==loc){
+			var id=i;
+		}
+ 	}
+ 	$('#topnav>a:eq('+id+')').attr('id','topnav_current');
+ 	
+ 	
+});
+function show(n) {
+	$.get('../../Application/Home/IndexController.class.php', 'page=' + n, function(msg) {
+		alert(msg);
+	});
+}
+</script>
+</head>
+
+
+<body class="articlelist">
+<div class="ibody">
+<include file="head" />
+  <article>
+        <div class='extend' text-align='center'>
+		<volist name='pros' id='p'>
+<a href="http://www.mynote2.com/index.php/index/{$t_url}/u/{$p.pro_url}/p/1.html">{$p.pro_name} |</a>
+		</volist>
+		</div>
+		
+
+
+
+
+    <h2 class="about_h">{$location}</h2>
+	<div class="bloglist">
+
+	    <volist name='arts' id='a'> 
+	    <div class="newblog">
+        <ul>
+          <h3><a href="http://www.mynote2.com/index.php/index/art/id/{$a.art_id}.html">{$a.art_title}</a></h3>
+          <div class="autor">作者: <span class='sp'>{$a.art_writer}</span>
+		  <span>所属栏目【 <span class='sp'>{$a.pro_name}</span>】</span>
+		  <span>浏览 ( <span class='sp'>{$a.art_click}</span>)</span>
+		  <span>来源 ( <span class='sp'>{$a.art_source}</span>)</span></div>
+          <p>{$a.art_description}<a href="http://www.mynote2.com/index.php/index/art/id/{$a.art_id}.html" class="readmore">阅读全文</a></p>
+		  
+        </ul>
+        <figure><img src="http://www.mynote2.com/uploads/Images/{$a.art_purl}" ></figure>
+        <div class="dateview">{$a.art_time|date='m.d号',###}</div>
+      </div>
+	  <!-- /listbox -->
+    </volist>
+    </div>
+<div class="pagination">{$show}</div>
+  </article>
+
+	<include file="subaside" />
+
+
+
+
+  <div class="clear"></div>
+ </div>
+
+
+</body>
+</html>

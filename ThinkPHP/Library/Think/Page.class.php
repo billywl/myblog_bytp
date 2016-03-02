@@ -67,7 +67,7 @@ class Page{
      * @return string
      */
     private function url($page){
-        return str_replace(urlencode('[PAGE]'), $page, $this->url);
+        return str_replace(urlencode('[PAGE]'), $page,$this->url);
     }
 
     /**
@@ -76,7 +76,9 @@ class Page{
      */
     public function show() {
         if(0 == $this->totalRows) return '';
+        
 
+        
         /* 生成URL */
         $this->parameter[$this->p] = '[PAGE]';
         $this->url = U(ACTION_NAME, $this->parameter);
@@ -104,7 +106,7 @@ class Page{
         if($this->totalPages > $this->rollPage && ($this->nowPage - $now_cool_page) >= 1){
             $the_first = '<a class="first" href="' . $this->url(1) . '">' . $this->config['first'] . '</a>';
         }
-
+        
         //最后一页
         $the_end = '';
         if($this->totalPages > $this->rollPage && ($this->nowPage + $now_cool_page) < $this->totalPages){
@@ -142,4 +144,7 @@ class Page{
             $this->config['theme']);
         return "<div>{$page_str}</div>";
     }
+    
+
+    
 }

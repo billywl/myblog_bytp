@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$arts.art_title}</title>
+<meta name="keywords" content="{$arts.art_keyword}" />
+<meta name="description" content="{$arts.art_description}" />
+<link href="__STYLE__/base.css" rel="stylesheet">
+<link href="__STYLE__/style.css" rel="stylesheet">
+<link href="__STYLE__/index.css" rel="stylesheet">
+<link href="__STYLE__/media.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+<!--[if lt IE 9]>
+<script src="__JS__/modernizr.js"></script>
+<![endif]-->
+</head>
+<body>
+<div class="ibody">
+<include file='head' />
+  <article>
+    <h2 class="about_h">当前位置:<a href='http://www.mynote2.com'>主页</a> > <a href='http://www.mynote2.com/index.php/index/about.html'>关于天启</a></h2></h2>
+    <div class="index_about">
+      <h2 class="c_titile">{$arts.art_title}</h2>
+      <p class="box_c"><span class="d_time">发布时间：{$arts.art_time|date='m.d',###}</span>
+      <span>作者：{$arts.art_writer}</span><span>浏览:{$arts.art_click}次</span>
+      <span>来源:{$arts.art_source}</span></p>
+
+      <ul class="infos">
+       {$arts.art_body}
+      </ul>
+      <div class="keybq">
+        <p><span>关键字词</span>：{$arts.art_keyword}</p>
+      </div>
+
+    </div>
+  </article>
+
+<include file='aside' />
+  <script src="__JS__/silder.js"></script>
+  <div class="clear"></div>
+  <!-- 清除浮动 --> 
+</div>
+</body>
+</html>

@@ -6,3 +6,12 @@
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteRule ^(.*)$ /index.php/$1 [QSA,PT,L]
 </IfModule>
+
+<IfModule rewrite_module>
+#如果请求的来源中没有当前的域名（www.mytest.com）,则不允许访问。
+#如果请求的来源中有www.mytest.com则说明当前网站的页面请求的则允许。
+rewritecond  %{HTTP_REFERER}   !www.mytest.com
+#如果referer中没有mytest.com内容，遇到后缀是jpg则禁止访问。
+RewriteRule .*\.jpg [F]
+#RewriteRule .*\.jpg 110.gif  用110.git替代.jpg文件
+</IfModule>
