@@ -64,7 +64,7 @@ $().ready(function() {
       <span>来源:{$arts.art_source}</span></p>
 
       <ul class="infos">
-       {$arts.art_body}
+       {$body}
       </ul>
       <div class="keybq">
         <p><span>关键字词</span>：{$arts.art_keyword}</p>
@@ -72,8 +72,8 @@ $().ready(function() {
 
      
       <div class="nextinfo">
-        <p>上一篇:<a  id='pre' href='http://www.mynote2.com/index.php/index/art/id/{$prev_id}.html'>{$prev_title}</a></p>
-        <p>下一篇:<a id='nex' href='http://www.mynote2.com/index.php/index/art/id/{$next_id}.html'>{$next_title}</a></p>
+        <p>上一篇:<a  id='pre' href='http://www.mynote2.com/art/{$prev_id}.html'>{$prev_title}</a></p>
+        <p>下一篇:<a id='nex' href='http://www.mynote2.com/art/{$next_id}.html'>{$next_title}</a></p>
       </div>
     </div>
   </article>

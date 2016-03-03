@@ -126,11 +126,11 @@ class UpdateController extends CheckController {
 		//查询取出本栏目推荐的文章标题
 		$a2=$art->field('art_id,art_title')->where("art_topid=$topid and art_recommend=1")->limit('5')->order('art_click')->select();
 		
-		//根据当前文章的id和topid取出相同栏目下的前后文章id和标题,然后赋值到模版
+ 		//根据当前文章的id和topid取出相同栏目下的前后文章id和标题,然后赋值到模版
 		$this->getArtOfNearby ( $id, $topid,$art );
 		
 		//根据文章id平凑当前位置字符串
-		$location=$this->showLocationOfArt($id,$art,$pro);
+		$location=$this->showLocationOfArt($id,$art,$pro); 
 		
 		//赋值到模版
 		$this->assign('a1',$a1);
@@ -139,7 +139,7 @@ class UpdateController extends CheckController {
 		$this->assign('pros',$pros);
 		$this->assign('arts',$arts);
 		$this->assign('body',$body);
-		$html=$this->buildHtml("$id.html",'/art/','art');
+		$html=$this->buildHtml("$id.html",'./art/','art');
 		return $html; 
 	}
 	/**
@@ -152,11 +152,11 @@ class UpdateController extends CheckController {
 		$art=M('article');
 		$pro=M('program');
 		//取出本栏目的url
-		$t_url=$pro->where("pro_id=$searchId")->getField('pro_url');
+		$f_url=$pro->where("pro_id=$searchId")->getField('pro_url');
 		$title=$pro->where("pro_id=$searchId")->getField('pro_name');
-		$this->assign('t_url',$t_url);
+		$this->assign('f_url',$f_url);
 		$this->assign('title',$title);
-		
+		$this->assign('searchId',$searchId);
 
 		//取出顶级栏目下的子栏目
 		$pros=$pro->field('pro_id,pro_name,pro_url')->where("pro_topid=$searchId")->select();
@@ -175,7 +175,7 @@ class UpdateController extends CheckController {
 			$page       = new Page(); 
 			
 			//获取页脚输出的字符串
-			$show       = $page->show("http://www.mynote2.com/$t_url/index.html",$count,5);
+			$show       = $page->show("http://www.mynote2.com/$f_url/index.html",$count,5);
 			
 			//赋值到模版,模版中调用{$show}即可
 			$this->assign('show',$show);
@@ -190,11 +190,7 @@ class UpdateController extends CheckController {
 		$a1=$art->field('art_id,art_title')->where($where2)->limit('5')->order('art_click')->select();
 		//查询取出本栏目推荐的文章标题
 		$a2=$art->field('art_id,art_title')->where($where2)->where('art_recommend=1')->limit('5')->order('art_click')->select();
-	
-		//获取当前位置并赋值到模版
-		//$location=$this->showLocationOfList($pro);
-		//$this->assign('location',$location);
-	
+		
 		//赋值到模版
 		$this->assign('a1',$a1);
 		$this->assign('a2',$a2);
@@ -202,11 +198,14 @@ class UpdateController extends CheckController {
 		$this->assign('arts',$arts);
 		$this->assign('show',$show);
 		
-		$html=$this->buildHtml("index.html","./{$t_url}/",'list');
 		
+		//获取当前位置并赋值到模版
+		$location=$this->showLocationOfList($f_url, $title);
+		$this->assign('location',$location);
+		$html=$this->buildHtml("index.html","./$f_url/",'list');
 		return $html;			
 	}
-		
+			
 	/**
 	 *  根据pro_id更新二级栏目,生成栏目首页然后使用ajax分页完成分页
 	 *  @param $searchId 栏目的pro_id
@@ -215,13 +214,15 @@ class UpdateController extends CheckController {
 		//实例化数据表
 		$art=M('article');
 		$pro=M('program');
+		
 		//取出本栏目的url
+		$t_id=$pro->where("pro_id=$searchId")->getField('pro_topid');
 		$t_url=$pro->where("pro_id=$searchId")->getField('pro_url');
 		$title=$pro->where("pro_id=$searchId")->getField('pro_name');
-		$t_id=$pro->where("pro_id=$searchId")->getField('pro_topid');
-		$this->assign('t_url',$t_url);
 		$this->assign('title',$title);
 		$this->assign('searchId',$searchId);
+
+
 		
 		
 		//取出同栏目下的子栏目
@@ -230,7 +231,8 @@ class UpdateController extends CheckController {
 	
 		//取出父栏目的url
 		$f_url=$pro->where("pro_id=$t_id")->getField('pro_url');
-		
+		$title1=$pro->where("pro_id=$t_id")->getField('pro_name');
+		$this->assign('f_url',$f_url);
 		//获取查询到的中记录数
 		$count=$art->field('art_title')->where("art_topid=$searchId")->count();
 		
@@ -255,8 +257,8 @@ class UpdateController extends CheckController {
 		$a2=$art->field('art_id,art_title')->where("art_topid=$searchId and art_recommend=1")->limit('5')->order('art_click')->select();
 		
 		//获取当前位置并赋值到模版
-		//$location=$this->showLocationOfList($pro);
-		//$this->assign('location',$location);
+		$location=$this->showLocationOfList($f_url, $title1,$t_url,$title);
+		$this->assign('location',$location);
 		
 		//赋值到模版
 		$this->assign('a1',$a1);
@@ -268,13 +270,89 @@ class UpdateController extends CheckController {
 		$html=$this->buildHtml("index.html","./$f_url/{$t_url}/",'list');
 		
 		return $html;
-		/* 		if($html){
-		 $this->success('更新主页成功!','../article/add');
-		 }else{
-		 $this->error('更新主页失败!','../article/add');
-		 } */
-		//加载模版文件,然后返回
-		//$this->display('list');
-				
 		}
+		
+	/**
+	 * 根据当前文章的id和topid取出相同栏目下的前后文章id和标题,然后赋值到模版
+	 * 	上一篇文章为$prev_id和$prev_title
+	 * 	下一篇文章为$next_id和$next_title
+	 * @param id 当前文章id
+	 * @param topid 当前文章的topid
+	 * @param art 表对象
+	 */
+	private function getArtOfNearby($id, $topid,$art) {
+		//取出下一篇和上一篇文章的id
+		$set_id=$art->where("art_topid=$topid")->order('art_id')->getField('art_id',true);
+		//获取当前文章id的下标
+		$current=array_search($id, $set_id);
+		//获取上一篇本栏目文章id的下标
+		$prev=$current==0?-1:$current-1;
+		//获取下一篇本栏目文章id的下标
+		$next=$current==(count($set_id)-1)?-1:$current+1;
+		//根据id的下标取出id值
+		$prev_id=$set_id[$prev];
+		$next_id=$set_id[$next];
+	
+		//根据id取出文章标题
+		if($prev<0){
+			$prev_title='没有文章了!';
+	
+		}else{
+			$prev_title=$art->where("art_id=$prev_id")->getField('art_title');
+	
+		}
+	
+		if($next<0){
+			$next_title='没有文章了!';
+	
+		}else{
+			$next_title=$art->where("art_id=$next_id")->getField('art_title');
+		}
+		
+		//赋值到模版
+		$this->assign('prev_id',$prev_id);
+		$this->assign('prev_title',$prev_title);
+		$this->assign('next_id',$next_id);
+		$this->assign('next_title',$next_title);
+	}	
+	
+
+	/**
+	 * 列表页查询当前位置的方法
+	 * @param $pro program模型对象
+	 * @return string 拼凑好的当前位置字符串
+	 */
+	private function showLocationOfList($f_url,$title1,$t_url='',$title2=''){
+		//定义字符串
+		$location="当前位置:<a href='http://www.mynote2.com/index.html'>主页</a> > ";
+		//获取url
+		$location.="<a href='http://www.mynote2.com/$f_url/index.html' >$title1</a>";
+		if($t_url){
+			$location.=" ><a href='http://www.mynote2.com/$f_url/$t_url/index.html'>$title2</a>";
+			return $location;
+		}else{
+			return $location;
+		}
+	}
+	
+	/**
+	 * 文章页查询当前位置的方法,拼凑好字符串后赋值给模版$location
+	 * @param $art article模型对象
+	 * @param $id 当前文章id
+	 */
+	private function showLocationOfArt($id,$art,$pro){
+		//初始化字符串
+		$location="当前位置:<a href='http://www.mynote2.com'>主页</a> > ";
+		//根据$id获取所属栏目和顶级栏目名和url
+		$programOfArt=$art->alias('a')->where("art_id=$id")->field('a.art_topid,p.pro_name,p.pro_url,p.pro_topid')
+		->join('left join tp_program p on a.art_topid=p.pro_id') ->find();
+	
+		//根据$programOfArt['pro_topid'],获取顶级栏目名和url
+		$id=$programOfArt['pro_topid'];
+		$programOfTop=$pro->field('pro_name,pro_url')->where("pro_id=$id")->find();
+	
+		$location.="<a href='http://www.mynote2.com/{$programOfTop["pro_url"]}/index.html'>{$programOfTop['pro_name']}</a>";
+		$location.=" > <a href='http://www.mynote2.com/{$programOfTop["pro_url"]}/{$programOfArt["pro_url"]}/index.html'>{$programOfArt['pro_name']}</a>";
+		$this->assign('location',$location);
+	}
 }

@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>程序员必练</title>
-<meta name="keywords" content="健身,编程,php,天启,个人博客'/" />
-<meta name="description" content="会健身的程序员天启的个人博客" />
+<title>1</title>
+<meta name="keywords" content="1" />
+<meta name="description" content="1" />
 <link href="/Style/base.css" rel="stylesheet">
 <link href="/Style/style.css" rel="stylesheet">
 <link href="/Style/media.css" rel="stylesheet">
@@ -12,31 +12,47 @@
 <!--[if lt IE 9]>
 <script src="/Js/modernizr.js"></script>
 <![endif]-->
-<script src='/Js/jquery-1.12.0.min.js'></script>
-<script>
-$().ready(function(){
-	var loc=$('.about_h>a:eq(1)').attr('href');
-	var list=$('#topnav>a');
 
+<script src='/Js/jquery-1.12.0.min.js'></script>
+
+<script>
+$().ready(function() {
+	$("#pre").bind("click", function(event) {
+		if ($('#pre').text() == '没有文章了!') {
+			//取消按钮提交表单的默认行为
+			event.preventDefault();
+			window.event.returnValue=false;
+		}
+	})
+	
+	$("#nex").bind("click", function(event) {
+		if ($('#nex').text() == '没有文章了!') {
+			//取消按钮提交表单的默认行为
+			event.preventDefault();
+			window.event.returnValue=false;
+		}
+	})	
+	
+	//获取当前页面中当前位置中的栏目url
+	var loc=$('.about_h>a:eq(1)').attr('href');
+	
+	//获取head.html中的所有a标签中的url
+	var list=$('#topnav>a');
+	
+	//循环比较,如果哪个url和栏目url相等,设置属性id=topnav_current,高亮
  	for(var i=0;i<list.length;i++){
 		if(list[i]==loc){
 			var id=i;
 		}
  	}
  	$('#topnav>a:eq('+id+')').attr('id','topnav_current');
- 	
- 	
+	
 });
-function show(n) {
-	$.get('http://www.mynote2.com/index.php/index/test', 'page=' + n+'&id='+26, function(msg) {
-		$('.bloglist').html(msg);
-	});
-}
+
 </script>
 </head>
+<body>
 
-
-<body class="articlelist">
 <div class="ibody">
   <header>
     <h1>天启的个人博客</h1>
@@ -44,7 +60,7 @@ function show(n) {
     <div class="logo"><a href="http://www.mynote2.com/index.html"></a></div>
     <nav id="topnav">
       <a href="http://www.mynote2.com/index.html">首页</a>
-	<a href='http://www.mynote2.com/fitness/index.html'>健身世界</a>
+	<a href="http://www.mynote2.com/fitness/index.html">健身世界</a>
 	<a href="http://www.mynote2.com/program/index.html">IT世界</a>
 	<a href="http://www.mynote2.com/index/about.html">关于天启</a>
 	<a href="https://github.com/billywl">Github</a>
@@ -52,35 +68,29 @@ function show(n) {
   </header>
 
   <article>
-        <div class='extend' text-align='center'>
-		<a href="http://www.mynote2.com/fitness/knowledge/index.html">健身知识 |</a><a href="http://www.mynote2.com/fitness/Diet/index.html">健身饮食 |</a><a href="http://www.mynote2.com/fitness/necessary/index.html">程序员必练 |</a><a href="http://www.mynote2.com/fitness/log/index.html">健身日志 |</a>		</div>
-		
+    <h2 class="about_h">当前位置:<a href='http://www.mynote2.com'>主页</a> > <a href='http://www.mynote2.com/fitness/index.html'>健身世界</a> > <a href='http://www.mynote2.com/fitness/knowledge/index.html'>健身知识</a></h2>
+    <div class="index_about">
+      <h2 class="c_titile">1</h2>
+      <p class="box_c"><span class="d_time">发布时间：02.22</span>
+      <span>作者：天启</span><span>浏览:86次</span>
+      <span>来源:原创</span></p>
 
-
-
-
-    <h2 class="about_h">当前位置:<a href='http://www.mynote2.com/index.html'>主页</a> > <a href='http://www.mynote2.com/fitness/index.html' >健身世界</a> ><a href='http://www.mynote2.com/fitness/necessary/index.html'>程序员必练</a></h2>
-	<div class="bloglist">
-
-	    <div class="newblog">
-        <ul>
-          <h3><a href="http://www.mynote2.com/art/17.html">123123</a></h3>
-          <div class="autor">作者: <span class='sp'>天启</span>
-		  <span>所属栏目【 <span class='sp'>程序员必练</span>】</span>
-		  <span>浏览 ( <span class='sp'>85</span>)</span>
-		  <span>来源 ( <span class='sp'>原创</span>)</span></div>
-          <p>&lt;p&gt;123123123&lt;/p&gt;
-<a href="http://www.mynote2.com/art/17.html" class="readmore">阅读全文</a></p>
-		  
-        </ul>
-        <figure><img src="http://www.mynote2.com/uploads/Images/" ></figure>
-        <div class="dateview">02.22号</div>
+      <ul class="infos">
+       <p>1</p>
+      </ul>
+      <div class="keybq">
+        <p><span>关键字词</span>：1</p>
       </div>
-	  <!-- /listbox -->    </div>
-<div class="pagination">				每页显示5条记录,总共有 1条记录,&nbsp;&nbsp;&nbsp;&nbsp;<span id="click_page"><a href='#' onclick='show(1)'>1</a>&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+
+     
+      <div class="nextinfo">
+        <p>上一篇:<a  id='pre' href='http://www.mynote2.com/art/.html'>没有文章了!</a></p>
+        <p>下一篇:<a id='nex' href='http://www.mynote2.com/art/19.html'>2</a></p>
+      </div>
+    </div>
   </article>
 
-	  <aside>
+  <aside>
     <div class="rnav">
 		<li class="rnav1"><a href="http://www.mynote2.com/fitness/knowledge/index.html">健身知识</a></li><li class="rnav2"><a href="http://www.mynote2.com/fitness/Diet/index.html">健身饮食</a></li><li class="rnav3"><a href="http://www.mynote2.com/fitness/necessary/index.html">程序员必练</a></li><li class="rnav4"><a href="http://www.mynote2.com/fitness/log/index.html">健身日志</a></li>    </div>
     <div class="ph_news">
@@ -88,12 +98,12 @@ function show(n) {
         <p>点击排行</p>
       </h2>
       <ul class="ph_n">
-      <li><span class="num1">1</span><a href="http://www.mynote2.com/art/17.html">123123</a></li>      </ul>
+      <li><span class="num1">1</span><a href="http://www.mynote2.com/art/19.html">2</a></li><li><span class="num2">2</span><a href="http://www.mynote2.com/art/18.html">1</a></li><li><span class="num3">3</span><a href="http://www.mynote2.com/art/22.html">5</a></li><li><span class="num4">4</span><a href="http://www.mynote2.com/art/23.html">6</a></li><li><span class="num5">5</span><a href="http://www.mynote2.com/art/20.html">3</a></li>      </ul>
       <h2>
         <p>文章推荐</p>
       </h2>
       <ul>
-            </ul>
+      <li><a href="http://www.mynote2.com/art/22.html">5</a></li><li><a href="http://www.mynote2.com/art/23.html">6</a></li><li><a href="http://www.mynote2.com/art/20.html">3</a></li><li><a href="http://www.mynote2.com/art/21.html">4</a></li>      </ul>
 	      <div class="links">
       <h2>
         <p>友情链接</p>
@@ -112,13 +122,8 @@ function show(n) {
       </ul>
     </div>
   </aside>
-
-
-
-
   <div class="clear"></div>
- </div>
-
-
+  <!-- 清除浮动 --> 
+</div>
 </body>
 </html>

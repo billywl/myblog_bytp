@@ -25,12 +25,12 @@ $().ready(function(){
   <header>
     <h1>天启的个人博客</h1>
     <h2>fighting!为梦想去努力的路不会觉得累!!!</h2>
-    <div class="logo"><a href="http://www.mynote2.com"></a></div>
+    <div class="logo"><a href="http://www.mynote2.com/index.html"></a></div>
     <nav id="topnav">
-      <a href="http://www.mynote2.com">首页</a>
-	<a href="http://www.mynote2.com/index.php/index/fitness/p/1.html">健身世界</a>
-	<a href="http://www.mynote2.com/index.php/index/program/p/1.html">IT世界</a>
-	<a href="http://www.mynote2.com/index.php/index/about.html">关于天启</a>
+      <a href="http://www.mynote2.com/index.html">首页</a>
+	<a href="http://www.mynote2.com/fitness/index.html">健身世界</a>
+	<a href="http://www.mynote2.com/program/index.html">IT世界</a>
+	<a href="http://www.mynote2.com/index/about.html">关于天启</a>
 	<a href="https://github.com/billywl">Github</a>
 	</nav>
   </header>
@@ -47,11 +47,11 @@ $().ready(function(){
         <p><span>最新</span>文章</p>
       </h2>
 	    <?php if(is_array($arts)): $i = 0; $__LIST__ = $arts;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a): $mod = ($i % 2 );++$i;?><div class="blogs">
-        <h3><a href="http://www.mynote2.com/index.php/index/art/id/<?php echo ($a["art_id"]); ?>.html"><?php echo ($a["art_title"]); ?></a></h3>
+        <h3><a href="http://www.mynote2.com/id/<?php echo ($a["art_id"]); ?>.html"><?php echo ($a["art_title"]); ?></a></h3>
         <figure><img src="http://www.mynote2.com/uploads/Images/<?php echo ($a["art_purl"]); ?>" ></figure>
         <ul>
           <p><?php echo ($a["art_description"]); ?></p>
-          <a href="http://www.mynote2.com/index.php/index/art/id/<?php echo ($a["art_id"]); ?>.html" class="readmore">阅读全文&gt;&gt;</a>
+          <a href="http://www.mynote2.com/art/<?php echo ($a["art_id"]); ?>.html" class="readmore">阅读全文&gt;&gt;</a>
         </ul>
         <p class="autor"><span>作者：<?php echo ($a["art_writer"]); ?></span><span>分类：【<a href="/" ><?php echo ($a["pro_name"]); ?></a>】</span><span>浏览（<a href="/"><?php echo ($a["art_click"]); ?></a>）</span><span>来源（<a href="/"><?php echo ($a["art_source"]); ?></a>）</span></p>
         <div class="dateview"><?php echo (date('m.d号',$a["art_time"])); ?></div>
@@ -60,7 +60,7 @@ $().ready(function(){
 
   </article>
   <aside>
-    <div class="avatar"><a href="http://www.mynote2.com/index.php/index/about.html"><span>关于天启</span></a></div>
+    <div class="avatar"><a href="http://www.mynote2.com/index/about.html"><span>关于天启</span></a></div>
     <div class="topspaceinfo">
       <h1>健身改变自己,指尖改变世界</h1>
       <p>我变得更好,才能让身边的人更幸福......</p>
@@ -77,13 +77,13 @@ $().ready(function(){
         <p class="tj_t1">程序世界</p>
       </h2>
       <ul>
-			<?php if(is_array($a1)): $i = 0; $__LIST__ = $a1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a1): $mod = ($i % 2 );++$i;?><li><a href="http://www.mynote2.com/index.php/index/art/id/<?php echo ($a1["art_id"]); ?>.html"><?php echo ($a1["art_title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+			<?php if(is_array($a1)): $i = 0; $__LIST__ = $a1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a1): $mod = ($i % 2 );++$i;?><li><a href="http://www.mynote2.com/art/<?php echo ($a1["art_id"]); ?>.html"><?php echo ($a1["art_title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
       </ul>
       <h2>
         <p class="tj_t2">健身世界</p>
       </h2>
       <ul>
-			<?php if(is_array($a2)): $i = 0; $__LIST__ = $a2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a2): $mod = ($i % 2 );++$i;?><li><a href="http://www.mynote2.com/index.php/index/art/id/<?php echo ($a2["art_id"]); ?>.html"><?php echo ($a2["art_title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+			<?php if(is_array($a2)): $i = 0; $__LIST__ = $a2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a2): $mod = ($i % 2 );++$i;?><li><a href="http://www.mynote2.com/art/<?php echo ($a2["art_id"]); ?>.html"><?php echo ($a2["art_title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
       </ul>
     </div>
     <div class="links">

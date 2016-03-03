@@ -369,7 +369,7 @@ class IndexController extends Controller {
 	 */
 	 private function getArtOfNearby($id, $topid,$art) {
 		 //取出下一篇和上一篇文章的id
-		$set_id=$art->where("art_topid=$topid")->getField('art_id',true);
+		$set_id=$art->where("art_topid=$topid")->order('art_id')->getField('art_id',true);
 		//获取当前文章id的下标
 		$current=array_search($id, $set_id);
 		//获取上一篇本栏目文章id的下标
@@ -403,6 +403,9 @@ class IndexController extends Controller {
 		$this->assign('next_title',$next_title);
 	}
 	
+	/**
+	 * ajax分页请求方法,根据get传递的page和id值判断取出的栏目也页码
+	 */
 	public function test(){
 		$page=$_GET['page'];
 		$id=$_GET['id'];
@@ -435,4 +438,16 @@ class IndexController extends Controller {
 		echo $str;
 		
 	}
+	
+	public function init(){
+		$loc="http://www.mynote2.com/fitness/index.html";
+		//截取方法名,并拼凑到字符串
+		$loc=substr($loc,strpos($loc, 'com/')+4);
+		$loc=substr($loc,strpos($loc, '/')+1);
+		$stop=strpos($loc,'/');
+		var_dump($stop);
+
+		
+	}
+	
 }

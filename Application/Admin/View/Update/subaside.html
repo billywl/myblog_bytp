@@ -1,7 +1,7 @@
   <aside>
     <div class="rnav">
 		<volist name='pros' id='p'>
-	      <li class="rnav{$i}"><a href="http://www.mynote2.com/index.php/index/{$t_url}/u/{$p.pro_url}/p/1.html">{$p.pro_name}</a></li>
+	      <li class="rnav{$i}"><a href="http://www.mynote2.com/{$f_url}/{$p.pro_url}/index.html">{$p.pro_name}</a></li>
 		</volist>
     </div>
     <div class="ph_news">
@@ -10,7 +10,7 @@
       </h2>
       <ul class="ph_n">
       <volist name='a1' id='a1'>
-        <li><span class="num{$i}">{$i}</span><a href="http://www.mynote2.com/index.php/index/art/id/{$a1.art_id}/p/1.html">{$a1.art_title}</a></li>
+        <li><span class="num{$i}">{$i}</span><a href="http://www.mynote2.com/art/{$a1.art_id}.html">{$a1.art_title}</a></li>
 	</volist>
       </ul>
       <h2>
@@ -18,7 +18,7 @@
       </h2>
       <ul>
       <volist name='a2' id='a2'>
-        <li><a href="http://www.mynote2.com/index.php/index/art/id/{$a2.art_id}.html">{$a2.art_title}</a></li>
+        <li><a href="http://www.mynote2.com/art/{$a2.art_id}.html">{$a2.art_title}</a></li>
 	</volist>
       </ul>
 	      <div class="links">

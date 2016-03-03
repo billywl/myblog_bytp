@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title><?php echo ($title); ?></title>
-<meta name="keywords" content="健身,编程,php,天启,个人博客'/" />
-<meta name="description" content="会健身的程序员天启的个人博客" />
+<title><?php echo ($arts["art_title"]); ?></title>
+<meta name="keywords" content="<?php echo ($arts["art_keyword"]); ?>" />
+<meta name="description" content="<?php echo ($arts["art_description"]); ?>" />
 <link href="/Style/base.css" rel="stylesheet">
 <link href="/Style/style.css" rel="stylesheet">
 <link href="/Style/media.css" rel="stylesheet">
@@ -12,31 +12,47 @@
 <!--[if lt IE 9]>
 <script src="/Js/modernizr.js"></script>
 <![endif]-->
-<script src='/Js/jquery-1.12.0.min.js'></script>
-<script>
-$().ready(function(){
-	var loc=$('.about_h>a:eq(1)').attr('href');
-	var list=$('#topnav>a');
 
+<script src='/Js/jquery-1.12.0.min.js'></script>
+
+<script>
+$().ready(function() {
+	$("#pre").bind("click", function(event) {
+		if ($('#pre').text() == '没有文章了!') {
+			//取消按钮提交表单的默认行为
+			event.preventDefault();
+			window.event.returnValue=false;
+		}
+	})
+	
+	$("#nex").bind("click", function(event) {
+		if ($('#nex').text() == '没有文章了!') {
+			//取消按钮提交表单的默认行为
+			event.preventDefault();
+			window.event.returnValue=false;
+		}
+	})	
+	
+	//获取当前页面中当前位置中的栏目url
+	var loc=$('.about_h>a:eq(1)').attr('href');
+	
+	//获取head.html中的所有a标签中的url
+	var list=$('#topnav>a');
+	
+	//循环比较,如果哪个url和栏目url相等,设置属性id=topnav_current,高亮
  	for(var i=0;i<list.length;i++){
 		if(list[i]==loc){
 			var id=i;
 		}
  	}
  	$('#topnav>a:eq('+id+')').attr('id','topnav_current');
- 	
- 	
+	
 });
-function show(n) {
-	$.get('http://www.mynote2.com/index.php/index/test', 'page=' + n+'&id='+<?php echo ($searchId); ?>, function(msg) {
-		$('.bloglist').html(msg);
-	});
-}
+
 </script>
 </head>
+<body>
 
-
-<body class="articlelist">
 <div class="ibody">
   <header>
     <h1>天启的个人博客</h1>
@@ -44,7 +60,7 @@ function show(n) {
     <div class="logo"><a href="http://www.mynote2.com/index.html"></a></div>
     <nav id="topnav">
       <a href="http://www.mynote2.com/index.html">首页</a>
-	<a href='http://www.mynote2.com/fitness/index.html'>健身世界</a>
+	<a href="http://www.mynote2.com/fitness/index.html">健身世界</a>
 	<a href="http://www.mynote2.com/program/index.html">IT世界</a>
 	<a href="http://www.mynote2.com/index/about.html">关于天启</a>
 	<a href="https://github.com/billywl">Github</a>
@@ -52,38 +68,31 @@ function show(n) {
   </header>
 
   <article>
-        <div class='extend' text-align='center'>
-		<?php if(is_array($pros)): $i = 0; $__LIST__ = $pros;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$p): $mod = ($i % 2 );++$i;?><a href="http://www.mynote2.com/<?php echo ($f_url); ?>/<?php echo ($p["pro_url"]); ?>/index.html"><?php echo ($p["pro_name"]); ?> |</a><?php endforeach; endif; else: echo "" ;endif; ?>
-		</div>
-		
-
-
-
-
     <h2 class="about_h"><?php echo ($location); ?></h2>
-	<div class="bloglist">
+    <div class="index_about">
+      <h2 class="c_titile"><?php echo ($arts["art_title"]); ?></h2>
+      <p class="box_c"><span class="d_time">发布时间：<?php echo (date('m.d',$arts["art_time"])); ?></span>
+      <span>作者：<?php echo ($arts["art_writer"]); ?></span><span>浏览:<?php echo ($arts["art_click"]); ?>次</span>
+      <span>来源:<?php echo ($arts["art_source"]); ?></span></p>
 
-	    <?php if(is_array($arts)): $i = 0; $__LIST__ = $arts;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a): $mod = ($i % 2 );++$i;?><div class="newblog">
-        <ul>
-          <h3><a href="http://www.mynote2.com/art/<?php echo ($a["art_id"]); ?>.html"><?php echo ($a["art_title"]); ?></a></h3>
-          <div class="autor">作者: <span class='sp'><?php echo ($a["art_writer"]); ?></span>
-		  <span>所属栏目【 <span class='sp'><?php echo ($a["pro_name"]); ?></span>】</span>
-		  <span>浏览 ( <span class='sp'><?php echo ($a["art_click"]); ?></span>)</span>
-		  <span>来源 ( <span class='sp'><?php echo ($a["art_source"]); ?></span>)</span></div>
-          <p><?php echo ($a["art_description"]); ?><a href="http://www.mynote2.com/art/<?php echo ($a["art_id"]); ?>.html" class="readmore">阅读全文</a></p>
-		  
-        </ul>
-        <figure><img src="http://www.mynote2.com/uploads/Images/<?php echo ($a["art_purl"]); ?>" ></figure>
-        <div class="dateview"><?php echo (date('m.d号',$a["art_time"])); ?></div>
+      <ul class="infos">
+       <?php echo ($body); ?>
+      </ul>
+      <div class="keybq">
+        <p><span>关键字词</span>：<?php echo ($arts["art_keyword"]); ?></p>
       </div>
-	  <!-- /listbox --><?php endforeach; endif; else: echo "" ;endif; ?>
+
+     
+      <div class="nextinfo">
+        <p>上一篇:<a  id='pre' href='http://www.mynote2.com/art/<?php echo ($prev_id); ?>.html'><?php echo ($prev_title); ?></a></p>
+        <p>下一篇:<a id='nex' href='http://www.mynote2.com/art/<?php echo ($next_id); ?>.html'><?php echo ($next_title); ?></a></p>
+      </div>
     </div>
-<div class="pagination"><?php echo ($show); ?></div>
   </article>
 
-	  <aside>
+  <aside>
     <div class="rnav">
-		<?php if(is_array($pros)): $i = 0; $__LIST__ = $pros;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$p): $mod = ($i % 2 );++$i;?><li class="rnav<?php echo ($i); ?>"><a href="http://www.mynote2.com/<?php echo ($f_url); ?>/<?php echo ($p["pro_url"]); ?>/index.html"><?php echo ($p["pro_name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+		<?php if(is_array($pros)): $i = 0; $__LIST__ = $pros;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$p): $mod = ($i % 2 );++$i;?><li class="rnav<?php echo ($i); ?>"><a href="http://www.mynote2.com/<?php echo ($t_url); ?>/<?php echo ($p["pro_url"]); ?>/index.html"><?php echo ($p["pro_name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
     </div>
     <div class="ph_news">
       <h2>
@@ -116,13 +125,8 @@ function show(n) {
       </ul>
     </div>
   </aside>
-
-
-
-
   <div class="clear"></div>
- </div>
-
-
+  <!-- 清除浮动 --> 
+</div>
 </body>
 </html>

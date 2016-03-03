@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>开发实战篇</title>
-<meta name="keywords" content="健身,编程,php,天启,个人博客'/" />
-<meta name="description" content="会健身的程序员天启的个人博客" />
+<title>1231</title>
+<meta name="keywords" content="1231" />
+<meta name="description" content="" />
 <link href="/Style/base.css" rel="stylesheet">
 <link href="/Style/style.css" rel="stylesheet">
 <link href="/Style/media.css" rel="stylesheet">
@@ -12,31 +12,47 @@
 <!--[if lt IE 9]>
 <script src="/Js/modernizr.js"></script>
 <![endif]-->
-<script src='/Js/jquery-1.12.0.min.js'></script>
-<script>
-$().ready(function(){
-	var loc=$('.about_h>a:eq(1)').attr('href');
-	var list=$('#topnav>a');
 
+<script src='/Js/jquery-1.12.0.min.js'></script>
+
+<script>
+$().ready(function() {
+	$("#pre").bind("click", function(event) {
+		if ($('#pre').text() == '没有文章了!') {
+			//取消按钮提交表单的默认行为
+			event.preventDefault();
+			window.event.returnValue=false;
+		}
+	})
+	
+	$("#nex").bind("click", function(event) {
+		if ($('#nex').text() == '没有文章了!') {
+			//取消按钮提交表单的默认行为
+			event.preventDefault();
+			window.event.returnValue=false;
+		}
+	})	
+	
+	//获取当前页面中当前位置中的栏目url
+	var loc=$('.about_h>a:eq(1)').attr('href');
+	
+	//获取head.html中的所有a标签中的url
+	var list=$('#topnav>a');
+	
+	//循环比较,如果哪个url和栏目url相等,设置属性id=topnav_current,高亮
  	for(var i=0;i<list.length;i++){
 		if(list[i]==loc){
 			var id=i;
 		}
  	}
  	$('#topnav>a:eq('+id+')').attr('id','topnav_current');
- 	
- 	
+	
 });
-function show(n) {
-	$.get('http://www.mynote2.com/index.php/index/test', 'page=' + n+'&id='+21, function(msg) {
-		$('.bloglist').html(msg);
-	});
-}
+
 </script>
 </head>
+<body>
 
-
-<body class="articlelist">
 <div class="ibody">
   <header>
     <h1>天启的个人博客</h1>
@@ -44,7 +60,7 @@ function show(n) {
     <div class="logo"><a href="http://www.mynote2.com/index.html"></a></div>
     <nav id="topnav">
       <a href="http://www.mynote2.com/index.html">首页</a>
-	<a href='http://www.mynote2.com/fitness/index.html'>健身世界</a>
+	<a href="http://www.mynote2.com/fitness/index.html">健身世界</a>
 	<a href="http://www.mynote2.com/program/index.html">IT世界</a>
 	<a href="http://www.mynote2.com/index/about.html">关于天启</a>
 	<a href="https://github.com/billywl">Github</a>
@@ -52,21 +68,28 @@ function show(n) {
   </header>
 
   <article>
-        <div class='extend' text-align='center'>
-		<a href="http://www.mynote2.com/program/php/index.html">php后端篇 |</a><a href="http://www.mynote2.com/program/tools/index.html">实用工具篇 |</a><a href="http://www.mynote2.com/program/wars/index.html">开发实战篇 |</a><a href="http://www.mynote2.com/program/others/index.html">其他语言篇 |</a>		</div>
-		
+    <h2 class="about_h">当前位置:<a href='http://www.mynote2.com'>主页</a> > <a href='http://www.mynote2.com/program/index.html'>IT世界</a> > <a href='http://www.mynote2.com/program/php/index.html'>php后端篇</a></h2>
+    <div class="index_about">
+      <h2 class="c_titile">1231</h2>
+      <p class="box_c"><span class="d_time">发布时间：02.19</span>
+      <span>作者：</span><span>浏览:89次</span>
+      <span>来源:原创</span></p>
 
+      <ul class="infos">
+             </ul>
+      <div class="keybq">
+        <p><span>关键字词</span>：1231</p>
+      </div>
 
-
-
-    <h2 class="about_h">当前位置:<a href='http://www.mynote2.com/index.html'>主页</a> > <a href='http://www.mynote2.com/program/index.html' >IT世界</a> ><a href='http://www.mynote2.com/program/wars/index.html'>开发实战篇</a></h2>
-	<div class="bloglist">
-
-	        </div>
-<div class="pagination">				每页显示5条记录,总共有 0条记录,&nbsp;&nbsp;&nbsp;&nbsp;<span id="click_page"></div>
+     
+      <div class="nextinfo">
+        <p>上一篇:<a  id='pre' href='http://www.mynote2.com/art/4.html'>12323</a></p>
+        <p>下一篇:<a id='nex' href='http://www.mynote2.com/art/15.html'>123</a></p>
+      </div>
+    </div>
   </article>
 
-	  <aside>
+  <aside>
     <div class="rnav">
 		<li class="rnav1"><a href="http://www.mynote2.com/program/php/index.html">php后端篇</a></li><li class="rnav2"><a href="http://www.mynote2.com/program/tools/index.html">实用工具篇</a></li><li class="rnav3"><a href="http://www.mynote2.com/program/wars/index.html">开发实战篇</a></li><li class="rnav4"><a href="http://www.mynote2.com/program/others/index.html">其他语言篇</a></li>    </div>
     <div class="ph_news">
@@ -74,12 +97,12 @@ function show(n) {
         <p>点击排行</p>
       </h2>
       <ul class="ph_n">
-            </ul>
+      <li><span class="num1">1</span><a href="http://www.mynote2.com/art/4.html">12323</a></li><li><span class="num2">2</span><a href="http://www.mynote2.com/art/5.html">1231</a></li><li><span class="num3">3</span><a href="http://www.mynote2.com/art/3.html">234234234234</a></li><li><span class="num4">4</span><a href="http://www.mynote2.com/art/15.html">123</a></li>      </ul>
       <h2>
         <p>文章推荐</p>
       </h2>
       <ul>
-            </ul>
+      <li><a href="http://www.mynote2.com/art/3.html">234234234234</a></li><li><a href="http://www.mynote2.com/art/15.html">123</a></li>      </ul>
 	      <div class="links">
       <h2>
         <p>友情链接</p>
@@ -98,13 +121,8 @@ function show(n) {
       </ul>
     </div>
   </aside>
-
-
-
-
   <div class="clear"></div>
- </div>
-
-
+  <!-- 清除浮动 --> 
+</div>
 </body>
 </html>
