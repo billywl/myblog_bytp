@@ -28,8 +28,8 @@ $().ready(function(){
  	
 });
 function show(n) {
-	$.get('../../Application/Home/IndexController.class.php', 'page=' + n, function(msg) {
-		alert(msg);
+	$.get('http://www.mynote2.com/index.php/index/test', 'page=' + n+'&id='+, function(msg) {
+		$('.bloglist').html(msg);
 	});
 }
 </script>

@@ -259,7 +259,7 @@ class IndexController extends Controller {
 			$count=$art->field('art_title')->where($where2)->count();
 	
 			//实例化系统的分页类
-			$page       = new \Think\Page($count,3);
+			$page       = new \Think\Page($count,5);
 				
 			//获取页脚输出的字符串
 			$show       = $page->show();
@@ -313,7 +313,7 @@ class IndexController extends Controller {
 		$count=$art->field('art_title')->where("art_topid=$id")->count();
 		
 		//实例化系统的分页类
-		$page       = new \Think\Page($count,3);
+		$page       = new \Think\Page($count,5);
 			
 		//获取页脚输出的字符串
 		$show       = $page->show();
@@ -404,6 +404,35 @@ class IndexController extends Controller {
 	}
 	
 	public function test(){
-		echo 'haha';
+		$page=$_GET['page'];
+		$id=$_GET['id'];
+		$start=5*$page-5;
+		$end=5;
+		//实例化数据表
+		$art=M('article');
+		$pro=M('program');
+		
+		if($id<3){
+			//取出顶级栏目下的子栏目
+			$pros=$pro->field('pro_id,pro_name,pro_url')->where("pro_topid=$id")->select();
+			$this->assign('pros',$pros);
+			//设定查询条件
+			for($i=0;$i<count($pros);$i++){
+				$proid[]=$pros[$i]['pro_id'];
+			}
+			$where1['pro_id']=array('in',$proid);
+			
+			//联合查询取出文章数据和所属栏目
+			$arts=$art->alias('a')->field('a.art_id,a.art_purl,a.art_title,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
+			->where($where1)->limit("$start,$end")->order('art_id desc')->join('left join tp_program p on a.art_topid=p.pro_id')->select();
+		}else{
+			//联合查询取出文章数据和所属栏目
+			$arts=$art->alias('a')->field('a.art_id,a.art_purl,a.art_title,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name')
+			->where("art_topid=$id")->limit("$start,$end")->order('art_id desc')->join('left join tp_program p on a.art_topid=p.pro_id')->select();
+		}
+		$this->assign('arts',$arts);
+		$str=$this->fetch();
+		echo $str;
+		
 	}
 }

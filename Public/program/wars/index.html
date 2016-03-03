@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>开发实战篇</title>
+<meta name="keywords" content="健身,编程,php,天启,个人博客'/" />
+<meta name="description" content="会健身的程序员天启的个人博客" />
+<link href="/Style/base.css" rel="stylesheet">
+<link href="/Style/style.css" rel="stylesheet">
+<link href="/Style/media.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+<!--[if lt IE 9]>
+<script src="/Js/modernizr.js"></script>
+<![endif]-->
+<script src='/Js/jquery-1.12.0.min.js'></script>
+<script>
+$().ready(function(){
+	var loc=$('.about_h>a:eq(1)').attr('href');
+	var list=$('#topnav>a');
+
+ 	for(var i=0;i<list.length;i++){
+		if(list[i]==loc){
+			var id=i;
+		}
+ 	}
+ 	$('#topnav>a:eq('+id+')').attr('id','topnav_current');
+ 	
+ 	
+});
+function show(n) {
+	$.get('http://www.mynote2.com/index.php/index/test', 'page=' + n+'&id='+5, function(msg) {
+		$('.bloglist').html(msg);
+	});
+}
+</script>
+</head>
+
+
+<body class="articlelist">
+<div class="ibody">
+  <header>
+    <h1>天启的个人博客</h1>
+    <h2>fighting!为梦想去努力的路不会觉得累!!!</h2>
+    <div class="logo"><a href="http://www.mynote2.com"></a></div>
+    <nav id="topnav">
+      <a href="http://www.mynote2.com">首页</a>
+	<a href="http://www.mynote2.com/index.php/index/fitness/p/1.html">健身世界</a>
+	<a href="http://www.mynote2.com/index.php/index/program/p/1.html">IT世界</a>
+	<a href="http://www.mynote2.com/index.php/index/about.html">关于天启</a>
+	<a href="https://github.com/billywl">Github</a>
+	</nav>
+  </header>
+
+  <article>
+        <div class='extend' text-align='center'>
+		<a href="http://www.mynote2.com/index.php/index/wars/u/php/p/1.html">php后端篇 |</a><a href="http://www.mynote2.com/index.php/index/wars/u/tools/p/1.html">实用工具篇 |</a><a href="http://www.mynote2.com/index.php/index/wars/u/wars/p/1.html">开发实战篇 |</a><a href="http://www.mynote2.com/index.php/index/wars/u/others/p/1.html">其他语言篇 |</a>		</div>
+		
+
+
+
+
+    <h2 class="about_h"></h2>
+	<div class="bloglist">
+
+	    <div class="newblog">
+        <ul>
+          <h3><a href="http://www.mynote2.com/index.php/index/art/id/31.html">ggbfgbfgb</a></h3>
+          <div class="autor">作者: <span class='sp'>天启</span>
+		  <span>所属栏目【 <span class='sp'>开发实战篇</span>】</span>
+		  <span>浏览 ( <span class='sp'>101</span>)</span>
+		  <span>来源 ( <span class='sp'>原创</span>)</span></div>
+          <p> bfgbn<a href="http://www.mynote2.com/index.php/index/art/id/31.html" class="readmore">阅读全文</a></p>
+		  
+        </ul>
+        <figure><img src="http://www.mynote2.com/uploads/Images/2016-02-26/thumb.56d008e2df33b.jpg" ></figure>
+        <div class="dateview">02.26号</div>
+      </div>
+	  <!-- /listbox --><div class="newblog">
+        <ul>
+          <h3><a href="http://www.mynote2.com/index.php/index/art/id/29.html">撒旦法啥地方是</a></h3>
+          <div class="autor">作者: <span class='sp'>天启</span>
+		  <span>所属栏目【 <span class='sp'>开发实战篇</span>】</span>
+		  <span>浏览 ( <span class='sp'>88</span>)</span>
+		  <span>来源 ( <span class='sp'>原创</span>)</span></div>
+          <p>&lt;p&gt;啥地方士大夫啥地方<a href="http://www.mynote2.com/index.php/index/art/id/29.html" class="readmore">阅读全文</a></p>
+		  
+        </ul>
+        <figure><img src="http://www.mynote2.com/uploads/Images/2016-02-24/thumb.56cd51c657981.jpg" ></figure>
+        <div class="dateview">02.24号</div>
+      </div>
+	  <!-- /listbox -->    </div>
+<div class="pagination">				每页显示5条记录,总共有 2条记录,&nbsp;&nbsp;&nbsp;&nbsp;<span id="click_page"><a href='#' onclick='show(1)'>1</a>&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+  </article>
+
+	  <aside>
+    <div class="rnav">
+		<li class="rnav1"><a href="http://www.mynote2.com/index.php/index/wars/u/php/p/1.html">php后端篇</a></li><li class="rnav2"><a href="http://www.mynote2.com/index.php/index/wars/u/tools/p/1.html">实用工具篇</a></li><li class="rnav3"><a href="http://www.mynote2.com/index.php/index/wars/u/wars/p/1.html">开发实战篇</a></li><li class="rnav4"><a href="http://www.mynote2.com/index.php/index/wars/u/others/p/1.html">其他语言篇</a></li>    </div>
+    <div class="ph_news">
+      <h2>
+        <p>点击排行</p>
+      </h2>
+      <ul class="ph_n">
+      <li><span class="num1">1</span><a href="http://www.mynote2.com/index.php/index/art/id/29/p/1.html">撒旦法啥地方是</a></li><li><span class="num2">2</span><a href="http://www.mynote2.com/index.php/index/art/id/31/p/1.html">ggbfgbfgb</a></li>      </ul>
+      <h2>
+        <p>文章推荐</p>
+      </h2>
+      <ul>
+            </ul>
+	      <div class="links">
+      <h2>
+        <p>友情链接</p>
+      </h2>
+      <ul>
+	    <li><a href="http://www.imooc.com/">慕课网</a></li>
+        <li><a href="http://www.yangqq.com/">杨青个人博客</a></li>
+      </ul>
+    </div>
+    </div>
+    <div class="copyright">
+      <ul>
+        <p> Design by 天启</a></p>
+        <p>备案号</p>
+        </p>
+      </ul>
+    </div>
+  </aside>
+
+
+
+
+  <div class="clear"></div>
+ </div>
+
+
+</body>
+</html>
