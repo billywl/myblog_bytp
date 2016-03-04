@@ -354,11 +354,22 @@ class IndexController extends Controller {
 		if(!$click){
 			$this->error('您访问的文章不存在!','../../');
 		}else{
-			$art->art_click=$click+1;
+			$click=$art->art_click=$click+1;
 			$art->where("art_id=$id")->save();
+			return $click;
 		}
 	}
 	
+	/**
+	 * ajax请求,访问量+1
+	 */
+	public function click(){
+		$id=$_GET['id'];
+		$art=M('article');
+		$click=$this->addClick($id, $art);
+		echo $click;
+	}
+		
 	/**
 	 * 根据当前文章的id和topid取出相同栏目下的前后文章id和标题,然后赋值到模版
 	 * 	上一篇文章为$prev_id和$prev_title

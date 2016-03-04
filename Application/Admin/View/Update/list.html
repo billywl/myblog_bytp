@@ -57,6 +57,7 @@ function show(a,n) {
 
 
     <h2 class="about_h">{$location}</h2>
+    <div class="pagination">{$show}</div>
 	<div class="bloglist">
 
 	    <volist name='arts' id='a'> 
@@ -65,7 +66,6 @@ function show(a,n) {
           <h3><a href="http://www.mynote2.com/art/{$a.art_id}.html">{$a.art_title}</a></h3>
           <div class="autor">作者: <span class='sp'>{$a.art_writer}</span>
 		  <span>所属栏目【 <span class='sp'>{$a.pro_name}</span>】</span>
-		  <span>浏览 ( <span class='sp'>{$a.art_click}</span>)</span>
 		  <span>来源 ( <span class='sp'>{$a.art_source}</span>)</span></div>
           <p>{$a.art_description}<a href="http://www.mynote2.com/art/{$a.art_id}.html" class="readmore">阅读全文</a></p>
 		  

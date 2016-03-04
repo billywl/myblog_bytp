@@ -47,6 +47,9 @@ $().ready(function() {
  	}
  	$('#topnav>a:eq('+id+')').attr('id','topnav_current');
 	
+	$.get('http://www.mynote2.com/index.php/index/click', 'id='+<?php echo ($arts["art_id"]); ?>, function(msg) {
+		$('#click').html('浏览:'+msg+'次');
+	}); 
 });
 
 </script>
@@ -72,7 +75,7 @@ $().ready(function() {
     <div class="index_about">
       <h2 class="c_titile"><?php echo ($arts["art_title"]); ?></h2>
       <p class="box_c"><span class="d_time">发布时间：<?php echo (date('m.d',$arts["art_time"])); ?></span>
-      <span>作者：<?php echo ($arts["art_writer"]); ?></span><span>浏览:<?php echo ($arts["art_click"]); ?>次</span>
+      <span>作者：<?php echo ($arts["art_writer"]); ?></span><span id='click'>浏览: 次</span>
       <span>来源:<?php echo ($arts["art_source"]); ?></span></p>
 
       <ul class="infos">

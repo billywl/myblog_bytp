@@ -54,6 +54,9 @@ $().ready(function(){
 
 
     <h2 class="about_h"><?php echo ($location); ?></h2>
+    <div class="pagination" ><?php echo ($show); ?></div>
+
+
 	<div class="bloglist">
 
 	    <?php if(is_array($arts)): $i = 0; $__LIST__ = $arts;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a): $mod = ($i % 2 );++$i;?><div class="newblog">

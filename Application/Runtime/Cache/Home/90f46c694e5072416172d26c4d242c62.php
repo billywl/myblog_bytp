@@ -52,7 +52,6 @@ $().ready(function() {
 </script>
 </head>
 <body>
-
 <div class="ibody">
   <header>
     <h1>天启的个人博客</h1>

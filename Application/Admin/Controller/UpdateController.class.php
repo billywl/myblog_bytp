@@ -216,7 +216,7 @@ class UpdateController extends CheckController {
 		$this->assign('searchId',$searchId);
 
 		//取出顶级栏目下的子栏目
-		$pros=$pro->field('pro_id,pro_name,pro_url')->where("pro_topid=$searchId")->select();
+		$pros=$pro->field('pro_id,pro_name,pro_url')->order('pro_id')->where("pro_topid=$searchId")->select();
 		$this->assign('pros',$pros);
 		//设定查询条件
 		for($i=0;$i<count($pros);$i++){

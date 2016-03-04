@@ -47,6 +47,9 @@ $().ready(function() {
  	}
  	$('#topnav>a:eq('+id+')').attr('id','topnav_current');
 	
+	$.get('http://www.mynote2.com/index.php/index/click', 'id='+11, function(msg) {
+		$('#click').html('浏览:'+msg+'次');
+	}); 
 });
 
 </script>
@@ -72,7 +75,7 @@ $().ready(function() {
     <div class="index_about">
       <h2 class="c_titile">knowledge1</h2>
       <p class="box_c"><span class="d_time">发布时间：02.23</span>
-      <span>作者：天启</span><span>浏览:99次</span>
+      <span>作者：天启</span><span id='click'>浏览: 次</span>
       <span>来源:原创</span></p>
 
       <ul class="infos">
@@ -92,7 +95,7 @@ $().ready(function() {
 
   <aside>
     <div class="rnav">
-		<li class="rnav1"><a href="http://www.mynote2.com//knowledge/index.html">健身知识</a></li><li class="rnav2"><a href="http://www.mynote2.com//diet/index.html">健身饮食</a></li><li class="rnav3"><a href="http://www.mynote2.com//necessary/index.html">程序员必练</a></li><li class="rnav4"><a href="http://www.mynote2.com//log/index.html">健身日志</a></li>    </div>
+		<li class="rnav1"><a href="http://www.mynote2.com/fitness/knowledge/index.html">健身知识</a></li><li class="rnav2"><a href="http://www.mynote2.com/fitness/diet/index.html">健身饮食</a></li><li class="rnav3"><a href="http://www.mynote2.com/fitness/necessary/index.html">程序员必练</a></li><li class="rnav4"><a href="http://www.mynote2.com/fitness/log/index.html">健身日志</a></li>    </div>
     <div class="ph_news">
       <h2>
         <p>点击排行</p>
