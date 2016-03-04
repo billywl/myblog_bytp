@@ -24,11 +24,7 @@
                     <br />
                     <h1 class="type"><a href="/admin.php/picture/upLoadPic" target="main">上传图片</a></h1>                      
                     <br />
-                    <h1 class="type"><a href="/admin.php/update/index" target="main">更新主页</a></h1>                      
-                    <br />
-                    <h1 class="type"><a href="/admin.php/update/program" target="main">更新栏目页</a></h1>                      
-                    <br />
-                    <h1 class="type"><a href="/admin.php/update/article" target="main">更新文章页</a></h1>                      
+                    <h1 class="type"><a href="/admin.php/update/update" target="main">更新静态页</a></h1>                      
                     <!-- *********** -->
                 </div>
             </td>

@@ -60,7 +60,7 @@ $().ready(function() {
     <div class="logo"><a href="http://www.mynote2.com/index.html"></a></div>
     <nav id="topnav">
       <a href="http://www.mynote2.com/index.html">首页</a>
-	<a href="http://www.mynote2.com/fitness/index.html">健身世界</a>
+	<a href='http://www.mynote2.com/fitness/index.html'>健身世界</a>
 	<a href="http://www.mynote2.com/program/index.html">IT世界</a>
 	<a href="http://www.mynote2.com/index/about.html">关于天启</a>
 	<a href="https://github.com/billywl">Github</a>
@@ -92,7 +92,7 @@ $().ready(function() {
 
   <aside>
     <div class="rnav">
-		<?php if(is_array($pros)): $i = 0; $__LIST__ = $pros;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$p): $mod = ($i % 2 );++$i;?><li class="rnav<?php echo ($i); ?>"><a href="http://www.mynote2.com/<?php echo ($t_url); ?>/<?php echo ($p["pro_url"]); ?>/index.html"><?php echo ($p["pro_name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+		<?php if(is_array($pros)): $i = 0; $__LIST__ = $pros;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$p): $mod = ($i % 2 );++$i;?><li class="rnav<?php echo ($i); ?>"><a href="http://www.mynote2.com/<?php echo ($f_url); ?>/<?php echo ($p["pro_url"]); ?>/index.html"><?php echo ($p["pro_name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
     </div>
     <div class="ph_news">
       <h2>

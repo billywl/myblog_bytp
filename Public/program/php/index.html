@@ -27,10 +27,16 @@ $().ready(function(){
  	
  	
 });
-function show(n) {
-	$.get('http://www.mynote2.com/index.php/index/test', 'page=' + n+'&id='+19, function(msg) {
+
+//点击事件
+function show(a,n) {
+ 	//ajax请求获取其他数据
+	$.get('http://www.mynote2.com/index.php/index/test', 'page=' + n+'&id='+3, function(msg) {
 		$('.bloglist').html(msg);
-	});
+	}); 
+	//当前页面栏高亮
+	$('.current').attr('class','');
+	$(a).attr('class','current'); 
 }
 </script>
 </head>
@@ -64,58 +70,71 @@ function show(n) {
 
 	    <div class="newblog">
         <ul>
-          <h3><a href="http://www.mynote2.com/art/15.html">123</a></h3>
+          <h3><a href="http://www.mynote2.com/art/27.html">简历</a></h3>
           <div class="autor">作者: <span class='sp'>天启</span>
 		  <span>所属栏目【 <span class='sp'>php后端篇</span>】</span>
-		  <span>浏览 ( <span class='sp'>92</span>)</span>
+		  <span>浏览 ( <span class='sp'>86</span>)</span>
 		  <span>来源 ( <span class='sp'>原创</span>)</span></div>
-          <p><a href="http://www.mynote2.com/art/15.html" class="readmore">阅读全文</a></p>
+          <p>简历简历简历简历简历简历简历简历简历简历简历简历简历<a href="http://www.mynote2.com/art/27.html" class="readmore">阅读全文</a></p>
 		  
         </ul>
-        <figure><img src="http://www.mynote2.com/uploads/Images/" ></figure>
-        <div class="dateview">02.20号</div>
+        <figure><img src="http://www.mynote2.com/uploads/Images/2016-02-24/thumb.56cd4c1c43fc3.jpg" ></figure>
+        <div class="dateview">02.24号</div>
       </div>
 	  <!-- /listbox --><div class="newblog">
         <ul>
-          <h3><a href="http://www.mynote2.com/art/5.html">1231</a></h3>
-          <div class="autor">作者: <span class='sp'></span>
+          <h3><a href="http://www.mynote2.com/art/7.html">php7</a></h3>
+          <div class="autor">作者: <span class='sp'>天启</span>
 		  <span>所属栏目【 <span class='sp'>php后端篇</span>】</span>
-		  <span>浏览 ( <span class='sp'>89</span>)</span>
+		  <span>浏览 ( <span class='sp'>85</span>)</span>
 		  <span>来源 ( <span class='sp'>原创</span>)</span></div>
-          <p><a href="http://www.mynote2.com/art/5.html" class="readmore">阅读全文</a></p>
+          <p>php7php7php7php7php7<a href="http://www.mynote2.com/art/7.html" class="readmore">阅读全文</a></p>
 		  
         </ul>
         <figure><img src="http://www.mynote2.com/uploads/Images/" ></figure>
-        <div class="dateview">02.19号</div>
+        <div class="dateview">02.23号</div>
       </div>
 	  <!-- /listbox --><div class="newblog">
         <ul>
-          <h3><a href="http://www.mynote2.com/art/4.html">12323</a></h3>
+          <h3><a href="http://www.mynote2.com/art/6.html">php6</a></h3>
           <div class="autor">作者: <span class='sp'>天启</span>
 		  <span>所属栏目【 <span class='sp'>php后端篇</span>】</span>
-		  <span>浏览 ( <span class='sp'>88</span>)</span>
+		  <span>浏览 ( <span class='sp'>84</span>)</span>
 		  <span>来源 ( <span class='sp'>原创</span>)</span></div>
-          <p>&lt;p&gt;法人股东风格的风格<a href="http://www.mynote2.com/art/4.html" class="readmore">阅读全文</a></p>
+          <p>php6php6php6<a href="http://www.mynote2.com/art/6.html" class="readmore">阅读全文</a></p>
 		  
         </ul>
         <figure><img src="http://www.mynote2.com/uploads/Images/" ></figure>
-        <div class="dateview">02.19号</div>
+        <div class="dateview">02.23号</div>
       </div>
 	  <!-- /listbox --><div class="newblog">
         <ul>
-          <h3><a href="http://www.mynote2.com/art/3.html">234234234234</a></h3>
+          <h3><a href="http://www.mynote2.com/art/5.html">php5</a></h3>
           <div class="autor">作者: <span class='sp'>天启</span>
 		  <span>所属栏目【 <span class='sp'>php后端篇</span>】</span>
-		  <span>浏览 ( <span class='sp'>90</span>)</span>
+		  <span>浏览 ( <span class='sp'>85</span>)</span>
 		  <span>来源 ( <span class='sp'>原创</span>)</span></div>
-          <p><a href="http://www.mynote2.com/art/3.html" class="readmore">阅读全文</a></p>
+          <p>php5php5php5php5php5php5php5php5<a href="http://www.mynote2.com/art/5.html" class="readmore">阅读全文</a></p>
 		  
         </ul>
         <figure><img src="http://www.mynote2.com/uploads/Images/" ></figure>
-        <div class="dateview">02.19号</div>
+        <div class="dateview">02.23号</div>
+      </div>
+	  <!-- /listbox --><div class="newblog">
+        <ul>
+          <h3><a href="http://www.mynote2.com/art/4.html">php4</a></h3>
+          <div class="autor">作者: <span class='sp'>天启</span>
+		  <span>所属栏目【 <span class='sp'>php后端篇</span>】</span>
+		  <span>浏览 ( <span class='sp'>85</span>)</span>
+		  <span>来源 ( <span class='sp'>原创</span>)</span></div>
+          <p>php4php4php4php4php4php4<a href="http://www.mynote2.com/art/4.html" class="readmore">阅读全文</a></p>
+		  
+        </ul>
+        <figure><img src="http://www.mynote2.com/uploads/Images/" ></figure>
+        <div class="dateview">02.23号</div>
       </div>
 	  <!-- /listbox -->    </div>
-<div class="pagination">				每页显示5条记录,总共有 4条记录,&nbsp;&nbsp;&nbsp;&nbsp;<span id="click_page"><a href='#' onclick='show(1)'>1</a>&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+<div class="pagination"><div> <a class='current' href='#' onclick='show(this,1)'>1</a><a href='#' onclick='show(this,2)'>2</a></div></div>
   </article>
 
 	  <aside>
@@ -126,12 +145,12 @@ function show(n) {
         <p>点击排行</p>
       </h2>
       <ul class="ph_n">
-      <li><span class="num1">1</span><a href="http://www.mynote2.com/art/4.html">12323</a></li><li><span class="num2">2</span><a href="http://www.mynote2.com/art/5.html">1231</a></li><li><span class="num3">3</span><a href="http://www.mynote2.com/art/3.html">234234234234</a></li><li><span class="num4">4</span><a href="http://www.mynote2.com/art/15.html">123</a></li>      </ul>
+      <li><span class="num1">1</span><a href="http://www.mynote2.com/art/6.html">php6</a></li><li><span class="num2">2</span><a href="http://www.mynote2.com/art/2.html">php2</a></li><li><span class="num3">3</span><a href="http://www.mynote2.com/art/3.html">php3</a></li><li><span class="num4">4</span><a href="http://www.mynote2.com/art/4.html">php4</a></li><li><span class="num5">5</span><a href="http://www.mynote2.com/art/5.html">php5</a></li>      </ul>
       <h2>
         <p>文章推荐</p>
       </h2>
       <ul>
-      <li><a href="http://www.mynote2.com/art/3.html">234234234234</a></li><li><a href="http://www.mynote2.com/art/15.html">123</a></li>      </ul>
+      <li><a href="http://www.mynote2.com/art/2.html">php2</a></li><li><a href="http://www.mynote2.com/art/4.html">php4</a></li><li><a href="http://www.mynote2.com/art/27.html">简历</a></li>      </ul>
 	      <div class="links">
       <h2>
         <p>友情链接</p>

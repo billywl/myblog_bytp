@@ -28,7 +28,7 @@ $().ready(function(){
     <div class="logo"><a href="http://www.mynote2.com/index.html"></a></div>
     <nav id="topnav">
       <a href="http://www.mynote2.com/index.html">首页</a>
-	<a href="http://www.mynote2.com/fitness/index.html">健身世界</a>
+	<a href='http://www.mynote2.com/fitness/index.html'>健身世界</a>
 	<a href="http://www.mynote2.com/program/index.html">IT世界</a>
 	<a href="http://www.mynote2.com/index/about.html">关于天启</a>
 	<a href="https://github.com/billywl">Github</a>

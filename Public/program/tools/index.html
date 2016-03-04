@@ -27,10 +27,16 @@ $().ready(function(){
  	
  	
 });
-function show(n) {
-	$.get('http://www.mynote2.com/index.php/index/test', 'page=' + n+'&id='+20, function(msg) {
+
+//点击事件
+function show(a,n) {
+ 	//ajax请求获取其他数据
+	$.get('http://www.mynote2.com/index.php/index/test', 'page=' + n+'&id='+4, function(msg) {
 		$('.bloglist').html(msg);
-	});
+	}); 
+	//当前页面栏高亮
+	$('.current').attr('class','');
+	$(a).attr('class','current'); 
 }
 </script>
 </head>
@@ -64,20 +70,73 @@ function show(n) {
 
 	    <div class="newblog">
         <ul>
-          <h3><a href="http://www.mynote2.com/art/24.html">12321</a></h3>
+          <h3><a href="http://www.mynote2.com/art/30.html">打手犯规地方</a></h3>
           <div class="autor">作者: <span class='sp'>天启</span>
 		  <span>所属栏目【 <span class='sp'>实用工具篇</span>】</span>
-		  <span>浏览 ( <span class='sp'>84</span>)</span>
+		  <span>浏览 ( <span class='sp'>91</span>)</span>
 		  <span>来源 ( <span class='sp'>原创</span>)</span></div>
-          <p>123
-<a href="http://www.mynote2.com/art/24.html" class="readmore">阅读全文</a></p>
+          <p>对 手犯规
+
+水电费是<a href="http://www.mynote2.com/art/30.html" class="readmore">阅读全文</a></p>
 		  
         </ul>
-        <figure><img src="http://www.mynote2.com/uploads/Images/" ></figure>
-        <div class="dateview">02.28号</div>
+        <figure><img src="http://www.mynote2.com/uploads/Images/2016-02-24/thumb.56cd5b83314a9.jpg" ></figure>
+        <div class="dateview">02.24号</div>
+      </div>
+	  <!-- /listbox --><div class="newblog">
+        <ul>
+          <h3><a href="http://www.mynote2.com/art/25.html">dsfgdgf</a></h3>
+          <div class="autor">作者: <span class='sp'>天启</span>
+		  <span>所属栏目【 <span class='sp'>实用工具篇</span>】</span>
+		  <span>浏览 ( <span class='sp'>90</span>)</span>
+		  <span>来源 ( <span class='sp'>原创</span>)</span></div>
+          <p>&lt;p&gt;啥的发生的防守打法<a href="http://www.mynote2.com/art/25.html" class="readmore">阅读全文</a></p>
+		  
+        </ul>
+        <figure><img src="http://www.mynote2.com/uploads/Images/2016-02-24/thumb.56cd3dc0f33b5.jpg" ></figure>
+        <div class="dateview">02.24号</div>
+      </div>
+	  <!-- /listbox --><div class="newblog">
+        <ul>
+          <h3><a href="http://www.mynote2.com/art/24.html">rt etre</a></h3>
+          <div class="autor">作者: <span class='sp'>天启</span>
+		  <span>所属栏目【 <span class='sp'>实用工具篇</span>】</span>
+		  <span>浏览 ( <span class='sp'>91</span>)</span>
+		  <span>来源 ( <span class='sp'>原创</span>)</span></div>
+          <p>erterterterterterterterterterterterterterter<a href="http://www.mynote2.com/art/24.html" class="readmore">阅读全文</a></p>
+		  
+        </ul>
+        <figure><img src="http://www.mynote2.com/uploads/Images/2016-02-24/thumb.56cd3d9192e4c.jpg" ></figure>
+        <div class="dateview">02.24号</div>
+      </div>
+	  <!-- /listbox --><div class="newblog">
+        <ul>
+          <h3><a href="http://www.mynote2.com/art/23.html">dfgdfg</a></h3>
+          <div class="autor">作者: <span class='sp'>天启</span>
+		  <span>所属栏目【 <span class='sp'>实用工具篇</span>】</span>
+		  <span>浏览 ( <span class='sp'>89</span>)</span>
+		  <span>来源 ( <span class='sp'>原创</span>)</span></div>
+          <p><a href="http://www.mynote2.com/art/23.html" class="readmore">阅读全文</a></p>
+		  
+        </ul>
+        <figure><img src="http://www.mynote2.com/uploads/Images/2016-02-24/thumb.56cd37cd593ca.jpg" ></figure>
+        <div class="dateview">02.24号</div>
+      </div>
+	  <!-- /listbox --><div class="newblog">
+        <ul>
+          <h3><a href="http://www.mynote2.com/art/22.html">erretr</a></h3>
+          <div class="autor">作者: <span class='sp'>天启</span>
+		  <span>所属栏目【 <span class='sp'>实用工具篇</span>】</span>
+		  <span>浏览 ( <span class='sp'>85</span>)</span>
+		  <span>来源 ( <span class='sp'>原创</span>)</span></div>
+          <p><a href="http://www.mynote2.com/art/22.html" class="readmore">阅读全文</a></p>
+		  
+        </ul>
+        <figure><img src="http://www.mynote2.com/uploads/Images/2016-02-24/56cd378136061.jpg" ></figure>
+        <div class="dateview">02.24号</div>
       </div>
 	  <!-- /listbox -->    </div>
-<div class="pagination">				每页显示5条记录,总共有 1条记录,&nbsp;&nbsp;&nbsp;&nbsp;<span id="click_page"><a href='#' onclick='show(1)'>1</a>&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+<div class="pagination"><div> <a class='current' href='#' onclick='show(this,1)'>1</a><a href='#' onclick='show(this,2)'>2</a></div></div>
   </article>
 
 	  <aside>
@@ -88,12 +147,12 @@ function show(n) {
         <p>点击排行</p>
       </h2>
       <ul class="ph_n">
-      <li><span class="num1">1</span><a href="http://www.mynote2.com/art/24.html">12321</a></li>      </ul>
+      <li><span class="num1">1</span><a href="http://www.mynote2.com/art/8.html">tools1</a></li><li><span class="num2">2</span><a href="http://www.mynote2.com/art/22.html">erretr</a></li><li><span class="num3">3</span><a href="http://www.mynote2.com/art/9.html">tools2</a></li><li><span class="num4">4</span><a href="http://www.mynote2.com/art/23.html">dfgdfg</a></li><li><span class="num5">5</span><a href="http://www.mynote2.com/art/25.html">dsfgdgf</a></li>      </ul>
       <h2>
         <p>文章推荐</p>
       </h2>
       <ul>
-            </ul>
+      <li><a href="http://www.mynote2.com/art/8.html">tools1</a></li><li><a href="http://www.mynote2.com/art/9.html">tools2</a></li>      </ul>
 	      <div class="links">
       <h2>
         <p>友情链接</p>

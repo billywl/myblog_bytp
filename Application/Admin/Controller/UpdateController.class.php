@@ -3,6 +3,23 @@
 namespace Admin\Controller;
 use Common\Tool\Page;
 class UpdateController extends CheckController {
+	
+	/**
+	 * 一键更新
+	 */
+	public function updateAll(){
+		$this->index();
+		$this->program();
+		$this->article();				
+		$this->about();				
+	}
+	
+	/**
+	 * 更新页面
+	 */
+	public function update(){
+		$this->display();
+	}
 	/**
 	 * 更新主页
 	 */
@@ -41,9 +58,9 @@ class UpdateController extends CheckController {
 		$html=$this->buildHtml('index.html','./','index');
 		
 		if($html){
-			$this->success('更新主页成功!','../article/add');
+			$this->success('更新主页成功!','update');
 		}else{
-			$this->error('更新主页失败!','../article/add');
+			$this->error('更新主页失败!','update');
 		}
 	}	
 	
@@ -68,9 +85,9 @@ class UpdateController extends CheckController {
 				
 		}
 		if($num==10){	
-			$this->success('更新主页成功!','../article/add');
+			$this->success('更新栏目成功!','update');
 		}else{
-			$this->error('更新主页失败!','../article/add');
+			$this->error('更新栏目失败!','update');
 		}
 	}
 
@@ -81,19 +98,59 @@ class UpdateController extends CheckController {
 		$art=M('article');
 		$arr=$art->where('art_topid>0')->getField('art_id',true);
 		$num=$art->count('art_id')-1;
-
 		foreach ($arr as $value){
 			if($this->updateArticle($value)){				
 				$num--;
 			}			
 		}
 		if(!$num){	
-			$this->success('更新主页成功!','../article/add');
+			$this->success('更新文章成功!','update');
 		}else{
-			$this->error('更新主页失败!','../article/add');
+			$this->error("更新文章失败,还有$num篇未更新",'update');
 		}
 	}
 	
+	/**
+	 * 更新简介页面
+	 */
+	public function about(){
+		$art=M('article');
+		$pro=M('program');
+		//联合查询取出文章数据和所属栏目
+		
+		//取出健身世界和程序世界下的子栏目
+		$pros1=$pro->field('pro_id,pro_name,pro_url')->where('pro_topid=1')->select();
+		$pros2=$pro->field('pro_id,pro_name,pro_url')->where('pro_topid=2')->select();
+		
+		//设定查询条件
+		for($i=0;$i<count($pros1);$i++){
+			$proid1[]=$pros1[$i]['pro_id'];
+		}
+		$where1['art_topid']=array('in',$proid1);
+		
+		for($i=0;$i<count($pros2);$i++){
+			$proid2[]=$pros2[$i]['pro_id'];
+		}
+		$where2['art_topid']=array('in',$proid2);
+		
+		
+		//取出侧边栏数据
+		$a1=$art->field('art_id,art_title')->where($where1)->limit('5')->order('art_id desc')->select();
+		$a2=$art->field('art_id,art_title')->where($where2)->limit('5')->order('art_id desc')->select();
+		
+		//赋值给模版并加载模版
+
+		$this->assign('a1',$a1);
+		$this->assign('a2',$a2);
+				
+		$html=$this->buildHtml('about.html','./index/','about');
+		
+		if($html){
+			$this->success('更新简介成功!','update');
+		}else{
+			$this->error('更新简介失败!','update');
+		}
+	}
 	/**
 	 * 根据$id更新文章页 存放目录/art/$id.html
 	 */

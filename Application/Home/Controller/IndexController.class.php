@@ -439,15 +439,5 @@ class IndexController extends Controller {
 		
 	}
 	
-	public function init(){
-		$loc="http://www.mynote2.com/fitness/index.html";
-		//截取方法名,并拼凑到字符串
-		$loc=substr($loc,strpos($loc, 'com/')+4);
-		$loc=substr($loc,strpos($loc, '/')+1);
-		$stop=strpos($loc,'/');
-		var_dump($stop);
-
-		
-	}
 	
 }

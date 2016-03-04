@@ -27,10 +27,16 @@ $().ready(function(){
  	
  	
 });
-function show(n) {
-	$.get('http://www.mynote2.com/index.php/index/test', 'page=' + n+'&id='+24, function(msg) {
+
+//点击事件
+function show(a,n) {
+ 	//ajax请求获取其他数据
+	$.get('http://www.mynote2.com/index.php/index/test', 'page=' + n+'&id='+7, function(msg) {
 		$('.bloglist').html(msg);
-	});
+	}); 
+	//当前页面栏高亮
+	$('.current').attr('class','');
+	$(a).attr('class','current'); 
 }
 </script>
 </head>
@@ -53,7 +59,7 @@ function show(n) {
 
   <article>
         <div class='extend' text-align='center'>
-		<a href="http://www.mynote2.com/fitness/knowledge/index.html">健身知识 |</a><a href="http://www.mynote2.com/fitness/Diet/index.html">健身饮食 |</a><a href="http://www.mynote2.com/fitness/necessary/index.html">程序员必练 |</a><a href="http://www.mynote2.com/fitness/log/index.html">健身日志 |</a>		</div>
+		<a href="http://www.mynote2.com/fitness/knowledge/index.html">健身知识 |</a><a href="http://www.mynote2.com/fitness/diet/index.html">健身饮食 |</a><a href="http://www.mynote2.com/fitness/necessary/index.html">程序员必练 |</a><a href="http://www.mynote2.com/fitness/log/index.html">健身日志 |</a>		</div>
 		
 
 
@@ -64,87 +70,87 @@ function show(n) {
 
 	    <div class="newblog">
         <ul>
-          <h3><a href="http://www.mynote2.com/art/23.html">6</a></h3>
+          <h3><a href="http://www.mynote2.com/art/17.html">knowledge7</a></h3>
           <div class="autor">作者: <span class='sp'>天启</span>
 		  <span>所属栏目【 <span class='sp'>健身知识</span>】</span>
-		  <span>浏览 ( <span class='sp'>89</span>)</span>
+		  <span>浏览 ( <span class='sp'>88</span>)</span>
 		  <span>来源 ( <span class='sp'>原创</span>)</span></div>
-          <p><a href="http://www.mynote2.com/art/23.html" class="readmore">阅读全文</a></p>
+          <p>knowledge7<a href="http://www.mynote2.com/art/17.html" class="readmore">阅读全文</a></p>
 		  
         </ul>
         <figure><img src="http://www.mynote2.com/uploads/Images/" ></figure>
-        <div class="dateview">02.22号</div>
+        <div class="dateview">02.23号</div>
       </div>
 	  <!-- /listbox --><div class="newblog">
         <ul>
-          <h3><a href="http://www.mynote2.com/art/22.html">5</a></h3>
-          <div class="autor">作者: <span class='sp'>天启</span>
-		  <span>所属栏目【 <span class='sp'>健身知识</span>】</span>
-		  <span>浏览 ( <span class='sp'>87</span>)</span>
-		  <span>来源 ( <span class='sp'>原创</span>)</span></div>
-          <p><a href="http://www.mynote2.com/art/22.html" class="readmore">阅读全文</a></p>
-		  
-        </ul>
-        <figure><img src="http://www.mynote2.com/uploads/Images/" ></figure>
-        <div class="dateview">02.22号</div>
-      </div>
-	  <!-- /listbox --><div class="newblog">
-        <ul>
-          <h3><a href="http://www.mynote2.com/art/21.html">4</a></h3>
-          <div class="autor">作者: <span class='sp'>天启</span>
-		  <span>所属栏目【 <span class='sp'>健身知识</span>】</span>
-		  <span>浏览 ( <span class='sp'>96</span>)</span>
-		  <span>来源 ( <span class='sp'>原创</span>)</span></div>
-          <p><a href="http://www.mynote2.com/art/21.html" class="readmore">阅读全文</a></p>
-		  
-        </ul>
-        <figure><img src="http://www.mynote2.com/uploads/Images/" ></figure>
-        <div class="dateview">02.22号</div>
-      </div>
-	  <!-- /listbox --><div class="newblog">
-        <ul>
-          <h3><a href="http://www.mynote2.com/art/20.html">3</a></h3>
-          <div class="autor">作者: <span class='sp'>天启</span>
-		  <span>所属栏目【 <span class='sp'>健身知识</span>】</span>
-		  <span>浏览 ( <span class='sp'>91</span>)</span>
-		  <span>来源 ( <span class='sp'>原创</span>)</span></div>
-          <p><a href="http://www.mynote2.com/art/20.html" class="readmore">阅读全文</a></p>
-		  
-        </ul>
-        <figure><img src="http://www.mynote2.com/uploads/Images/" ></figure>
-        <div class="dateview">02.22号</div>
-      </div>
-	  <!-- /listbox --><div class="newblog">
-        <ul>
-          <h3><a href="http://www.mynote2.com/art/19.html">2</a></h3>
+          <h3><a href="http://www.mynote2.com/art/16.html">knowledge6</a></h3>
           <div class="autor">作者: <span class='sp'>天启</span>
 		  <span>所属栏目【 <span class='sp'>健身知识</span>】</span>
 		  <span>浏览 ( <span class='sp'>85</span>)</span>
 		  <span>来源 ( <span class='sp'>原创</span>)</span></div>
-          <p><a href="http://www.mynote2.com/art/19.html" class="readmore">阅读全文</a></p>
+          <p>knowledge6knowledge6knowledge6<a href="http://www.mynote2.com/art/16.html" class="readmore">阅读全文</a></p>
 		  
         </ul>
         <figure><img src="http://www.mynote2.com/uploads/Images/" ></figure>
-        <div class="dateview">02.22号</div>
+        <div class="dateview">02.23号</div>
+      </div>
+	  <!-- /listbox --><div class="newblog">
+        <ul>
+          <h3><a href="http://www.mynote2.com/art/15.html">knowledge5</a></h3>
+          <div class="autor">作者: <span class='sp'>天启</span>
+		  <span>所属栏目【 <span class='sp'>健身知识</span>】</span>
+		  <span>浏览 ( <span class='sp'>84</span>)</span>
+		  <span>来源 ( <span class='sp'>原创</span>)</span></div>
+          <p>knowledge5knowledge5knowledge5<a href="http://www.mynote2.com/art/15.html" class="readmore">阅读全文</a></p>
+		  
+        </ul>
+        <figure><img src="http://www.mynote2.com/uploads/Images/" ></figure>
+        <div class="dateview">02.23号</div>
+      </div>
+	  <!-- /listbox --><div class="newblog">
+        <ul>
+          <h3><a href="http://www.mynote2.com/art/14.html">knowledge4</a></h3>
+          <div class="autor">作者: <span class='sp'>天启</span>
+		  <span>所属栏目【 <span class='sp'>健身知识</span>】</span>
+		  <span>浏览 ( <span class='sp'>101</span>)</span>
+		  <span>来源 ( <span class='sp'>原创</span>)</span></div>
+          <p>knowledge4knowledge4knowledge4<a href="http://www.mynote2.com/art/14.html" class="readmore">阅读全文</a></p>
+		  
+        </ul>
+        <figure><img src="http://www.mynote2.com/uploads/Images/" ></figure>
+        <div class="dateview">02.23号</div>
+      </div>
+	  <!-- /listbox --><div class="newblog">
+        <ul>
+          <h3><a href="http://www.mynote2.com/art/13.html">knowledge3</a></h3>
+          <div class="autor">作者: <span class='sp'>天启</span>
+		  <span>所属栏目【 <span class='sp'>健身知识</span>】</span>
+		  <span>浏览 ( <span class='sp'>86</span>)</span>
+		  <span>来源 ( <span class='sp'>原创</span>)</span></div>
+          <p>knowledge3knowledge3<a href="http://www.mynote2.com/art/13.html" class="readmore">阅读全文</a></p>
+		  
+        </ul>
+        <figure><img src="http://www.mynote2.com/uploads/Images/" ></figure>
+        <div class="dateview">02.23号</div>
       </div>
 	  <!-- /listbox -->    </div>
-<div class="pagination">				每页显示5条记录,总共有 6条记录,&nbsp;&nbsp;&nbsp;&nbsp;<span id="click_page"><a href='#' onclick='show(1)'>1</a>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href='#' onclick='show(2)'>2</a>&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+<div class="pagination"><div> <a class='current' href='#' onclick='show(this,1)'>1</a><a href='#' onclick='show(this,2)'>2</a></div></div>
   </article>
 
 	  <aside>
     <div class="rnav">
-		<li class="rnav1"><a href="http://www.mynote2.com/fitness/knowledge/index.html">健身知识</a></li><li class="rnav2"><a href="http://www.mynote2.com/fitness/Diet/index.html">健身饮食</a></li><li class="rnav3"><a href="http://www.mynote2.com/fitness/necessary/index.html">程序员必练</a></li><li class="rnav4"><a href="http://www.mynote2.com/fitness/log/index.html">健身日志</a></li>    </div>
+		<li class="rnav1"><a href="http://www.mynote2.com/fitness/knowledge/index.html">健身知识</a></li><li class="rnav2"><a href="http://www.mynote2.com/fitness/diet/index.html">健身饮食</a></li><li class="rnav3"><a href="http://www.mynote2.com/fitness/necessary/index.html">程序员必练</a></li><li class="rnav4"><a href="http://www.mynote2.com/fitness/log/index.html">健身日志</a></li>    </div>
     <div class="ph_news">
       <h2>
         <p>点击排行</p>
       </h2>
       <ul class="ph_n">
-      <li><span class="num1">1</span><a href="http://www.mynote2.com/art/19.html">2</a></li><li><span class="num2">2</span><a href="http://www.mynote2.com/art/18.html">1</a></li><li><span class="num3">3</span><a href="http://www.mynote2.com/art/22.html">5</a></li><li><span class="num4">4</span><a href="http://www.mynote2.com/art/23.html">6</a></li><li><span class="num5">5</span><a href="http://www.mynote2.com/art/20.html">3</a></li>      </ul>
+      <li><span class="num1">1</span><a href="http://www.mynote2.com/art/15.html">knowledge5</a></li><li><span class="num2">2</span><a href="http://www.mynote2.com/art/16.html">knowledge6</a></li><li><span class="num3">3</span><a href="http://www.mynote2.com/art/13.html">knowledge3</a></li><li><span class="num4">4</span><a href="http://www.mynote2.com/art/12.html">knowledge2</a></li><li><span class="num5">5</span><a href="http://www.mynote2.com/art/17.html">knowledge7</a></li>      </ul>
       <h2>
         <p>文章推荐</p>
       </h2>
       <ul>
-      <li><a href="http://www.mynote2.com/art/22.html">5</a></li><li><a href="http://www.mynote2.com/art/23.html">6</a></li><li><a href="http://www.mynote2.com/art/20.html">3</a></li><li><a href="http://www.mynote2.com/art/21.html">4</a></li>      </ul>
+      <li><a href="http://www.mynote2.com/art/15.html">knowledge5</a></li><li><a href="http://www.mynote2.com/art/16.html">knowledge6</a></li><li><a href="http://www.mynote2.com/art/12.html">knowledge2</a></li><li><a href="http://www.mynote2.com/art/17.html">knowledge7</a></li><li><a href="http://www.mynote2.com/art/11.html">knowledge1</a></li>      </ul>
 	      <div class="links">
       <h2>
         <p>友情链接</p>

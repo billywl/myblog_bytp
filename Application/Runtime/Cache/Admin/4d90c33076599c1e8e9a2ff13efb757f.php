@@ -27,10 +27,16 @@ $().ready(function(){
  	
  	
 });
-function show(n) {
+
+//点击事件
+function show(a,n) {
+ 	//ajax请求获取其他数据
 	$.get('http://www.mynote2.com/index.php/index/test', 'page=' + n+'&id='+<?php echo ($searchId); ?>, function(msg) {
 		$('.bloglist').html(msg);
-	});
+	}); 
+	//当前页面栏高亮
+	$('.current').attr('class','');
+	$(a).attr('class','current'); 
 }
 </script>
 </head>

@@ -43,19 +43,26 @@ namespace Common\Tool;
 			//计算上一页和下一页
 			$prev=($page ==1)?$page:($page-1);
 			$next=($page==$pageCounts)?$page:($page+1);
-			$str= <<<ENDF
+/* 			$str= <<<ENDF
 				每页显示{$pageSize}条记录,总共有 {$counts}条记录,&nbsp;&nbsp;&nbsp;&nbsp;
-ENDF;
+ENDF; */
+			$str='';
 			
 			//当总页数小于6时,直接列出全部页的链接
-			$click='<span id="click_page">';
+			$click="<div> <a class='current' href='#' onclick='show(this,1)'>1</a>";
+			for($i=2;$i<=$pageCounts;$i++){
+				//每页增加一个数字a标签
+				$click .="<a href='#' onclick='show(this,$i)'>$i</a>";
+			}
+			return $str.$click.'</div>';
+			/*$click='<span id="click_page">';
 			if($pageCounts<6){
 				for($i=1;$i<=$pageCounts;$i++){
 				//每页增加一个数字a标签
 				$click .="<a href='#' onclick='show($i)'>$i</a>&nbsp;&nbsp;&nbsp;&nbsp;</span>";
 				}return $str.$click;	
 			//当总页数大于6时,列出效果为首页...前一页 选中页 下一页...	
-			}else{
+			} else{
 				if($page<=3){
 					for($i=1;$i<=4;$i++){
 						//当总页数大于5且选中页数小于等于3时,列出所有前4个标签和...
@@ -80,8 +87,8 @@ ENDF;
 						$click .="<a href='$basename?page=$prev'>$prev</a>&nbsp;&nbsp;";
 						$click .="<a href='$basename?page=$page'>$page</a>&nbsp;&nbsp;</span>";
 					}return $str.$click.$select;
-				}
+				} 
 
-			}
+			}*/
 		}	
 	}
