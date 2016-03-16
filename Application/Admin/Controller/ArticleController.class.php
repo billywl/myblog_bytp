@@ -44,8 +44,8 @@ class ArticleController extends CheckController{
 		//没有post就直接加载添加页面
 		if(!$_POST){
 			//取出所有栏目数据
-			$art=M('program');
-			$list=$art->field('pro_id,pro_name,pro_topid')->select();
+			$pro=M('program');
+			$list=$pro->field('pro_id,pro_name,pro_topid')->select();
 			//无限极分类并赋值到模版
 			$this->assign('list',Tree::tree($list));
 			$this->display();			
@@ -296,18 +296,18 @@ class ArticleController extends CheckController{
 		 //实例化图片类
 		$image = new \Think\Image();
 		//打开上传的图片
-		$image->open("./Uploads/{$info['purl']['savepath']}{$info['purl']['savename']}");
+		$image->open("./Uploads/{$info['url']['savepath']}{$info['url']['savename']}");
 		
 		//生成缩略图
-		$image->thumb(200, 150,\Think\Image::IMAGE_THUMB_FIXED)->save("./Uploads/{$info['purl']['savepath']}thumb.{$info['purl']['savename']}");
+		$image->thumb(200, 150,\Think\Image::IMAGE_THUMB_FIXED)->save("./Uploads/{$info['url']['savepath']}thumb.{$info['url']['savename']}");
 		
 		// 缩略图添加文字水印
 		$image->text('会健身的程序员','./Uploads/cai.ttf',10,'#ff5151',9)
-		->save("./Uploads/{$info['purl']['savepath']}thumb.{$info['purl']['savename']}");
+		->save("./Uploads/{$info['url']['savepath']}thumb.{$info['url']['savename']}");
 		
 		// 给原图添加文字水印
-		$image->open("./Uploads/{$info['purl']['savepath']}{$info['purl']['savename']}")
+		$image->open("./Uploads/{$info['url']['savepath']}{$info['url']['savename']}")
 		->text('会健身的程序员','./Uploads/cai.ttf',30,'#ff5151',9)
-		->save("./Uploads/{$info['purl']['savepath']}{$info['purl']['savename']}");
+		->save("./Uploads/{$info['url']['savepath']}{$info['url']['savename']}");
 	}
 }	

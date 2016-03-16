@@ -117,8 +117,14 @@ window.onload = function(){
                                                     </tr>     
                                                     <tr>
                                                         <td width="2%">&nbsp;</td>
-                                                        <td>缩略图：</td>
-                                                        <td width="20%"><input  type="file" name="purl" /></td>
+                                                        <td>上传缩略图：</td>
+                                                        <td width="20%"><input  type="file" name="url" /></td>
+                                                        <td width="2%">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="2%">&nbsp;</td>
+                                                        <td>填写缩略图：</td>
+                                                        <td width="20%"><input class="text" type="text" name="purl"  /></td>
                                                         <td width="2%">&nbsp;</td>
                                                     </tr>    
                                                     <tr>

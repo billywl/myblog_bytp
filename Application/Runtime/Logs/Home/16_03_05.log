@@ -1,0 +1,54 @@
+[ 2016-03-05T09:41:48+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000100s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003551s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003120s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.0087s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0089s ]
+SQL: SELECT a.art_id,a.art_title,a.art_purl,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE ( a.art_topid>0 ) ORDER BY art_id desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=1 )  [ RunTime:0.0007s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=2 )  [ RunTime:0.0004s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('3','4','5','6') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0016s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('7','8','9','10') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000252s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000568s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073222s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073581s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002497s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002804s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003456s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003766s ]
+
+[ 2016-03-05T10:23:32+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001423s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001941s ]
+SQL: SHOW COLUMNS FROM `tp_article` [ RunTime:0.0079s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0096s ]
+SQL: SELECT a.art_id,a.art_title,a.art_purl,a.art_description,a.art_writer,a.art_topid,a.art_click,a.art_source,a.art_time,p.pro_name FROM tp_article a left join tp_program p on a.art_topid=p.pro_id  WHERE ( a.art_topid>0 ) ORDER BY art_id desc LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=1 )  [ RunTime:0.0005s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_url` FROM `tp_program` WHERE ( pro_topid=2 )  [ RunTime:0.0004s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('3','4','5','6') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0006s ]
+SQL: SELECT `art_id`,`art_title` FROM `tp_article` WHERE `art_topid` IN ('7','8','9','10') ORDER BY art_id desc LIMIT 5   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000236s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000545s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031388s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031733s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000921s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001216s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001724s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002034s ]
+
