@@ -64,17 +64,16 @@ $().ready(function() {
                                             <form action="" method="">
                                                 <table width="100%"  class="cont tr_color">
                                                     <tr>
-                                                        <th>权限id</th>
-                                                        <th>权限名称</th>
-                                                        <th>权限全路径</th>
-                                                        <th>权限级别</th>
+                                                        <th>角色id</th>
+                                                        <th>角色名称</th>
+                                                        <th>角色权限id</th>
+
                                                     </tr>
                                                     <volist name='list' id='vo'>
                                                     <tr align="center" class="d">
-                                                        <td>{$vo.au_id}</td>
-                                                        <td>{$vo.au_name}</td>
-                                                        <td>{$vo.au_path}</td>
-                                                        <td>{$vo.au_level}</td>
+                                                        <td>{$vo.r_id}</td>
+                                                        <td>{$vo.r_name}</td>
+                                                        <td>{$vo.r_au_ids}</td>
                                                     </tr>
                                                     </volist>
                                                 </table>                                                       

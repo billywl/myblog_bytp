@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="__STYLE__/skin.css" />
-    <script src="__JS__/public.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="/Style/skin.css" />
+    <script src="/Js/public.js" type="text/javascript"></script>
 <script>
 function prevent(event) {
 	if(window.event) {
@@ -31,20 +31,20 @@ window.onload = function(){
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <!-- 头部开始 -->
             <tr>
-                <td width="17" valign="top" background="__IMG__/mail_left_bg.gif">
-                    <img src="__IMG__/left_top_right.gif" width="17" height="29" />
+                <td width="17" valign="top" background="/Images/mail_left_bg.gif">
+                    <img src="/Images/left_top_right.gif" width="17" height="29" />
                 </td>
-                <td valign="top" background="__IMG__/content_bg.gif">
-                    <table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" background="./__IMG__/content_bg.gif">
+                <td valign="top" background="/Images/content_bg.gif">
+                    <table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" background=".//Images/content_bg.gif">
                         <tr><td height="31"><div class="title">添加角色</div></td></tr>
                     </table>
                 </td>
-                <td width="16" valign="top" background="__IMG__/mail_right_bg.gif"><img src="__IMG__/nav_right_bg.gif" width="16" height="29" /></td>
+                <td width="16" valign="top" background="/Images/mail_right_bg.gif"><img src="/Images/nav_right_bg.gif" width="16" height="29" /></td>
             </tr>
             <!-- 中间部分开始 -->
             <tr>
                 <!--第一行左边框-->
-                <td valign="middle" background="__IMG__/mail_left_bg.gif">&nbsp;</td>
+                <td valign="middle" background="/Images/mail_left_bg.gif">&nbsp;</td>
                 <!--第一行中间内容-->
                 <td valign="top" bgcolor="#F7F8F9">
                     <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -54,7 +54,7 @@ window.onload = function(){
                             <td colspan="4">
                                 <table>
                                     <tr>
-                                        <td width="100" align="center"><img src="__IMG__/mime.gif" /></td>
+                                        <td width="100" align="center"><img src="/Images/mime.gif" /></td>
                                     </tr>
                                 </table>
                             </td>
@@ -78,26 +78,23 @@ window.onload = function(){
                                                 <table width="100%" class="cont">
                                                     <tr>
                                                         <td width="2%">&nbsp;</td>
-                                                        <td>角色名称：</td>
-                                                        <td width="90%"><input class="text" type="text" id='name' name="name" /></td>
+                                                        <td >角色名称：</td>
+                                                        <td ><input class="text" type="text" id='name' name="name" /></td>
                                                     </tr>
                                                     <tr>
                                                         <td width="2%">&nbsp;</td>
                                                         <td>选择权限：</td>
-                                                     </tr>
-                                                  <volist name='top' id='vo'>
-                                                    <tr>
+									  <td>
+                                                  <?php if(is_array($top)): $i = 0; $__LIST__ = $top;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
                                                         <td width="2%">&nbsp;</td>
-                                                        <td width="90%">
-										<input type="checkbox" class='top' name='ids[]' value="{$vo.au_id}"/>{$vo.au_name}
-                                                        	<volist name='sub' id='so'>
-                                                        		<eq name='so.au_pid' value='$vo.au_id'>
-                                                        			<input type="checkbox" class='sub' name='ids[]' value="{$so.au_id}" />{$so.au_name}
-											</eq>
-                                                        	</volist>
+                                                        <td >
+										<input type="checkbox" class='top' id='top' name='ids[]' value="<?php echo ($vo["au_id"]); ?>"/><?php echo ($vo["au_name"]); ?>
+                                                        	<?php if(is_array($sub)): $i = 0; $__LIST__ = $sub;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$so): $mod = ($i % 2 );++$i; if(($so["au_pid"]) == $vo["au_id"]): ?><input type="checkbox" class='sub' name='ids[]' value="<?php echo ($so["au_id"]); ?>" /><?php echo ($so["au_name"]); endif; endforeach; endif; else: echo "" ;endif; ?>
                                                         </td>
-                                                    </tr>
-                                                  </volist>
+                                                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+									  </td>
+                                                     </tr>
+
                                                     <tr>
                                                         <td>&nbsp;</td>
                                                         <td colspan="3"><input class="btn" id='btn' type="submit" value="提交" /></td>
@@ -121,35 +118,42 @@ window.onload = function(){
                         </tr>
                     </table>
                 </td>
-                <td background="__IMG__/mail_right_bg.gif">&nbsp;</td>
+                <td background="/Images/mail_right_bg.gif">&nbsp;</td>
             </tr>
             <!-- 底部部分 -->
             <tr>
-                <td valign="bottom" background="__IMG__/mail_left_bg.gif">
-                    <img src="__IMG__/buttom_left.gif" width="17" height="17" />
+                <td valign="bottom" background="/Images/mail_left_bg.gif">
+                    <img src="/Images/buttom_left.gif" width="17" height="17" />
                 </td>
-                <td background="__IMG__/buttom_bgs.gif">
-                    <img src="__IMG__/buttom_bgs.gif" width="17" height="17">
+                <td background="/Images/buttom_bgs.gif">
+                    <img src="/Images/buttom_bgs.gif" width="17" height="17">
                 </td>
-                <td valign="bottom" bac	kground="__IMG__/mail_right_bg.gif">
-                    <img src="__IMG__/buttom_right.gif" width="16" height="17" />
+                <td valign="bottom" bac	kground="/Images/mail_right_bg.gif">
+                    <img src="/Images/buttom_right.gif" width="16" height="17" />
                 </td>           
             </tr>
         </table>
-        <script src='__JS__/jquery-1.12.0.min.js'></script>
+        <script src='/Js/jquery-1.12.0.min.js'></script>
         <script>
-        	$().ready(
-        		function (){
-        			$('.top').bind('click',function(){
-	        			if(this.checked){
-	        				$(this).parent().find('.sub').attr("checked",true);
-	        				
-	        			}else{
-	        				
-	        				$(this).parent().find('.sub').attr("checked",false);
-	        			}
-        			});
-        	});
+          	$().ready(function (){
+                	$('.top').bind('click',function(){
+                		var obj=$(this).parent().children('.sub');
+            			if(this.checked){
+            				for(var i=0;i<obj.length;i++){
+            					obj[i].checked=true;	
+            				}
+            			}else{
+            				for(var i=0;i<obj.length;i++){
+            					obj[i].checked=false;	
+            				}
+            			}
+        		}); 
+                	$('.sub').bind('click',function(){
+                		if(this.checked){
+                			$(this).parent().find('.top')[0].checked=true;              			
+                		}
+                	})
+        	}); 
         </script>
     </body>
 </html>

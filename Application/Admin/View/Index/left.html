@@ -28,7 +28,7 @@
                     <br />
                     <volist name='topAuth' id='vo' >
 	
-                   	<span class='test' ><h1 class="type"><a href="javascript:void(0)" target="main">{$vo.au_name}</a></h1>                      
+                   	<span><h1 class="type"><a class='test'  href="javascript:void(0)" target="main">{$vo.au_name}</a></h1>                      
 				<ul class="RM" hidden>
 				<volist name='subAuth' id='so'>
                     	<eq name="so.au_pid" value="$vo.au_id">
@@ -52,7 +52,7 @@
     $().ready(function(){
 	    	$('.test').click(
 		    	function(){
-		    		$(this).children('ul').toggle();
+		    		$(this).parent().next('ul').toggle();
 		    	}
 	    	); 
     	}); 

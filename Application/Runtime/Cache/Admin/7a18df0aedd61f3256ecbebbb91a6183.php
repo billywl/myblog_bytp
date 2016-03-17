@@ -78,23 +78,20 @@ window.onload = function(){
                                                 <table width="100%" class="cont">
                                                     <tr>
                                                         <td width="2%">&nbsp;</td>
-                                                        <td >角色名称：</td>
-                                                        <td ><input class="text" type="text" id='name' name="name" /></td>
+                                                        <td>角色名称：</td>
+                                                        <td width="90%"><input class="text" type="text" id='name' name="name" /></td>
                                                     </tr>
                                                     <tr>
                                                         <td width="2%">&nbsp;</td>
                                                         <td>选择权限：</td>
-									  <td>
+                                                     </tr>
                                                   <?php if(is_array($top)): $i = 0; $__LIST__ = $top;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
                                                         <td width="2%">&nbsp;</td>
-                                                        <td >
+                                                        <td width="90%">
 										<input type="checkbox" class='top' id='top' name='ids[]' value="<?php echo ($vo["au_id"]); ?>"/><?php echo ($vo["au_name"]); ?>
                                                         	<?php if(is_array($sub)): $i = 0; $__LIST__ = $sub;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$so): $mod = ($i % 2 );++$i; if(($so["au_pid"]) == $vo["au_id"]): ?><input type="checkbox" class='sub' name='ids[]' value="<?php echo ($so["au_id"]); ?>" /><?php echo ($so["au_name"]); endif; endforeach; endif; else: echo "" ;endif; ?>
                                                         </td>
                                                     </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-									  </td>
-                                                     </tr>
-
                                                     <tr>
                                                         <td>&nbsp;</td>
                                                         <td colspan="3"><input class="btn" id='btn' type="submit" value="提交" /></td>
@@ -135,25 +132,16 @@ window.onload = function(){
         </table>
         <script src='/Js/jquery-1.12.0.min.js'></script>
         <script>
-          	$().ready(function (){
-                	$('.top').bind('click',function(){
-                		var obj=$(this).parent().children('.sub');
-            			if(this.checked){
-            				for(var i=0;i<obj.length;i++){
-            					obj[i].checked=true;	
-            				}
-            			}else{
-            				for(var i=0;i<obj.length;i++){
-            					obj[i].checked=false;	
-            				}
-            			}
-        		}); 
-                	$('.sub').bind('click',function(){
-                		if(this.checked){
-                			$(this).parent().find('.top')[0].checked=true;              			
-                		}
-                	})
-        	}); 
+        	$().ready(
+        		function (){
+        			$('.top').bind('click',function(){
+	        			if(this.checked){
+	        				$(this).parent().children('.sub').attr("checked",true);
+	        			}else{
+	        				$(this).parent().children('.sub').attr("checked",false);
+	        			}
+        			});
+        	});
         </script>
     </body>
 </html>

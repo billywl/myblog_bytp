@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title> new document </title>
+  <meta name="generator" content="editplus" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+    <script src='jquery.min.js'></script>
+ </head>
+
+ <body>
+ <form action='test.php' method='post'> 
+	<input type='checkbox' name='test[]' class='top' />top
+	<input type='checkbox' name='test[]' class='sub' />sub1
+	<input type='checkbox' name='test[]' class='sub' />sub2
+	<input type='submit' >
+  </form>
+
+  <script >
+  var flag=1;
+	$('.top').bind('click',function(){
+/*		if((flag%2)!=0){
+			for(
+			$('.sub')	.attr('checked','checked');
+			flag++;
+		}else{
+			$('.sub').removeAttr('checked');
+			flag++;
+		}*/
+	if(this.checked){
+		for(var i=0;i<$('.sub').length;i++){
+			$('.sub')[i].checked=true;
+		}
+	}else{
+		for(var i=0;i<$('.sub').length;i++){
+			$('.sub')[i].checked=false;
+		}
+	}
+	});
+
+</script>
+ </body>
+</html>

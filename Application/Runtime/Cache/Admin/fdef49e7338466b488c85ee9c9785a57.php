@@ -3,28 +3,14 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="/Style/skin.css" />
-    <script src="/Js/public.js" type="text/javascript"></script>
-<script>
-function prevent(event) {
-	if(window.event) {
-		//对于ie
-		window.event.returnValue=false;
-	} else {
-		//对于w3c
-		event.preventDefault();
-	}
-}
+    <script src="/Js/jquery-1.12.0.min.js" type="text/javascript"></script>
 
-window.onload = function(){
-	$('btn').onclick = function(event){
-		//当username为空时,取消submit的按钮的提交
-		if ($('name').value == ''||$('url').value =='') {
-			//调用取消函数
-			prevent(event);
-			alert('栏目名不能为空!');
-		}
-	}
-} 
+<script>
+$().ready(function() {
+	$('.del').bind('click',(function(event){
+		return confirm('删除?');
+	}))
+});	
 </script>
 </head>
     <body>
@@ -35,8 +21,8 @@ window.onload = function(){
                     <img src="/Images/left_top_right.gif" width="17" height="29" />
                 </td>
                 <td valign="top" background="/Images/content_bg.gif">
-                    <table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" background=".//Images/content_bg.gif">
-                        <tr><td height="31"><div class="title">添加角色</div></td></tr>
+                    <table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" background="/Images/content_bg.gif">
+                        <tr><td height="31"><div class="title">权限列表</div></td></tr>
                     </table>
                 </td>
                 <td width="16" valign="top" background="/Images/mail_right_bg.gif"><img src="/Images/nav_right_bg.gif" width="16" height="29" /></td>
@@ -55,6 +41,7 @@ window.onload = function(){
                                 <table>
                                     <tr>
                                         <td width="100" align="center"><img src="/Images/mime.gif" /></td>
+                                        <td valign="bottom"><h3 style="letter-spacing:1px;">在这里，您可以根据您的需求，填写网站参数！</h3></td>
                                     </tr>
                                 </table>
                             </td>
@@ -67,40 +54,27 @@ window.onload = function(){
                                 </table>
                             </td>
                         </tr>
-                        <!-- 添加栏目开始 -->
+                        <!-- 产品列表开始 -->
                         <tr>
                             <td width="2%">&nbsp;</td>
                             <td width="96%">
                                 <table width="100%">
                                     <tr>
                                         <td colspan="2">
-                                            <form action="" method="post">
-                                                <table width="100%" class="cont">
+                                            <form action="" method="">
+                                                <table width="100%"  class="cont tr_color">
                                                     <tr>
-                                                        <td width="2%">&nbsp;</td>
-                                                        <td >角色名称：</td>
-                                                        <td ><input class="text" type="text" id='name' name="name" /></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td width="2%">&nbsp;</td>
-                                                        <td>选择权限：</td>
-									  <td>
-                                                  <?php if(is_array($top)): $i = 0; $__LIST__ = $top;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-                                                        <td width="2%">&nbsp;</td>
-                                                        <td >
-										<input type="checkbox" class='top' id='top' name='ids[]' value="<?php echo ($vo["au_id"]); ?>"/><?php echo ($vo["au_name"]); ?>
-                                                        	<?php if(is_array($sub)): $i = 0; $__LIST__ = $sub;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$so): $mod = ($i % 2 );++$i; if(($so["au_pid"]) == $vo["au_id"]): ?><input type="checkbox" class='sub' name='ids[]' value="<?php echo ($so["au_id"]); ?>" /><?php echo ($so["au_name"]); endif; endforeach; endif; else: echo "" ;endif; ?>
-                                                        </td>
-                                                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-									  </td>
-                                                     </tr>
+                                                        <th>角色id</th>
+                                                        <th>角色名称</th>
+                                                        <th>角色权限id</th>
 
-                                                    <tr>
-                                                        <td>&nbsp;</td>
-                                                        <td colspan="3"><input class="btn" id='btn' type="submit" value="提交" /></td>
-                                                        <td>&nbsp;</td>
                                                     </tr>
-                                                </table>
+                                                    <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr align="center" class="d">
+                                                        <td><?php echo ($vo["r_id"]); ?></td>
+                                                        <td><?php echo ($vo["r_name"]); ?></td>
+                                                        <td><?php echo ($vo["r_au_ids"]); ?></td>
+                                                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                                                </table>                                                       
                                             </form>
                                         </td>
                                     </tr>
@@ -108,7 +82,8 @@ window.onload = function(){
                             </td>
                             <td width="2%">&nbsp;</td>
                         </tr>
-                        <!-- 添加栏目结束 -->
+
+                        <!-- 产品列表结束 -->
                         <tr>
                             <td height="40" colspan="4">
                                 <table width="100%" height="1" border="0" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC">
@@ -117,6 +92,7 @@ window.onload = function(){
                             </td>
                         </tr>
                     </table>
+                                    
                 </td>
                 <td background="/Images/mail_right_bg.gif">&nbsp;</td>
             </tr>
@@ -128,32 +104,10 @@ window.onload = function(){
                 <td background="/Images/buttom_bgs.gif">
                     <img src="/Images/buttom_bgs.gif" width="17" height="17">
                 </td>
-                <td valign="bottom" bac	kground="/Images/mail_right_bg.gif">
+                <td valign="bottom" background="/Images/mail_right_bg.gif">
                     <img src="/Images/buttom_right.gif" width="16" height="17" />
                 </td>           
             </tr>
         </table>
-        <script src='/Js/jquery-1.12.0.min.js'></script>
-        <script>
-          	$().ready(function (){
-                	$('.top').bind('click',function(){
-                		var obj=$(this).parent().children('.sub');
-            			if(this.checked){
-            				for(var i=0;i<obj.length;i++){
-            					obj[i].checked=true;	
-            				}
-            			}else{
-            				for(var i=0;i<obj.length;i++){
-            					obj[i].checked=false;	
-            				}
-            			}
-        		}); 
-                	$('.sub').bind('click',function(){
-                		if(this.checked){
-                			$(this).parent().find('.top')[0].checked=true;              			
-                		}
-                	})
-        	}); 
-        </script>
     </body>
 </html>

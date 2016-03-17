@@ -7,7 +7,7 @@ class AuthController extends CheckController {
 	/**
 	 * 添加权限,并处理添加数据
 	 */
-	public function addAuth() {
+	public function add() {
 		// ~~~加载添加权限页面~~~~~~~~~~~~~
 		// 判断是否有post数据
 		if (! $_POST) {

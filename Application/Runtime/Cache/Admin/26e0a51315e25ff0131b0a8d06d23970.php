@@ -15,7 +15,7 @@ function prevent(event) {
 	}
 }
 
-/* window.onload = function(){
+window.onload = function(){
 	$('btn').onclick = function(event){
 		//当username为空时,取消submit的按钮的提交
 		if ($('name').value == ''||$('url').value =='') {
@@ -24,7 +24,7 @@ function prevent(event) {
 			alert('栏目名不能为空!');
 		}
 	}
-} */
+}
 </script>
 </head>
     <body>
