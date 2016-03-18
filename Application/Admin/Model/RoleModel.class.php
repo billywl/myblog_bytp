@@ -11,6 +11,7 @@ class RoleModel extends Model {
 	);
 	
 	protected $_map=array(
+		'id'=>'r_id',
 		'name'=>'r_name',
 		'ids'=>'r_au_ids',
 		'ac'=>'r_au_ac',

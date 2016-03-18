@@ -1,0 +1,3079 @@
+[ 2016-03-18T09:36:18+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.039943s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006128s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006577s ]
+
+[ 2016-03-18T09:36:19+08:00 ] 127.0.0.1 /admin.php/login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001173s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002861s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000241s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000567s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.088760s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.089101s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001454s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001747s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001937s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002243s ]
+
+[ 2016-03-18T09:36:19+08:00 ] 127.0.0.1 /admin.php/Login/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001452s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002542s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002892s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001527s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001892s ]
+
+[ 2016-03-18T09:37:09+08:00 ] 127.0.0.1 /admin.php/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001816s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002161s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000187s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000483s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049698s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050179s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000958s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001253s ]
+
+[ 2016-03-18T09:37:12+08:00 ] 127.0.0.1 /admin.php/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001345s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001775s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002110s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000229s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000543s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017198s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017528s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000951s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001240s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001723s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002033s ]
+
+[ 2016-03-18T09:37:12+08:00 ] 127.0.0.1 /admin.php/Login/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002695s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001556s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003515s ]
+
+[ 2016-03-18T09:37:22+08:00 ] 127.0.0.1 /admin.php/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001427s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001731s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002401s ]
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.1553s ]
+SQL: SELECT * FROM `tp_admin` WHERE ( a_username='admin' ) LIMIT 1   [ RunTime:0.0088s ]
+SQL: UPDATE `tp_admin` SET `a_id`='1',`a_username`='admin',`a_password`='37b7540036b258665f7cbba421c53b26',`a_salt`='4f41d5',`a_uname`='天启',`a_role_id`='1',`a_last_log_ip`='127.0.0.1',`a_last_time`='1458265042' WHERE ( a_username='admin' ) [ RunTime:0.0797s ]
+
+[ 2016-03-18T09:37:22+08:00 ] 127.0.0.1 /admin.php/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001838s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000192s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000492s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018192s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018553s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001104s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001394s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002050s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002349s ]
+
+[ 2016-03-18T09:37:22+08:00 ] 127.0.0.1 /admin.php/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000529s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002965s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.037616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.037954s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000196s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000508s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028163s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028513s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001030s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001381s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001527s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001836s ]
+
+[ 2016-03-18T09:37:23+08:00 ] 127.0.0.1 /admin.php/Index/left.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001569s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001898s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0799s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_level=0 )  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tp_auth` WHERE ( au_level=1 )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000245s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000543s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.151875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.152204s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001302s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001611s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003127s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003433s ]
+
+[ 2016-03-18T09:37:23+08:00 ] 127.0.0.1 /admin.php/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001324s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002923s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003952s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020874s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026946s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000954s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001252s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002415s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002748s ]
+
+[ 2016-03-18T09:37:29+08:00 ] 127.0.0.1 /admin.php/article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001478s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001855s ]
+SQL: SHOW COLUMNS FROM `tp_program` [ RunTime:0.0667s ]
+SQL: SELECT `pro_id`,`pro_name`,`pro_topid` FROM `tp_program`  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000304s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000595s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050552s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050908s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001020s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001321s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001426s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001730s ]
+
+[ 2016-03-18T09:37:43+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001576s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001910s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0601s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000271s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000592s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022080s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022415s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001281s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001614s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001921s ]
+
+[ 2016-03-18T09:37:46+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001435s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001700s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0091s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001484s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001798s ]
+
+[ 2016-03-18T09:42:20+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001457s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001540s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001893s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0081s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000264s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000555s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022056s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022391s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001097s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001390s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002364s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003051s ]
+
+[ 2016-03-18T09:42:22+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001208s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001699s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002041s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0081s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001878s ]
+
+[ 2016-03-18T09:42:23+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001217s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001663s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000272s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000565s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020608s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021182s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000900s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001210s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001408s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001720s ]
+
+[ 2016-03-18T09:42:24+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001187s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002799s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003155s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0078s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002992s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003340s ]
+
+[ 2016-03-18T10:01:56+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001526s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001862s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000275s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000599s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021802s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022135s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001201s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001544s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001847s ]
+
+[ 2016-03-18T10:01:58+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000159s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002398s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001666s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0087s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0091s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth`  [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000273s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000566s ]
+NOTIC: [8] Undefined variable: top E:\www\mynote2\Application\Runtime\Cache\Admin\39aa184a5bf3d6ec492b3aabf4016819.php 第 89 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045099s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045406s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001765s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002767s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001448s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001751s ]
+
+[ 2016-03-18T10:01:58+08:00 ] 127.0.0.1 /admin.php/Role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002314s ]
+
+[ 2016-03-18T10:05:45+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001317s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001578s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001980s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000279s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000607s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024017s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001064s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001357s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001535s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001849s ]
+
+[ 2016-03-18T10:05:47+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001176s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001674s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0091s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0007s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0101s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001533s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001900s ]
+
+[ 2016-03-18T10:06:04+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001183s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001656s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000264s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000568s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022648s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022969s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000899s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001192s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001411s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001714s ]
+
+[ 2016-03-18T10:06:05+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001167s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001918s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0081s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0006s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000290s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000613s ]
+NOTIC: [8] Undefined index: au_pid E:\www\mynote2\Application\Runtime\Cache\Admin\39aa184a5bf3d6ec492b3aabf4016819.php 第 93 行.
+NOTIC: [8] Undefined index: au_pid E:\www\mynote2\Application\Runtime\Cache\Admin\39aa184a5bf3d6ec492b3aabf4016819.php 第 93 行.
+NOTIC: [8] Undefined index: au_pid E:\www\mynote2\Application\Runtime\Cache\Admin\39aa184a5bf3d6ec492b3aabf4016819.php 第 93 行.
+NOTIC: [8] Undefined index: au_pid E:\www\mynote2\Application\Runtime\Cache\Admin\39aa184a5bf3d6ec492b3aabf4016819.php 第 93 行.
+NOTIC: [8] Undefined index: au_pid E:\www\mynote2\Application\Runtime\Cache\Admin\39aa184a5bf3d6ec492b3aabf4016819.php 第 93 行.
+NOTIC: [8] Undefined index: au_pid E:\www\mynote2\Application\Runtime\Cache\Admin\39aa184a5bf3d6ec492b3aabf4016819.php 第 93 行.
+NOTIC: [8] Undefined index: au_pid E:\www\mynote2\Application\Runtime\Cache\Admin\39aa184a5bf3d6ec492b3aabf4016819.php 第 93 行.
+NOTIC: [8] Undefined index: au_pid E:\www\mynote2\Application\Runtime\Cache\Admin\39aa184a5bf3d6ec492b3aabf4016819.php 第 93 行.
+NOTIC: [8] Undefined index: au_pid E:\www\mynote2\Application\Runtime\Cache\Admin\39aa184a5bf3d6ec492b3aabf4016819.php 第 93 行.
+NOTIC: [8] Undefined index: au_pid E:\www\mynote2\Application\Runtime\Cache\Admin\39aa184a5bf3d6ec492b3aabf4016819.php 第 93 行.
+NOTIC: [8] Undefined index: au_pid E:\www\mynote2\Application\Runtime\Cache\Admin\39aa184a5bf3d6ec492b3aabf4016819.php 第 93 行.
+NOTIC: [8] Undefined index: au_pid E:\www\mynote2\Application\Runtime\Cache\Admin\39aa184a5bf3d6ec492b3aabf4016819.php 第 93 行.
+NOTIC: [8] Undefined index: au_pid E:\www\mynote2\Application\Runtime\Cache\Admin\39aa184a5bf3d6ec492b3aabf4016819.php 第 93 行.
+NOTIC: [8] Undefined index: au_pid E:\www\mynote2\Application\Runtime\Cache\Admin\39aa184a5bf3d6ec492b3aabf4016819.php 第 93 行.
+NOTIC: [8] Undefined index: au_pid E:\www\mynote2\Application\Runtime\Cache\Admin\39aa184a5bf3d6ec492b3aabf4016819.php 第 93 行.
+NOTIC: [8] Undefined index: au_pid E:\www\mynote2\Application\Runtime\Cache\Admin\39aa184a5bf3d6ec492b3aabf4016819.php 第 93 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034781s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035077s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001067s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001372s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001832s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002143s ]
+
+[ 2016-03-18T10:06:05+08:00 ] 127.0.0.1 /admin.php/Role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001880s ]
+
+[ 2016-03-18T10:06:54+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001815s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002008s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002348s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000261s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000563s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020509s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020829s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000975s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001526s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001679s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001992s ]
+
+[ 2016-03-18T10:06:55+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001166s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001660s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0111s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0009s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000272s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000569s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026896s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027231s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000926s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001218s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002078s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002424s ]
+
+[ 2016-03-18T10:06:55+08:00 ] 127.0.0.1 /admin.php/Role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001520s ]
+
+[ 2016-03-18T10:39:23+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000081s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001573s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001919s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0109s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000314s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000609s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021777s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022238s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001097s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001389s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001760s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002069s ]
+
+[ 2016-03-18T10:39:24+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001325s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002149s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed E:\www\mynote2\Application\Admin\Controller\RoleController.class.php 第 88 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001567s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001876s ]
+
+[ 2016-03-18T10:41:12+08:00 ] 127.0.0.1 /admin.php/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001420s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001858s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000227s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000652s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014247s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014577s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001345s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001684s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002018s ]
+
+[ 2016-03-18T10:41:12+08:00 ] 127.0.0.1 /admin.php/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001676s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000197s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000550s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014622s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014961s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001052s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001351s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003270s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003620s ]
+
+[ 2016-03-18T10:41:12+08:00 ] 127.0.0.1 /admin.php/Index/left.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001424s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004269s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0130s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_level=0 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tp_auth` WHERE ( au_level=1 )  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000220s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000551s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024450s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024801s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001425s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001748s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003111s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003730s ]
+
+[ 2016-03-18T10:41:12+08:00 ] 127.0.0.1 /admin.php/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001387s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001703s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000252s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000572s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019383s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020109s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001138s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001449s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001691s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002002s ]
+
+[ 2016-03-18T10:41:15+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000078s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001478s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001994s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0148s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000272s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000714s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028332s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028689s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001074s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001388s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001594s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001919s ]
+
+[ 2016-03-18T10:41:16+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001184s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001701s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002029s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0125s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001522s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001834s ]
+
+[ 2016-03-18T10:43:03+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001294s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002145s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000270s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000593s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020824s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021145s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000883s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001214s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001401s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001703s ]
+
+[ 2016-03-18T10:43:05+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001193s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001842s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0083s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0075s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0007s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000285s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000608s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025702s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026053s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000908s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001201s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001428s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001730s ]
+
+[ 2016-03-18T10:43:05+08:00 ] 127.0.0.1 /admin.php/Role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000100s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001507s ]
+
+[ 2016-03-18T11:00:27+08:00 ] 127.0.0.1 /admin.php/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001501s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002808s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003654s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000190s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000499s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015323s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015666s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001041s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001336s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001920s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002232s ]
+
+[ 2016-03-18T11:00:27+08:00 ] 127.0.0.1 /admin.php/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001218s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002043s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000208s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000524s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014289s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014622s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001027s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001509s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003642s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003950s ]
+
+[ 2016-03-18T11:00:27+08:00 ] 127.0.0.1 /admin.php/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001316s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007660s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000258s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000575s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019107s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019445s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001467s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001777s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001781s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002117s ]
+
+[ 2016-03-18T11:00:27+08:00 ] 127.0.0.1 /admin.php/Index/left.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001374s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001841s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0087s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_level=0 )  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tp_auth` WHERE ( au_level=1 )  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000228s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000586s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027235s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027566s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001146s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001450s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002491s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002801s ]
+
+[ 2016-03-18T11:00:30+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001367s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001716s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0093s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000269s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000586s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020698s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021031s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000896s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001391s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001697s ]
+
+[ 2016-03-18T11:00:31+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001194s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001761s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001450s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001763s ]
+
+[ 2016-03-18T11:01:30+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001573s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001722s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0077s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000291s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000624s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022388s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022719s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000916s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001209s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001410s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001712s ]
+
+[ 2016-03-18T11:01:32+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001760s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001709s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0087s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0009s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000313s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000895s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028922s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029270s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000966s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001261s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002672s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002984s ]
+
+[ 2016-03-18T11:01:32+08:00 ] 127.0.0.1 /admin.php/Role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000077s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004287s ]
+
+[ 2016-03-18T11:02:20+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000209s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001590s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001881s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0076s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000299s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000877s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021895s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022219s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000881s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001185s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001380s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001686s ]
+
+[ 2016-03-18T11:02:21+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001210s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001769s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0082s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0087s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0010s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000717s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001259s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027613s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027948s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001347s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001652s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001806s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002122s ]
+
+[ 2016-03-18T11:02:22+08:00 ] 127.0.0.1 /admin.php/Role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002007s ]
+
+[ 2016-03-18T11:05:24+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000351s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002397s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003157s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0077s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000273s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000589s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023042s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023399s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001072s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001367s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001525s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001829s ]
+
+[ 2016-03-18T11:05:26+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001776s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002115s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0080s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0006s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000298s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000605s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055585s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055940s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001011s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001508s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001817s ]
+
+[ 2016-03-18T11:05:27+08:00 ] 127.0.0.1 /admin.php/Role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001194s ]
+
+[ 2016-03-18T11:10:31+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001395s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002161s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002546s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0155s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000276s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000613s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033096s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033485s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001283s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001607s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002397s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003085s ]
+
+[ 2016-03-18T11:10:34+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001892s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0092s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0128s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0046s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000315s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000645s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030461s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030832s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001437s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001751s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002388s ]
+
+[ 2016-03-18T11:10:35+08:00 ] 127.0.0.1 /admin.php/Role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001272s ]
+
+[ 2016-03-18T11:10:42+08:00 ] 127.0.0.1 /admin.php/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000104s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007212s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002243s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002619s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000205s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000634s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025812s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026193s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001490s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001815s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001526s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001838s ]
+
+[ 2016-03-18T11:10:43+08:00 ] 127.0.0.1 /admin.php/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001723s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000208s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000526s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014793s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015148s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000980s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001303s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001596s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001911s ]
+
+[ 2016-03-18T11:10:43+08:00 ] 127.0.0.1 /admin.php/Index/left.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001782s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002461s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0084s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_level=0 )  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tp_auth` WHERE ( au_level=1 )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000254s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026392s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026740s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001029s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001748s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001533s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001847s ]
+
+[ 2016-03-18T11:10:43+08:00 ] 127.0.0.1 /admin.php/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001597s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002695s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000254s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000557s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017922s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018261s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001340s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001646s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001602s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001911s ]
+
+[ 2016-03-18T11:10:48+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001522s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002415s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000285s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000618s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028032s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028381s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000950s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001249s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001542s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001854s ]
+
+[ 2016-03-18T11:10:50+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004661s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001828s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0118s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0093s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0012s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000834s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001197s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033695s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034055s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001144s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001439s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001610s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001936s ]
+
+[ 2016-03-18T11:10:51+08:00 ] 127.0.0.1 /admin.php/Role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001204s ]
+
+[ 2016-03-18T11:18:57+08:00 ] 127.0.0.1 /admin.php/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001359s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001680s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002050s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000199s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000527s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017834s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001287s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001600s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002889s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003494s ]
+
+[ 2016-03-18T11:18:57+08:00 ] 127.0.0.1 /admin.php/Index/left.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001412s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001937s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0095s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_level=0 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tp_auth` WHERE ( au_level=1 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000269s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000616s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025330s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025717s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001210s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001527s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001679s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002005s ]
+
+[ 2016-03-18T11:18:57+08:00 ] 127.0.0.1 /admin.php/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001493s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001828s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000195s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000818s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016348s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016695s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000952s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001266s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001582s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001908s ]
+
+[ 2016-03-18T11:18:57+08:00 ] 127.0.0.1 /admin.php/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001595s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001810s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000253s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000581s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020102s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020464s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001320s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001633s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001635s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001948s ]
+
+[ 2016-03-18T11:19:06+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001399s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001742s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0086s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000273s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000609s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021107s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021454s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000905s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001195s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001890s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002193s ]
+
+[ 2016-03-18T11:19:08+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001912s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001739s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0136s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0085s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0014s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000290s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000607s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029741s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030101s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001108s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001431s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003315s ]
+
+[ 2016-03-18T11:19:09+08:00 ] 127.0.0.1 /admin.php/Role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001183s ]
+
+[ 2016-03-18T11:35:02+08:00 ] 127.0.0.1 /admin.php/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001470s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006189s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000202s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000538s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014863s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015216s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002318s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002982s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001610s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001928s ]
+
+[ 2016-03-18T11:35:02+08:00 ] 127.0.0.1 /admin.php/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001204s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001733s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000215s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000546s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014611s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014955s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000947s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001256s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001485s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001794s ]
+
+[ 2016-03-18T11:35:02+08:00 ] 127.0.0.1 /admin.php/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000093s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001309s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003480s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000258s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000591s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016786s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017140s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001017s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001327s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004986s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005299s ]
+
+[ 2016-03-18T11:35:03+08:00 ] 127.0.0.1 /admin.php/Index/left.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001888s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002296s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0103s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_level=0 )  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tp_auth` WHERE ( au_level=1 )  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000233s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000546s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026083s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026418s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001274s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001592s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001733s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002052s ]
+
+[ 2016-03-18T11:35:05+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001522s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001684s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002060s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000288s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000595s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027145s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027584s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001012s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001338s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001931s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002324s ]
+
+[ 2016-03-18T11:35:45+08:00 ] 127.0.0.1 /admin.php/role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001334s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001395s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001735s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0135s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0088s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0009s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000298s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000617s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029501s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029853s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001022s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001474s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001687s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002173s ]
+
+[ 2016-03-18T11:35:46+08:00 ] 127.0.0.1 /admin.php/role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001522s ]
+
+[ 2016-03-18T11:35:54+08:00 ] 127.0.0.1 /admin.php/role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001221s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001886s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0082s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0007s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000290s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000606s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030338s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030788s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001184s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001497s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001754s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002124s ]
+
+[ 2016-03-18T11:35:55+08:00 ] 127.0.0.1 /admin.php/role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001240s ]
+
+[ 2016-03-18T11:36:26+08:00 ] 127.0.0.1 /admin.php/role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001208s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001850s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0077s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0112s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0013s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000305s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000631s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030895s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031227s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000928s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001219s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001733s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002534s ]
+
+[ 2016-03-18T11:36:28+08:00 ] 127.0.0.1 /admin.php/role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001378s ]
+
+[ 2016-03-18T11:37:22+08:00 ] 127.0.0.1 /admin.php/role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001401s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001968s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0115s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0080s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0017s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000286s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000610s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033159s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033516s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002149s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003298s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001868s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002209s ]
+
+[ 2016-03-18T11:37:23+08:00 ] 127.0.0.1 /admin.php/role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005334s ]
+
+[ 2016-03-18T11:37:32+08:00 ] 127.0.0.1 /admin.php/role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004904s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001959s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0085s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0093s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0029s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000291s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000614s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028721s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029089s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001101s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001414s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001557s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001860s ]
+
+[ 2016-03-18T11:37:33+08:00 ] 127.0.0.1 /admin.php/role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004774s ]
+
+[ 2016-03-18T11:43:39+08:00 ] 127.0.0.1 /admin.php/role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002524s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003153s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0143s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0118s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0009s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000311s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000639s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033275s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033668s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001626s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001944s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001705s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002013s ]
+
+[ 2016-03-18T11:43:40+08:00 ] 127.0.0.1 /admin.php/role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001861s ]
+
+[ 2016-03-18T11:44:09+08:00 ] 127.0.0.1 /admin.php/role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001288s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002136s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0083s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0007s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000298s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000641s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028275s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028652s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001108s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001427s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001796s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002122s ]
+
+[ 2016-03-18T11:44:10+08:00 ] 127.0.0.1 /admin.php/role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001237s ]
+
+[ 2016-03-18T11:46:02+08:00 ] 127.0.0.1 /admin.php/role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001878s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002210s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0109s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0103s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0009s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000294s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000598s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028947s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029304s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001408s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001727s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003689s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004409s ]
+
+[ 2016-03-18T11:46:03+08:00 ] 127.0.0.1 /admin.php/role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001438s ]
+
+[ 2016-03-18T11:57:08+08:00 ] 127.0.0.1 /admin.php/role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001364s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001584s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001942s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0099s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0007s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000296s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000611s ]
+NOTIC: [8] Undefined variable: ids E:\www\mynote2\Application\Runtime\Cache\Admin\39aa184a5bf3d6ec492b3aabf4016819.php 第 149 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028619s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028944s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001185s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001538s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001547s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001851s ]
+
+[ 2016-03-18T11:57:09+08:00 ] 127.0.0.1 /admin.php/role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001364s ]
+
+[ 2016-03-18T11:57:22+08:00 ] 127.0.0.1 /admin.php/role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001484s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003093s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003476s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0118s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0082s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0009s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000622s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000963s ]
+NOTIC: [8] Undefined index: r_ids E:\www\mynote2\Application\Runtime\Cache\Admin\39aa184a5bf3d6ec492b3aabf4016819.php 第 145 行.
+NOTIC: [8] Undefined variable: ids E:\www\mynote2\Application\Runtime\Cache\Admin\39aa184a5bf3d6ec492b3aabf4016819.php 第 149 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031346s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031646s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001011s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001334s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001501s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001809s ]
+
+[ 2016-03-18T11:57:23+08:00 ] 127.0.0.1 /admin.php/role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001511s ]
+
+[ 2016-03-18T11:58:36+08:00 ] 127.0.0.1 /admin.php/role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001534s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001737s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0080s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0006s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000302s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000637s ]
+NOTIC: [8] Undefined variable: ids E:\www\mynote2\Application\Runtime\Cache\Admin\39aa184a5bf3d6ec492b3aabf4016819.php 第 149 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029301s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029624s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000965s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001274s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001382s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001682s ]
+
+[ 2016-03-18T11:58:37+08:00 ] 127.0.0.1 /admin.php/role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001632s ]
+
+[ 2016-03-18T12:05:40+08:00 ] 127.0.0.1 /admin.php/role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001847s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0098s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0007s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000297s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000605s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026602s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026960s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001185s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001502s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001683s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002704s ]
+
+[ 2016-03-18T12:05:42+08:00 ] 127.0.0.1 /admin.php/role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001280s ]
+
+[ 2016-03-18T12:05:48+08:00 ] 127.0.0.1 /admin.php/role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001546s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001967s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0083s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0088s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0009s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000305s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000621s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027459s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027839s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001237s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001592s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001907s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002227s ]
+
+[ 2016-03-18T12:05:49+08:00 ] 127.0.0.1 /admin.php/role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001472s ]
+
+[ 2016-03-18T12:22:27+08:00 ] 127.0.0.1 /admin.php/role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002515s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001845s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0111s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0010s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000307s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000624s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028471s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028819s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001381s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001689s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001565s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001868s ]
+
+[ 2016-03-18T12:22:29+08:00 ] 127.0.0.1 /admin.php/role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004404s ]
+
+[ 2016-03-18T12:23:55+08:00 ] 127.0.0.1 /admin.php/role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001372s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001667s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0077s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0100s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0009s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000306s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000635s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027981s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028319s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000916s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001245s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001358s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001669s ]
+
+[ 2016-03-18T12:23:56+08:00 ] 127.0.0.1 /admin.php/role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005467s ]
+
+[ 2016-03-18T12:24:15+08:00 ] 127.0.0.1 /admin.php/role/modify?id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001334s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001648s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002012s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0076s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=2 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0081s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0007s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000294s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000610s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028089s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028426s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000917s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001224s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001508s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001813s ]
+
+[ 2016-03-18T12:24:16+08:00 ] 127.0.0.1 /admin.php/role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001338s ]
+
+[ 2016-03-18T12:26:05+08:00 ] 127.0.0.1 /admin.php/Role/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002030s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `tp_auth` WHERE ( au_level=0 )  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `tp_auth` WHERE ( au_level=1 )  [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000288s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000606s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045271s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045645s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001420s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001745s ]
+
+[ 2016-03-18T12:26:05+08:00 ] 127.0.0.1 /admin.php/Role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001345s ]
+
+[ 2016-03-18T12:26:16+08:00 ] 127.0.0.1 /admin.php/Role/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000104s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002196s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001959s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0104s ]
+NOTIC: [8] Undefined index: validate E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `tp_role` WHERE `r_name` = '娘娘' LIMIT 1   [ RunTime:0.0137s ]
+NOTIC: [8] Undefined index: auto E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0078s ]
+SQL: SELECT `au_id`,`au_a` FROM `tp_auth`  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined variable: ac E:\www\mynote2\Application\Admin\Controller\RoleController.class.php 第 39 行.
+SQL: INSERT INTO `tp_role` (`r_name`,`r_au_ids`,`r_au_ac`) VALUES ('娘娘','13,21,20,15,16','index,remove,add,modify') [ RunTime:0.1235s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000196s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000511s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015667s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000895s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001196s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001581s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001903s ]
+
+[ 2016-03-18T12:26:17+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002513s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001714s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002159s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0036s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000272s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000584s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025196s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025561s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003785s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004188s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001509s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001816s ]
+
+[ 2016-03-18T12:26:21+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001215s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001855s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0077s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=3 ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0078s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0011s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000466s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000826s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028112s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028459s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000973s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001286s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001389s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001690s ]
+
+[ 2016-03-18T12:26:21+08:00 ] 127.0.0.1 /admin.php/Role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001268s ]
+
+[ 2016-03-18T12:35:17+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001880s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0093s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000270s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000593s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020902s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021258s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001089s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001412s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001571s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001876s ]
+
+[ 2016-03-18T12:35:20+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001666s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0076s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=3 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0131s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0007s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000292s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000611s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027964s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028328s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000924s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001235s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001406s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001737s ]
+
+[ 2016-03-18T12:35:20+08:00 ] 127.0.0.1 /admin.php/Role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001233s ]
+
+[ 2016-03-18T14:07:24+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002850s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: validate E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `tp_role` WHERE `r_name` = '娘娘' AND `r_id` <> '3' LIMIT 1   [ RunTime:0.1236s ]
+NOTIC: [8] Undefined index: auto E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0104s ]
+SQL: SELECT `au_id`,`au_a` FROM `tp_auth`  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined variable: ac E:\www\mynote2\Application\Admin\Controller\RoleController.class.php 第 122 行.
+SQL: UPDATE `tp_role` SET `r_name`='娘娘',`r_au_ids`='13,21,20,15,16,14,19,18,22,23',`r_au_ac`='index,remove,modify,add,add,modify,index,remove' WHERE `r_id` = 3 [ RunTime:0.0103s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000198s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000488s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016917s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017257s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001080s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001387s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001826s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002144s ]
+
+[ 2016-03-18T14:07:26+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001563s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002239s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0263s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000369s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000732s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020347s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000892s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001201s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001916s ]
+
+[ 2016-03-18T14:07:28+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001193s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001638s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=3 ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0080s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0006s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000308s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000617s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027241s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027594s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000949s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001259s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001396s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001700s ]
+
+[ 2016-03-18T14:07:28+08:00 ] 127.0.0.1 /admin.php/Role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001271s ]
+
+[ 2016-03-18T14:08:18+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001615s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.020014s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0129s ]
+NOTIC: [8] Undefined index: validate E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `tp_role` WHERE `r_name` = '娘娘' AND `r_id` <> '3' LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: auto E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0095s ]
+SQL: SELECT `au_id`,`au_a` FROM `tp_auth`  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined variable: ac E:\www\mynote2\Application\Admin\Controller\RoleController.class.php 第 122 行.
+SQL: UPDATE `tp_role` SET `r_name`='娘娘',`r_au_ids`='13,21',`r_au_ac`='index' WHERE `r_id` = 3 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000195s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000492s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022828s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023165s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.021802s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.022103s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004301s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004609s ]
+
+[ 2016-03-18T14:08:19+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001622s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002844s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003183s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0116s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000279s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000603s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051403s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051790s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002582s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002895s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005364s ]
+
+[ 2016-03-18T14:12:49+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001780s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001803s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002140s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0081s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=3 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0094s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0007s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000294s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000607s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029602s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030098s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001518s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001835s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001941s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002256s ]
+
+[ 2016-03-18T14:12:49+08:00 ] 127.0.0.1 /admin.php/Role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001418s ]
+
+[ 2016-03-18T14:12:51+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001758s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002485s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0079s ]
+NOTIC: [8] Undefined index: validate E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `tp_role` WHERE `r_name` = '娘娘' LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000213s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000508s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019282s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019614s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001685s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001991s ]
+
+[ 2016-03-18T14:12:54+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001878s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002221s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=3 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0085s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0006s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000302s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000636s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029717s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030063s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001445s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001756s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001877s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002190s ]
+
+[ 2016-03-18T14:13:17+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001761s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002376s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000306s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000642s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024604s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001540s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001849s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001864s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002229s ]
+
+[ 2016-03-18T14:13:19+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001837s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002171s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0125s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0009s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000304s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000604s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030918s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031265s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001436s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001746s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002901s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003254s ]
+
+[ 2016-03-18T14:13:19+08:00 ] 127.0.0.1 /admin.php/Role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001243s ]
+
+[ 2016-03-18T14:13:23+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000078s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002115s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001788s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002134s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0092s ]
+NOTIC: [8] Undefined index: validate E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `tp_role` WHERE `r_name` = '朕' LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000204s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000508s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016837s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017207s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001626s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001927s ]
+
+[ 2016-03-18T14:13:27+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000080s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001567s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001906s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002395s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0087s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0074s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0009s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000301s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000606s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029899s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030275s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001494s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001809s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002477s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002789s ]
+
+[ 2016-03-18T14:14:13+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001597s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002039s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0082s ]
+NOTIC: [8] Undefined index: validate E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `tp_role` WHERE `r_name` = '朕撒旦法' LIMIT 1   [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: auto E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0075s ]
+SQL: SELECT `au_id`,`au_a` FROM `tp_auth`  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined variable: ac E:\www\mynote2\Application\Admin\Controller\RoleController.class.php 第 122 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000206s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000498s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016739s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017065s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002285s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003245s ]
+
+[ 2016-03-18T14:14:17+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001304s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001909s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002261s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0077s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0086s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0007s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000442s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000811s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028864s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029290s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001438s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001759s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001857s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002162s ]
+
+[ 2016-03-18T14:14:51+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001412s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001754s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002102s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0071s ]
+NOTIC: [8] Undefined index: validate E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `tp_role` WHERE `r_name` = '朕撒旦法' LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: auto E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0094s ]
+SQL: SELECT `au_id`,`au_a` FROM `tp_auth`  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined variable: ac E:\www\mynote2\Application\Admin\Controller\RoleController.class.php 第 122 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000220s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000520s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017030s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017365s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001378s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001682s ]
+
+[ 2016-03-18T14:14:54+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001746s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002077s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0081s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0075s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0006s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000411s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000756s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027856s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028209s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001493s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001809s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002588s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002893s ]
+
+[ 2016-03-18T14:15:35+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000081s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001524s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002233s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002636s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001575s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025229s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025595s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001427s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001739s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003616s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003939s ]
+
+[ 2016-03-18T14:15:37+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000080s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001819s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002155s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0114s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0006s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000303s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000610s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029627s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001407s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001720s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001881s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002183s ]
+
+[ 2016-03-18T14:15:37+08:00 ] 127.0.0.1 /admin.php/Role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001249s ]
+
+[ 2016-03-18T14:15:41+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000129s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001712s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002058s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0078s ]
+NOTIC: [8] Undefined index: validate E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `tp_role` WHERE `r_name` = '朕' AND `r_id` <> '1' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: auto E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0092s ]
+SQL: SELECT `au_id`,`au_a` FROM `tp_auth`  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: ac E:\www\mynote2\Application\Admin\Controller\RoleController.class.php 第 122 行.
+SQL: UPDATE `tp_role` SET `r_name`='朕',`r_au_ids`='13,21,20,15,16,14,19,18,22,23',`r_au_ac`='index,remove,modify,add,add,modify,index,remove' WHERE `r_id` = 1 [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000201s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000508s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017268s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017596s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001367s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001661s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002386s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002708s ]
+
+[ 2016-03-18T14:15:42+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001933s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002357s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0082s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000279s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000596s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022874s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023242s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001404s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001715s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002010s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002322s ]
+
+[ 2016-03-18T14:15:44+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001351s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001753s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002079s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0082s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0100s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0007s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000294s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000598s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028317s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028709s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001443s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001755s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002394s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002698s ]
+
+[ 2016-03-18T14:15:44+08:00 ] 127.0.0.1 /admin.php/Role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001447s ]
+
+[ 2016-03-18T14:15:57+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001382s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001782s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002121s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0076s ]
+NOTIC: [8] Undefined index: validate E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `tp_role` WHERE `r_name` = '太监' AND `r_id` <> '1' LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000260s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000564s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016639s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017130s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001815s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002116s ]
+
+[ 2016-03-18T14:16:00+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000095s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001997s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002339s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0081s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0081s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0007s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000299s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000601s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029437s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029889s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001433s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001757s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002286s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002656s ]
+
+[ 2016-03-18T14:16:13+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000093s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001424s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001724s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002067s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0094s ]
+NOTIC: [8] Undefined index: validate E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `tp_role` WHERE `r_name` = '朕' AND `r_id` <> '1' LIMIT 1   [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: auto E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0083s ]
+SQL: SELECT `au_id`,`au_a` FROM `tp_auth`  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined variable: ac E:\www\mynote2\Application\Admin\Controller\RoleController.class.php 第 122 行.
+SQL: UPDATE `tp_role` SET `r_name`='朕',`r_au_ids`='13,21,20,15,16,14,19,18,22,23',`r_au_ac`='index,remove,modify,add,add,modify,index,remove' WHERE `r_id` = 1 [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000197s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000496s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016692s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017022s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001412s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001709s ]
+
+[ 2016-03-18T14:16:16+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001310s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001890s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002531s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0077s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0087s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0007s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000292s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000592s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029619s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029978s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001453s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001761s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002241s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002544s ]
+
+[ 2016-03-18T14:16:18+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001700s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002047s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0081s ]
+NOTIC: [8] Undefined index: validate E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `tp_role` WHERE `r_name` = '朕' AND `r_id` <> '1' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: auto E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0077s ]
+SQL: SELECT `au_id`,`au_a` FROM `tp_auth`  [ RunTime:0.0009s ]
+NOTIC: [8] Undefined variable: ac E:\www\mynote2\Application\Admin\Controller\RoleController.class.php 第 122 行.
+SQL: UPDATE `tp_role` SET `r_name`='朕',`r_au_ids`='13,21,20,15,16,14,19,18,22,23',`r_au_ac`='index,remove,modify,add,add,modify,index,remove' WHERE `r_id` = 1 [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000209s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000705s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017918s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018284s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001373s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001670s ]
+
+[ 2016-03-18T14:16:21+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001982s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002322s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000268s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000570s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023684s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024033s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001904s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002247s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002336s ]
+
+[ 2016-03-18T14:16:23+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002139s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001863s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002196s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0076s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0006s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000304s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000626s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036405s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036765s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001844s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002233s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001899s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002210s ]
+
+[ 2016-03-18T14:16:24+08:00 ] 127.0.0.1 /admin.php/Role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000080s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001302s ]
+
+[ 2016-03-18T14:16:25+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000123s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001435s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005872s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006510s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0119s ]
+NOTIC: [8] Undefined index: validate E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `tp_role` WHERE `r_name` = '朕' AND `r_id` <> '1' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: auto E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0084s ]
+SQL: SELECT `au_id`,`au_a` FROM `tp_auth`  [ RunTime:0.0009s ]
+NOTIC: [8] Undefined variable: ac E:\www\mynote2\Application\Admin\Controller\RoleController.class.php 第 122 行.
+SQL: UPDATE `tp_role` SET `r_name`='朕',`r_au_ids`='13,21,20,15,16,14,19,18,22,23',`r_au_ac`='index,remove,modify,add,add,modify,index,remove' WHERE `r_id` = 1 [ RunTime:0.0034s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000200s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000502s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018110s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018487s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001485s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001790s ]
+
+[ 2016-03-18T14:16:28+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001769s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002127s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0079s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0006s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000291s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000593s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029558s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029921s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003073s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003469s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002404s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002718s ]
+
+[ 2016-03-18T14:16:50+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001905s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002246s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0082s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000277s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000592s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022558s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022936s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001396s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001707s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003350s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005017s ]
+
+[ 2016-03-18T14:16:52+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001570s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003959s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004297s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0080s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0015s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000294s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000596s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030721s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031352s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001679s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001948s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002259s ]
+
+[ 2016-03-18T14:16:52+08:00 ] 127.0.0.1 /admin.php/Role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001460s ]
+
+[ 2016-03-18T14:16:54+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001485s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001725s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002085s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0081s ]
+NOTIC: [8] Undefined index: validate E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `tp_role` WHERE `r_name` = '朕' AND `r_id` <> '1' LIMIT 1   [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: auto E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0092s ]
+SQL: SELECT `au_id`,`au_a` FROM `tp_auth`  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined variable: ac E:\www\mynote2\Application\Admin\Controller\RoleController.class.php 第 122 行.
+SQL: UPDATE `tp_role` SET `r_name`='朕',`r_au_ids`='13,21,20,15,16,14,19,18,22,23',`r_au_ac`='index,remove,modify,add,add,modify,index,remove' WHERE `r_id` = 1 [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000203s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000510s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017775s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018105s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001356s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001650s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002004s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002371s ]
+
+[ 2016-03-18T14:16:55+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000154s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002623s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001843s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002176s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000281s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000602s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024631s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024980s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001404s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001721s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001891s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002199s ]
+
+[ 2016-03-18T14:16:57+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001816s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002157s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0074s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0006s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000314s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000624s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037662s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038057s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001659s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001978s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002651s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003113s ]
+
+[ 2016-03-18T14:16:57+08:00 ] 127.0.0.1 /admin.php/Role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001337s ]
+
+[ 2016-03-18T14:17:06+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001314s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002186s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002555s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0083s ]
+NOTIC: [8] Undefined index: validate E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `tp_role` WHERE `r_name` = '你好' AND `r_id` <> '1' LIMIT 1   [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: auto E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0075s ]
+SQL: SELECT `au_id`,`au_a` FROM `tp_auth`  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined variable: ac E:\www\mynote2\Application\Admin\Controller\RoleController.class.php 第 122 行.
+SQL: UPDATE `tp_role` SET `r_name`='你好',`r_au_ids`='13,21,20,15,16,14,19,18,22,23',`r_au_ac`='index,remove,modify,add,add,modify,index,remove' WHERE `r_id` = 1 [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000199s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000499s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017646s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017988s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001374s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001668s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001945s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002303s ]
+
+[ 2016-03-18T14:17:07+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001848s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002188s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000279s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000606s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025675s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026041s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001474s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001789s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001893s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002200s ]
+
+[ 2016-03-18T14:17:10+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001882s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002225s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `tp_role` WHERE ( r_id=1 ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0080s ]
+SQL: SELECT `au_id`,`au_name` FROM `tp_auth` WHERE ( au_pid=0 )  [ RunTime:0.0006s ]
+SQL: SELECT `au_id`,`au_name`,`au_pid` FROM `tp_auth` WHERE ( au_pid!=0 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000294s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000598s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028677s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029033s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001405s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001720s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001865s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002166s ]
+
+[ 2016-03-18T14:17:10+08:00 ] 127.0.0.1 /admin.php/Role//Images/content_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001308s ]
+
+[ 2016-03-18T14:17:15+08:00 ] 127.0.0.1 /admin.php/Role/modify?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003888s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001907s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0078s ]
+NOTIC: [8] Undefined index: validate E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `tp_role` WHERE `r_name` = '朕' AND `r_id` <> '1' LIMIT 1   [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: auto E:\www\mynote2\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `tp_auth` [ RunTime:0.0091s ]
+SQL: SELECT `au_id`,`au_a` FROM `tp_auth`  [ RunTime:0.0015s ]
+NOTIC: [8] Undefined variable: ac E:\www\mynote2\Application\Admin\Controller\RoleController.class.php 第 122 行.
+SQL: UPDATE `tp_role` SET `r_name`='朕',`r_au_ids`='13,21,20,15,16,14,19,18,22,23',`r_au_ac`='index,remove,modify,add,add,modify,index,remove' WHERE `r_id` = 1 [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000207s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000517s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015485s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015823s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001036s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001353s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001555s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001863s ]
+
+[ 2016-03-18T14:17:16+08:00 ] 127.0.0.1 /admin.php/Role/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001281s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001833s ]
+SQL: SHOW COLUMNS FROM `tp_role` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `tp_role`  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000273s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000589s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021528s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021862s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000870s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001168s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001366s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001692s ]
+

@@ -67,6 +67,7 @@ $().ready(function() {
                                                         <th>角色id</th>
                                                         <th>角色名称</th>
                                                         <th>角色权限id</th>
+                                                        <th>操作</th>
 
                                                     </tr>
                                                     <volist name='list' id='vo'>
@@ -74,6 +75,7 @@ $().ready(function() {
                                                         <td>{$vo.r_id}</td>
                                                         <td>{$vo.r_name}</td>
                                                         <td>{$vo.r_au_ids}</td>
+                                                        <td><a href='__URL__/modify?id={$vo.r_id}'>编辑</a></td>
                                                     </tr>
                                                     </volist>
                                                 </table>                                                       

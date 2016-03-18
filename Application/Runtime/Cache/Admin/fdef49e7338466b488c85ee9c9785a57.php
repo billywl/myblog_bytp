@@ -67,12 +67,14 @@ $().ready(function() {
                                                         <th>角色id</th>
                                                         <th>角色名称</th>
                                                         <th>角色权限id</th>
+                                                        <th>操作</th>
 
                                                     </tr>
                                                     <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr align="center" class="d">
                                                         <td><?php echo ($vo["r_id"]); ?></td>
                                                         <td><?php echo ($vo["r_name"]); ?></td>
                                                         <td><?php echo ($vo["r_au_ids"]); ?></td>
+                                                        <td><a href='/admin.php/Role/modify?id=<?php echo ($vo["r_id"]); ?>'>编辑</a></td>
                                                     </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                                                 </table>                                                       
                                             </form>
